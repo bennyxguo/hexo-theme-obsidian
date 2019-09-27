@@ -1,0 +1,74 @@
+<div class= article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated bounceIn" style="
+            animation-delay: 600ms;
+            animation-duration: 800ms;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(<%- page.cover || theme.welcome_cover %>);">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown"><%- page.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
+            <h3 class="animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
+            <p class="animated fadeInDown"><%- truncate(strip_html(page.content), {length: 100, omission: '...'}) %></p>
+            <% if (page.tags && page.tags.length){ %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'animated fadeInDown post-tags'
+                }) %>
+            <% } %>
+            <p class="article-count animated fadeInDown">
+                <span>
+                    <b class="iconfont icon-text2"></b>
+                    <%= wordcount(page.content) %>字
+                </span>
+                <span>
+                    <b class="iconfont icon-timer__s"></b>
+                    <%= min2read(page.content) %>分钟
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                   <%= config.subtitle || config.description %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown">
+            <%- page.content %>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="<%- theme.autoplay || page.autoplay || "false" %>">
+                <source type="audio/mpeg" src="<%- page.mp3 %>">
+            </audio>
+            <% if (page.mp3 == '' | page.mp3 == null){%>
+                <ul id="audio-list" style="display:none">
+                    <% for (var i in theme.mp3){ %>
+                        <% if (theme.mp3[i].indexOf('http') == 0){%>
+                            <li title='<%- i %>' data-url='<%- theme.mp3[i] %>'></li>
+                        <%} else {%>
+                            <li title='<%- i %>' data-url='<%- config.root + theme.mp3[i] %>'></li>
+                        <%}%>
+                    <%}%>
+                </ul>
+            <%}%>
+        </div>
+        <%- partial('gitalk', {post: page}) %>
+    </div>
+    <% if (theme.TOC == true){ %>
+        <div class='side'>
+            <%- toc(page.content, {list_number: true}) %>
+        </div>
+    <%}%>
+</div>
+

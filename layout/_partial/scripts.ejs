@@ -1,0 +1,17 @@
+<%- js(['//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js'])%>
+<%- js(['//lib.baomitu.com/jquery/1.8.3/jquery.min.js', 'js/plugin.js', 'js/obsidian.js'])%>
+<%- partial('photoswipe') %>
+
+<% if (!config.highlightjs) { %>
+    <!-- Highlight.js -->
+    <%- css(['css/dracula.css'])%>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+<% } %>

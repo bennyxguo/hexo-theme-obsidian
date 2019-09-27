@@ -1,0 +1,54 @@
+.section {
+  min-height: calc(100vh) !important;
+  background: #100e17;
+}
+.article {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.article:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+  background-image: 
+              radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.46), #100e17),
+              url(/img/cover.jpg);
+  z-index: -1;
+}
+.article .main .content {
+  color:#c2c2c2;
+  font-weight: 800;
+}
+.article .main .content a {
+  color:#fff;
+  font-weight: 800;
+  background: var(--primary) !important;
+  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
+  border-bottom: 1px solid var(--dark);
+}
+.article .main .content a:hover {
+  color:#fff;
+  font-weight: 600;
+  background: #fff !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
+  border-bottom: 1px solid var(--dark);
+}
+.article .main .content>h4{
+  color: #fff;
+  font-weight: 900;
+}

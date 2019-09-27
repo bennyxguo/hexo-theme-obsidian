@@ -1,0 +1,62 @@
+<% var first = page.posts.sort("date", "desc").eq(0); %>
+<div id="header">
+    <div>
+        <a class="image-logo animated fadeInDown" href="/"></a>
+        <ul id="menu-menu" class="menu">
+            <% for (var i in theme.menu){ %>
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false})%>
+            </li>
+            <%}%>
+        </ul>
+        <!-- <div class="icon-menu switchmenu gradient-text"></div> -->
+    </div>
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.4">
+            <%- image_tag(theme.welcome_cover || first.cover || "/img/welcome-cover.jpg", {id: "cover", width: 1920, height: 1080}) %>
+        </div>
+    </div>
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" fill="#000" points="2000,1620 0,1620 0,0 600,0 "/>
+        </svg>
+        <div></div>
+    </div>
+    <% if ( first ) { %>
+    <div id="post0">
+        <p class="animated fadeInDown"><%- first.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
+        <h2 class="animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h2>
+        <p class="summary animated fadeInDown"><%- truncate(strip_html(first.content), {length: 60, omission: '...'}) %></p>
+        <% if (first.tags && first.tags.length){ %>
+            <%- list_tags(first.tags, {
+                show_count: false,
+                class: 'animated fadeInDown post-tags'
+            }) %>
+        <% } %>
+        <p class="post-count animated fadeInDown">
+            <span>
+                <b class="iconfont icon-text2"></b>
+                <%= wordcount(first.content) %>字
+            </span>
+            <span>
+                <b class="iconfont icon-timer__s"></b>
+                <%= min2read(first.content) %>分钟
+            </span>
+        </p>
+    </div>
+    <% } %>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <%= config.subtitle || config.description %>
+                </p> 
+            </div>
+        </div>
+    </div>
+</div>

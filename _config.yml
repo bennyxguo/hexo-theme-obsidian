@@ -1,0 +1,56 @@
+# 头部菜单，title: link
+menu:
+  关于我: /whoami
+  分类: /categories
+  标签: /tags
+  归档: /archives
+
+# 是否显示目录
+TOC: false
+
+# 是否自动播放音乐
+autoplay: false
+
+# 默认音乐
+mp3: 
+  - statics/chengdu.mp3
+
+# 首页封面图, 为空时取文章的cover作为封面
+welcome_cover: /img/cover.jpg
+
+# 默认文章封面图
+cover: #/img/cover.jpg
+
+# 是否关闭默认滚动条
+scrollbar: true
+
+# Gitalk 评论插件（https://github.com/gitalk/gitalk）
+gitalk:
+    # 是否自动展开评论框
+    autoExpand: false
+    # 应用编号
+    clientID: 'ec894e2b66f752e8b7fb'
+    # 应用秘钥
+    clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+    # issue仓库名
+    repo: 'TriDiamondBlog'
+    # Github名
+    owner: 'TriDiamond'
+    # Github名
+    admin: 'TriDiamond'
+    # Ensure uniqueness and length less than 50
+    id: location.pathname
+    # Facebook-like distraction free mode
+    distractionFreeMode: false
+
+# 网站关键字
+keywords: TriDiamond Blog 三钻 PHP博客 Laravel Ionic Frontend Backend
+
+# 要使用google_analytics进行统计的话，这里需要配置ID
+google_analytics: 
+
+# 网站ico
+favicon: /img/favicon.png
+
+# rss文件
+rss: atom.xml

@@ -1,0 +1,18 @@
+<%- partial('_partial/head') %>
+<body class="loading">
+    <span id="config-title" style="display:none"><%= config.title %></span>
+    <div id="loader"></div>
+    <%- body %>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; <%= date(new Date(), 'YYYY') %>
+        <span class="gradient-text">
+            <%= config.author || config.title %>
+        </span>.
+        💎 | Powered by <%- link_to("http://hexo.io/", "Hexo", {external: true})%>
+        Theme <span class="gradient-text"><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%></span>
+    </p>
+</footer>
+<%- partial('_partial/scripts', null, {cache: true}) %>
+</html>
