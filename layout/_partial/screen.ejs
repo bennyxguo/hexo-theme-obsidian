@@ -2,39 +2,30 @@
 <div id="header">
     <div>
         <a class="image-logo animated fadeInDown" href="/"></a>
-        <ul id="menu-menu" class="menu">
+        <ul id="menu-menu" class="menu text-menu">
             <% for (var i in theme.menu){ %>
             <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
-                <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false})%>
+                <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false, class: "menu-link"})%>
             </li>
             <%}%>
         </ul>
-        <!-- <div class="icon-menu switchmenu gradient-text"></div> -->
+        <div class="icon-menu switchmenu gradient-text animated fadeInDown"></div>
     </div>
 </div>
 <div id="screen">
     <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <%- image_tag(theme.welcome_cover || first.cover || "/img/welcome-cover.jpg", {id: "cover", width: 1920, height: 1080}) %>
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(<%= first.cover || "/img/cover.jpg" %>);">
         </div>
-    </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" fill="#000" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
     </div>
     <% if ( first ) { %>
     <div id="post0">
         <p class="animated fadeInDown"><%- first.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
-        <h2 class="animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h2>
-        <p class="summary animated fadeInDown"><%- truncate(strip_html(first.content), {length: 60, omission: '...'}) %></p>
-        <% if (first.tags && first.tags.length){ %>
-            <%- list_tags(first.tags, {
-                show_count: false,
-                class: 'animated fadeInDown post-tags'
-            }) %>
-        <% } %>
+        <h1 class="animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h1>
         <p class="post-count animated fadeInDown">
             <span>
                 <b class="iconfont icon-text2"></b>
@@ -45,6 +36,20 @@
                 <%= min2read(first.content) %>分钟
             </span>
         </p>
+        <div class="md-content animated fadeIn">
+            <%- htmlTruncate(first.content, 100, {
+                ellipsis: '...',
+                excludes: ['img'],
+                keepWhitespaces: true,
+                reserveLastWord: true
+            }) %>
+        </div>
+        <% if (first.tags && first.tags.length){ %>
+            <%- list_tags(first.tags, {
+                show_count: false,
+                class: 'animated fadeInDown post-tags'
+            }) %>
+        <% } %>
     </div>
     <% } %>
 </div>
@@ -54,7 +59,7 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                    <%= config.subtitle || config.description %>
+                  <span class="typed-text"></span>  
                 </p> 
             </div>
         </div>

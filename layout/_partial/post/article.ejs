@@ -1,8 +1,8 @@
 <div class= article-header-wrapper>
     <div class="article-header">
-        <div class="article-cover animated bounceIn" style="
+        <div class="article-cover animated fadeIn" style="
             animation-delay: 600ms;
-            animation-duration: 800ms;
+            animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
                 url(<%- page.cover || theme.welcome_cover %>);">
@@ -10,13 +10,6 @@
         <div class="else">
             <p class="animated fadeInDown"><%- page.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
             <h3 class="animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
-            <p class="animated fadeInDown"><%- truncate(strip_html(page.content), {length: 100, omission: '...'}) %></p>
-            <% if (page.tags && page.tags.length){ %>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: 'animated fadeInDown post-tags'
-                }) %>
-            <% } %>
             <p class="article-count animated fadeInDown">
                 <span>
                     <b class="iconfont icon-text2"></b>
@@ -27,6 +20,12 @@
                     <%= min2read(page.content) %>分钟
                 </span>
             </p>
+            <% if (page.tags && page.tags.length){ %>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'animated fadeInDown post-tags'
+                }) %>
+            <% } %>
         </div>
     </div>
 </div>
@@ -36,14 +35,14 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                   <%= config.subtitle || config.description %>
+                    <span></span>  
                 </p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="article">
+<div class="article animated fadeIn">
     <div class='main'>
         <div class="content markdown">
             <%- page.content %>

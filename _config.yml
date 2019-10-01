@@ -1,9 +1,9 @@
 # 头部菜单，title: link
 menu:
-  关于我: /whoami
-  分类: /categories
-  标签: /tags
-  归档: /archives
+  ABOUT: /whoami
+  CATEGORY: /categories
+  TAGS: /tags
+  ARCHIVES: /archives
 
 # 是否显示目录
 TOC: false
@@ -29,15 +29,15 @@ gitalk:
     # 是否自动展开评论框
     autoExpand: false
     # 应用编号
-    clientID: 'ec894e2b66f752e8b7fb'
+    clientID: ec894e2b66f752e8b7fb
     # 应用秘钥
-    clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+    clientSecret: 3ccc2e92bb350688fe2c2dc2930189b62622bfb1
     # issue仓库名
-    repo: 'TriDiamondBlog'
+    repo: TriDiamondBlog
     # Github名
-    owner: 'TriDiamond'
+    owner: TriDiamond
     # Github名
-    admin: 'TriDiamond'
+    admin: TriDiamond
     # Ensure uniqueness and length less than 50
     id: location.pathname
     # Facebook-like distraction free mode
@@ -45,6 +45,10 @@ gitalk:
 
 # 网站关键字
 keywords: TriDiamond Blog 三钻 PHP博客 Laravel Ionic Frontend Backend
+
+#
+descriptionOne: "Think like an artist, develop like an artisan"
+descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
 
 # 要使用google_analytics进行统计的话，这里需要配置ID
 google_analytics: 

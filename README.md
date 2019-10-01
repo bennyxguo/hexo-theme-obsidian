@@ -3,10 +3,13 @@
 
 **[在线预览 | PREVIEW ](http://tridiamond.tech)**
 
-⚫️一款优雅而高尚的黑色主题, 响应式, 高质量, 有趣, 优雅, 简约但不简单。
+⚫️ 一款优雅而高尚的黑色主题, 响应式, 高质量, 有趣, 优雅, 简约但不简单。
+
 ---
+
 ⚫️ A noble dark obsidian style Hexo theme, it's responsive, hight quality, fancy, high class. 
 
+![preview](https://s2.ax1x.com/2019/10/01/uNBcND.png)
 
 ### 安装主题
 

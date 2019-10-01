@@ -71,7 +71,7 @@ var Obsidian = {
             title = tag.attr('title') + " - " + $("#config-title").text();
 
         if (!$('#preview').length || !(window.history && history.pushState)) location.href = url;
-        Obsidian.loading()
+        Obsidian.loading();
         var state = {d: id, t: title, u: url};
         Obsidian.L(url, function(data) {
             if (!$(data).filter('#single').length) {
@@ -81,11 +81,13 @@ var Obsidian = {
             switch (flag) {
                 case 'push':
                     history.pushState(state, title, url)
-                    console.log('pushState');
+                    $('#preview').html($(data).filter('#single'));
+                    Obsidian.preview();
                     break;
                 case 'replace':
                     history.replaceState(state, title, url)
-                    console.log('replaceState');
+                    $('#preview').html($(data).filter('#single'));
+                    Obsidian.preview();
                     break;
             }
             document.title = title;
@@ -93,14 +95,12 @@ var Obsidian = {
             switch (flag) {
                 case 'push':
                     Obsidian.preview()
-                    hljs.initHighlightingOnLoad();
-                    console.log('push-preview');
+                    Obsidian.initArticleJs();
                     break;
                 case 'replace':
                     window.scrollTo(0, 0)
                     Obsidian.loaded()
-                    hljs.initHighlightingOnLoad();
-                    console.log('relplace-preview');
+                    Obsidian.initArticleJs();
                     break;
             }
             setTimeout(function() {
@@ -133,9 +133,7 @@ var Obsidian = {
                     'overflow-y': 'auto'
                 });
             }, 500);
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
+            Obsidian.initArticleJs();
         }, 0);
     },
     player: function() {
@@ -203,6 +201,136 @@ var Obsidian = {
         }
         id.style.left = (_width - parseInt(id.style.width)) / 2 +'px';
         id.style.top = (_height - parseInt(id.style.height)) / 2 +'px';
+    },
+    initArticleJs: function () {
+        // initialise hightlight.js
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+        Obsidian.setCodeRowWithLang();
+    },
+    setCodeRowWithLang: function() {
+        // Get the programming type of the current code block
+        let code = $("code");
+        if (code && code.length) {
+            code.each(function () {
+                var item = $(this);
+                var lang = "";
+                if (item[0].className.indexOf(' ') > -1) {
+                    lang = item[0].className.split(' ')[0];
+                } else {
+                    lang = item[0].className;
+                }
+                var langMap = {
+                    "html": "HTML",
+                    "xml": "XML",
+                    "svg": "SVG",
+                    "mathml": "MathML",
+                    "css": "CSS",
+                    "clike": "C-like",
+                    "js": "JavaScript",
+                    "abap": "ABAP",
+                    "apacheconf": "Apache Configuration",
+                    "apl": "APL",
+                    "arff": "ARFF",
+                    "asciidoc": "AsciiDoc",
+                    "adoc": "AsciiDoc",
+                    "asm6502": "6502 Assembly",
+                    "aspnet": "ASP.NET (C#)",
+                    "autohotkey": "AutoHotkey",
+                    "autoit": "AutoIt",
+                    "shell": "BASH",
+                    "bash": "BASH",
+                    "basic": "BASIC",
+                    "csharp": "C#",
+                    "dotnet": "C#",
+                    "cpp": "C++",
+                    "cil": "CIL",
+                    "csp": "Content-Security-Policy",
+                    "css-extras": "CSS Extras",
+                    "django": "Django/Jinja2",
+                    "jinja2": "Django/Jinja2",
+                    "dockerfile": "Docker",
+                    "erb": "ERB",
+                    "fsharp": "F#",
+                    "gcode": "G-code",
+                    "gedcom": "GEDCOM",
+                    "glsl": "GLSL",
+                    "gml": "GameMaker Language",
+                    "gamemakerlanguage": "GameMaker Language",
+                    "graphql": "GraphQL",
+                    "hcl": "HCL",
+                    "http": "HTTP",
+                    "hpkp": "HTTP Public-Key-Pins",
+                    "hsts": "HTTP Strict-Transport-Security",
+                    "ichigojam": "IchigoJam",
+                    "inform7": "Inform 7",
+                    "javastacktrace": "Java stack trace",
+                    "json": "JSON",
+                    "jsonp": "JSONP",
+                    "latex": "LaTeX",
+                    "emacs": "Lisp",
+                    "elisp": "Lisp",
+                    "emacs-lisp": "Lisp",
+                    "lolcode": "LOLCODE",
+                    "markup-templating": "Markup templating",
+                    "matlab": "MATLAB",
+                    "mel": "MEL",
+                    "n1ql": "N1QL",
+                    "n4js": "N4JS",
+                    "n4jsd": "N4JS",
+                    "nand2tetris-hdl": "Nand To Tetris HDL",
+                    "nasm": "NASM",
+                    "nginx": "nginx",
+                    "nsis": "NSIS",
+                    "objectivec": "Objective-C",
+                    "ocaml": "OCaml",
+                    "opencl": "OpenCL",
+                    "parigp": "PARI/GP",
+                    "objectpascal": "Object Pascal",
+                    "php": "PHP",
+                    "php-extras": "PHP Extras",
+                    "plsql": "PL/SQL",
+                    "powershell": "PowerShell",
+                    "properties": ".properties",
+                    "protobuf": "Protocol Buffers",
+                    "q": "Q (kdb+ database)",
+                    "jsx": "React JSX",
+                    "tsx": "React TSX",
+                    "renpy": "Ren'py",
+                    "rest": "reST (reStructuredText)",
+                    "sas": "SAS",
+                    "sass": "SASS (Sass)",
+                    "scss": "SASS (Scss)",
+                    "sql": "SQL",
+                    "soy": "Soy (Closure Template)",
+                    "tap": "TAP",
+                    "toml": "TOML",
+                    "tt2": "Template Toolkit 2",
+                    "ts": "TypeScript",
+                    "vbnet": "VB.Net",
+                    "vhdl": "VHDL",
+                    "vim": "vim",
+                    "visual-basic": "Visual Basic",
+                    "vb": "Visual Basic",
+                    "wasm": "WebAssembly",
+                    "wiki": "Wiki markup",
+                    "xeoracube": "XeoraCube",
+                    "xojo": "Xojo (REALbasic)",
+                    "xquery": "XQuery",
+                    "yaml": "YAML"
+                };
+     
+                var displayLangText = "";
+                if (lang in langMap) displayLangText = langMap[lang];
+                else displayLangText = lang;
+                if (item.find(".language-mark").length <= 0) {
+                    item.prepend(
+                        '<span class="language-mark" ref='+lang+'>'+displayLangText+'</span>');
+                }
+                
+            });
+        };
     }
 };
 
@@ -211,75 +339,11 @@ $(function() {
         $('body').addClass('touch')
     }
     if ($('#preview').length) {
-        var cover = {};
-        cover.t = $('#cover');
-        cover.w = cover.t.attr('width');
-        cover.h = cover.t.attr('height');
-        ;(cover.o = function() {
-            $('#mark').height(window.innerHeight)
-        })();
-        if (cover.t.prop('complete')) {
-            // why setTimeout ?
-            setTimeout(function() { cover.t.load() }, 0)
-        }
-        cover.t.on('load', function() {
-            ;(cover.f = function() {
-                var _w = $('#mark').width(), _h = $('#mark').height(), x, y, i, e;
-                e = (_w >= 1000 || _h >= 1000) ? 1000 : 500;
-                if (_w >= _h) {
-                    i = _w / e * 50;
-                    y = i;
-                    x = i * _w / _h;
-                } else {
-                    i = _h / e * 50;
-                    x = i;
-                    y = i * _h / _w;
-                }
-                $('.layer').css({
-                    'width': _w + x,
-                    'height': _h + y,
-                    'marginLeft': - 0.5 * x,
-                    'marginTop': - 0.5 * y
-                })
-                if (!cover.w) {
-                    cover.w = cover.t.width();
-                    cover.h = cover.t.height();
-                }
-                Obsidian.F($('#cover')[0], cover.w, cover.h)
-            })();
-            setTimeout(function() {
-                $('html, body').removeClass('loading')
-            }, 500)
-            $('#mark').parallax()
-            var vibrant = new Vibrant(cover.t[0]);
-            var swatches = vibrant.swatches()
-            if (swatches['DarkVibrant']) {
-                // $('#vibrant polygon').css('fill', swatches['DarkVibrant'].getHex())
-                $('#vibrant div').css('background-color', swatches['DarkVibrant'].getHex())
-            }
-            if (swatches['Vibrant']) {
-                $('.icon-menu').css('color', swatches['Vibrant'].getHex())
-            }
-        })
-        if (!cover.t.attr('src')) {
-            alert('Please set the post thumbnail')
-        }
-        $('#preview').css('min-height', window.innerHeight)
-        Obsidian.PS()
-        $('.pview a').addClass('pviewa')
-        var T;
-        $(window).on('resize', function() {
-            clearTimeout(T)
-            T = setTimeout(function() {
-                if (!Obsidian.P() && location.href == Home) {
-                    cover.o()
-                    cover.f()
-                }
-                if ($('#loader').attr('class')) {
-                    Obsidian.loading()
-                }
-            }, 300)
-        })
+        Obsidian.PS();
+        // $('.pview a').addClass('pviewa')
+        setTimeout(function() {
+            $('html, body').removeClass('loading')
+        }, 500);
     } else {
         $('#single').css('min-height', window.innerHeight)
         setTimeout(function() {
@@ -393,12 +457,13 @@ $(function() {
                 return false;
                 break;
             // history state
-            case (tag.indexOf('cover') != -1):
-                Obsidian.HS($(e.target).parent(), 'push')
+            case (tag.indexOf('posttitle') != -1):
+                Obsidian.HS($(e.target), 'push')
+                // initialArticleTyped();
                 return false;
                 break;
             // history state
-            case (tag.indexOf('posttitle') != -1):
+            case (tag.indexOf('menu-link') != -1):
                 Obsidian.HS($(e.target), 'push')
                 return false;
                 break;
@@ -505,6 +570,8 @@ $(function() {
     if (comment.data('ae') == true){
         comment.click();
     }
+    initialTyped();
+    Obsidian.setCodeRowWithLang();
     console.log("%c Github %c","background:#24272A; color:#73ddd7","","https://github.com/TriDiamond/hexo-theme-obsidian")
 })
 
