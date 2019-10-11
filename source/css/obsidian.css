@@ -448,12 +448,19 @@ body.mu .image-logo {
 }
 
 #pager a {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 5px;
-  color: #666;
-  border: 1px solid #dadada;
+  border: 5px solid rgba(255, 255, 255, 0.46);
+  border-radius: 10px;
   padding: 10px 40px;
-  background: #fff;
+  background: #100e17;
+  background: var(--primary) !important;
+  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
 }
 
 #loader {
@@ -1546,7 +1553,7 @@ h1.title {
   top: 0;
   left: 30%;
   width: 1200px;
-  height: 800px;
+  height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.85;
@@ -1654,9 +1661,12 @@ h1.title {
   align-content: flex-start;
   font-size: 12px;
   font-weight: 900;
+  line-height: 18px;
   color: #999;
 }
 .else .post-count span {
+  font-size: 12px;
+  line-height: 18px;
   margin-right: 15px;
   display: flex;
   justify-content: center;

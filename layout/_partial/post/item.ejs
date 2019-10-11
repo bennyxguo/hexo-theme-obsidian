@@ -7,23 +7,41 @@
     <div class="else">
         <p><%- post.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
         <h3><%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %></h3>
-        <p class="post-count">
-            <span>
-                <b class="iconfont icon-text2"></b>
-                <%= wordcount(post.content) %>字
-            </span>
-            <span>
-                <b class="iconfont icon-timer__s"></b>
-                <%= min2read(post.content) %>分钟
-            </span>
-        </p>
+        <% if (theme.symbols_count_time.enable) {%>
+            <p class="post-count animated fadeInDown">
+                <% if (theme.symbols_count_time.wordCount) { %>
+                    <span>
+                        <b class="iconfont icon-text2"></b>
+                        <%= symbolsCount(post.content) %>
+                    </span>
+                <% } %>
+                <% if (theme.symbols_count_time.readCount) { %>
+                    <span>
+                        <b class="iconfont icon-timer__s"></b>
+                        <%= symbolsTime(
+                                post.content,
+                                theme.symbols_count_time.awl,
+                                theme.symbols_count_time.wpm,
+                                theme.symbols_count_time.suffix
+                        ) %>
+                    </span>
+                <% } %>
+            </p>
+        <% } %>
         <div class="md-content">
-            <%- htmlTruncate(post.content, 500, {
-                ellipsis: '...',
-                excludes: ['img'],
-                keepWhitespaces: true,
-                reserveLastWord: true
-            }) %>
+            <% if (theme.html_truncate.enable) { %>
+                <%- htmlTruncate(post.content, theme.html_truncate.postLength, {
+                    ellipsis: theme.html_truncate.ellipsis,
+                    excludes: theme.html_truncate.excludes,
+                    keepWhitespaces: theme.html_truncate.keepWhitespaces,
+                    reserveLastWord: theme.html_truncate.reserveLastWord
+                }) %>
+            <% } else { %>
+                <%- truncate(strip_html(post.content), {
+                    length: 500,
+                    omission: '...'
+                }) %>
+            <% } %>
         </div>
         <% if (post.tags && post.tags.length){ %>
             <%- list_tags(post.tags, {

@@ -1,22 +1,22 @@
 # Hexo-theme-obsidian
-> A dark Hexo theme, it's responsive, simple but elegant.
+> 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
-**[PREVIEW](http://tridiamond.tech)** |
-**[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)**
+**[预览](http://tridiamond.tech)** |
+**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)**
 
 ![screenshot](https://s2.ax1x.com/2019/10/01/uNBcND.png)
 
-## Install
+## 安装
 
 ``` bash
 $ git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
 ```
 
-## Usage
+## 使用
 
-### Activate Theme
+### 启用主题
 
-Open `Hexo` config file `_config.yml`, set theme to `obsidian`
+打开 `Hexo` 配置文件 `_config.yml`, 设置主题为 `obsidian`
 
 ``` yaml
 ...
@@ -24,16 +24,16 @@ theme: obsidian
 ...
 ```
 
-### Theme settings
+### 主题配置
 
-Open `/themes/obsidian/_config.yml` can change the theme configs
+打开 `/themes/obsidian/_config.yml` 文件可以改变主题配置
 
 ``` yaml
 
 #! ---------------------------------------------------------------
-#! Obsidian theme use manual highlight.js
-#! To maintain the code block css display properly
-#! please change your default highlight setting as off!!
+#! Obsidian theme 使用手动启用 highlight.js 代码高亮
+#! 为了可以正常显示代码高亮的样式
+#! 请务必在hexo默认配置里面关闭highlight
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
@@ -43,58 +43,58 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 #! ---------------------------------------------------------------
 
 # ---------------------------------------------------------------
-# Theme default settings
+# 主题默认设置
 # ---------------------------------------------------------------
 
-# Menu setting | format = title_name: link_url
+# 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
   PAGE: /page
 
-# Enable table of content
+# 是否启用目录
 TOC: false
 
-# Home page first post default cover image, default use cover
+# 首页封面使用的封面图， 不配置默认使用cover配置的图片
 welcome_cover: /img/cover.jpg
 
-# Article default cover image
+# 文章默认封面图
 cover: /img/welcome-cover.jpg
 
-# Disable default scrollbar
+# 关闭默认滚动条
 scrollbar: true
 
-# Website keywords used for SEO
+# 网站的关键词，都好分割，用于SEO优化
 keywords: TriDiamond Obsidian
 
-# Website slogans
+# 网站口号
 descriptionOne: "Think like an artist, develop like an artisan"
 descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
 
-# If you use google analytics, please fill in the ID
+# 如果使用google analytics, 请填写ID
 google_analytics:
 
-# Website favicon
+# 网页图标
 favicon: /img/favicon.png
 
-# rss file
+# rss文件
 rss: atom.xml
 
 # ---------------------------------------------------------------
-# Article Music settings
+# 文章音乐设置
 # ---------------------------------------------------------------
 
-# Auto play article audio
+# 自动播放音乐
 autoplay: false
 
-# default mp3 file
+# 默认mp3文件
 mp3: 
   - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
-# Plugins
+# 主题插件
 # ---------------------------------------------------------------
 
-# Gitalk comment plugin
-# see https://github.com/gitalk/gitalk
+# Gitalk 评论插件
+# 查看 https://github.com/gitalk/gitalk
 gitalk:
   autoExpand: false
   clientID: ''
@@ -106,7 +106,7 @@ gitalk:
   id: location.pathname
   # Facebook-like distraction
 
-# Enable symbols-count-time plugin
+# 文章字数和阅读时间统计插件
 # see https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   enable: true
@@ -116,30 +116,30 @@ symbols_count_time:
   wpm: 275
   suffix: mins.
 
-# Enable html truncate
+# html截取插件（用于首页截取内容）
 # see https://github.com/TriDiamond/hexo-html-truncate
 html_truncate:
   enable: true
-  # Characters kept for posts
+  # 文章保留多少个字符
   postLength: 250
-  # Characters kept for cover posts
+  # 封面文章保留多少个字符
   coverLength: 100
+  # 省略符号
   ellipsis: '...'
-  # Excluding html tags
+  # 需要过滤的html标签
   excludes: ['img']
-  # Characters count including white spaces
+  # 截取时保留空白空格字符
   keepWhitespaces: true
-  # Reserving the last complete word, without breaking the word
+  # 截取到最后的时候保留完成的字（只对英文有用）
   reserveLastWord: true
   
 ```
 
-### Code block style
+### 代码块样式
 
-> Turn off default `highlight` to ensure code block style display properly. 
-  Because Obsidian theme use manual highlight.js
-  To maintain the code block css display properly
-  please change your default highlight setting as off.
+> 因为Obsidian theme 使用手动启用 highlight.js 代码高亮
+  为了可以正常显示代码高亮的样式
+  请务必在hexo默认配置里面关闭`highlight`。
 
 ```yaml
 ...
@@ -153,34 +153,34 @@ highlight:
 ...
 ```
 
-### Post template
+### 文章模版
 
-Post template settings
+文章模版设置
 
 ``` markdown
 
 title: My awesome title
 date: 2019-07-14 18:38:45
 categories:
-    - Category1
-    - Category2
+    - 分类1
+    - 分类2
 tags: 
-    - Tag1
-    - Tag2
+    - 标签1
+    - 标签2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 
 ```
 
-### Create categories page
+### 创建分类页
 
-Run Hexo command to generate categories page
+运行 Hexo 命令
 
 ```bash
 hexo new page categories
 ```
 
-Categories template
+分类模版
 
 ```
 title: categories
@@ -188,17 +188,17 @@ date: 2019-07-14 12:39:04
 type: "categories"
 ```
 
-> Theme will auto generate categories contents.
+> 主题会自动生成分类内容，模版里面留空不用改动就可以了。
 
-### Create tags page
+### 创建标签页
 
-Run Hexo command to generate tags page
+运行 Hexo 命令
 
 ```bash
 hexo new page tags
 ```
 
-Tags page template
+标签模版
 
 ```
 title: tags
@@ -206,11 +206,11 @@ date: 2014-12-22 12:39:04
 type: "tags"
 ```
 
-> Theme will auto generate tags contents.
+> 主题会自动生成标签内容，模版里面留空不用改动就可以了。
 
-## Update Theme
+## 更新主题
 
-> Please backup your `_config.yml` file before update
+> 更新前请先备份主题里的 `_config.yml` 文件
 
 ``` bash
 cd themes/osidian

@@ -10,16 +10,27 @@
         <div class="else">
             <p class="animated fadeInDown"><%- page.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
             <h3 class="animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
-            <p class="article-count animated fadeInDown">
-                <span>
-                    <b class="iconfont icon-text2"></b>
-                    <%= wordcount(page.content) %>字
-                </span>
-                <span>
-                    <b class="iconfont icon-timer__s"></b>
-                    <%= min2read(page.content) %>分钟
-                </span>
-            </p>
+            <% if (theme.symbols_count_time.enable) {%>
+                <p class="post-count animated fadeInDown">
+                    <% if (theme.symbols_count_time.wordCount) { %>
+                        <span>
+                        <b class="iconfont icon-text2"></b>
+                        <%= symbolsCount(page.content) %>
+                    </span>
+                    <% } %>
+                    <% if (theme.symbols_count_time.readCount) { %>
+                        <span>
+                        <b class="iconfont icon-timer__s"></b>
+                        <%= symbolsTime(
+                                page.content,
+                                theme.symbols_count_time.awl,
+                                theme.symbols_count_time.wpm,
+                                theme.symbols_count_time.suffix
+                        ) %>
+                    </span>
+                    <% } %>
+                </p>
+            <% } %>
             <% if (page.tags && page.tags.length){ %>
                 <%- list_tags(page.tags, {
                     show_count: false,

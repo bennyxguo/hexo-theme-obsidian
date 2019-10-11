@@ -1,0 +1,29 @@
+{
+  "name": "hexo-theme-obsidian",
+  "version": "1.0.0",
+  "description": " A noble dark obsidian style Hexo theme, it's responsive, hight quality, fancy, high class.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TriDiamond/hexo-theme-obsidian.git"
+  },
+  "keywords": [
+    "hexo-theme",
+    "hexo",
+    "obsidian",
+    "dark-theme"
+  ],
+  "author": "TriDiamond",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TriDiamond/hexo-theme-obsidian/issues"
+  },
+  "homepage": "https://github.com/TriDiamond/hexo-theme-obsidian#readme",
+  "private": true,
+  "devDependencies": {
+    "hexo-wordcount": "^6.0.1",
+    "hexo-html-truncate": "^1.0.0"
+  }
+}
