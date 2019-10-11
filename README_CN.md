@@ -2,7 +2,7 @@
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
 **[预览](http://tridiamond.tech)** |
-**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)**
+**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)**
 
 ![screenshot](https://s2.ax1x.com/2019/10/01/uNBcND.png)
 
