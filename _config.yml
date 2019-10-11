@@ -2,6 +2,8 @@
 #! Obsidian theme use manual highlight.js
 #! To maintain the code block css display properly
 #! please change your default highlight setting as off!!
+#! Rebuild files after you changed the config:
+#! `hexo clean && hexo g`
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false

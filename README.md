@@ -34,6 +34,8 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 #! Obsidian theme use manual highlight.js
 #! To maintain the code block css display properly
 #! please change your default highlight setting as off!!
+#! Rebuild files after you changed the config:
+#! `hexo clean && hexo g`
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
@@ -139,7 +141,7 @@ html_truncate:
 > Turn off default `highlight` to ensure code block style display properly. 
   Because Obsidian theme use manual highlight.js
   To maintain the code block css display properly
-  please change your default highlight setting as off.
+  please change your default highlight setting as off!!
 
 ```yaml
 ...
@@ -151,6 +153,12 @@ highlight:
   tab_replace:
 
 ...
+```
+
+> Rebuild files after you changed the config
+
+```bash
+hexo clean && hexo g
 ```
 
 ### Post template

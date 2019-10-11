@@ -153,6 +153,12 @@ highlight:
 ...
 ```
 
+> 修改了默认highlight配置后需要重新生成文件
+
+```bash
+hexo clean && hexo g
+```
+
 ### 文章模版
 
 文章模版设置
