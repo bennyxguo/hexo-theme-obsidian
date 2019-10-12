@@ -1,6 +1,7 @@
 <%- js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%>
 <%- js(['//lib.baomitu.com/jquery/1.8.3/jquery.min.js', 'js/plugin.js', 'js/obsidian.js', 'js/jquery.truncate.js'])%>
 <%- js(['//cdn.bootcss.com/typed.js/2.0.10/typed.min.js']) %>
+
 <%- partial('photoswipe') %>
 
 <% if (!config.highlightjs) { %>
@@ -37,3 +38,28 @@
         });
     }
 </script>
+
+<% if (theme.valine.enable) { %>
+    <%- js(['//unpkg.com/valine/dist/Valine.min.js']) %>
+    <script>
+
+        var valine = new Valine();
+
+        function initValine() {
+            valine.init({
+                el: '#vcomments',
+                appId: '<%- theme.valine.app_id %>',
+                appKey: '<%- theme.valine.app_key %>',
+                notify: '<%- theme.valine.notify %>',
+                verify: '<%- theme.valine.verify %>',
+                avatar: '<%- theme.valine.avatar %>',
+                placeholder: '<%- theme.valine.placeholder %>',
+                visitor: <%- theme.valine.visitor %>
+            });
+        }
+
+        $(document).ready(function () {
+            initValine();
+        })
+    </script>
+<% } %>

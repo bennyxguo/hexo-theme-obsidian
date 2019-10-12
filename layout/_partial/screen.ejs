@@ -45,6 +45,12 @@
                         ) %>
                     </span>
                 <% } %>
+                <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+                    <span id="<%- '/' + first.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                        <b class="iconfont icon-read"></b>
+                        <i class="leancloud-visitors-count">1000000</i>
+                    </span>
+                <% } %>
             </p>
         <% } %>
         <div class="md-content animated fadeIn">

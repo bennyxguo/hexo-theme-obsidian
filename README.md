@@ -2,7 +2,9 @@
 > A dark Hexo theme, it's responsive, simple but elegant.
 
 **[PREVIEW](http://tridiamond.tech)** |
-**[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)**
+**[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
+**[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+
 
 ![screenshot](https://s2.ax1x.com/2019/10/01/uNBcND.png)
 
@@ -53,13 +55,16 @@ menu:
   PAGE: /page
 
 # Enable table of content
-TOC: false
+TOC: true
 
 # Home page first post default cover image, default use cover
 welcome_cover: /img/cover.jpg
 
 # Article default cover image
 cover: /img/welcome-cover.jpg
+
+# Avatar
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
 
 # Disable default scrollbar
 scrollbar: true
@@ -98,6 +103,7 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
+  enable: false
   autoExpand: false
   clientID: ''
   clientSecret: ''
@@ -107,6 +113,18 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+
+# Valine comment plugin (recommended!)
+# see https://valine.js.org/quickstart.html
+valine:
+  enable: true
+  app_id:
+  app_key:
+  notify: false
+  verify: false
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
+  visitor: true
 
 # Enable symbols-count-time plugin
 # see https://github.com/theme-next/hexo-symbols-count-time

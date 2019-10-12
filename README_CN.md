@@ -2,7 +2,8 @@
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
 **[预览](http://tridiamond.tech)** |
-**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)**
+**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
+**[更新日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 ![screenshot](https://s2.ax1x.com/2019/10/01/uNBcND.png)
 
@@ -51,13 +52,16 @@ menu:
   PAGE: /page
 
 # 是否启用目录
-TOC: false
+TOC: true
 
 # 首页封面使用的封面图， 不配置默认使用cover配置的图片
 welcome_cover: /img/cover.jpg
 
 # 文章默认封面图
 cover: /img/welcome-cover.jpg
+
+# 文章内的默认头像
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
 
 # 关闭默认滚动条
 scrollbar: true
@@ -105,6 +109,18 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+
+# Valine 评论插件 (推荐使用!)
+# 查看 https://valine.js.org/quickstart.html
+valine:
+  enable: true
+  app_id:
+  app_key:
+  notify: false
+  verify: false
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
+  visitor: true
 
 # 文章字数和阅读时间统计插件
 # see https://github.com/theme-next/hexo-symbols-count-time

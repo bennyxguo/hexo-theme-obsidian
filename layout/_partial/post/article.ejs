@@ -29,6 +29,12 @@
                         ) %>
                     </span>
                     <% } %>
+                    <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+                        <span id="<%- '/' + page.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                            <b class="iconfont icon-read"></b>
+                            <i class="leancloud-visitors-count">1000000</i>
+                        </span>
+                    <% } %>
                 </p>
             <% } %>
             <% if (page.tags && page.tags.length){ %>
@@ -53,9 +59,9 @@
     </div>
 </div>
 
-<div class="article animated fadeIn">
+<div class="article">
     <div class='main'>
-        <div class="content markdown">
+        <div class="content markdown animated fadeIn slower">
             <%- page.content %>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="<%- theme.autoplay || page.autoplay || "false" %>">
@@ -72,13 +78,38 @@
                     <%}%>
                 </ul>
             <%}%>
+            <% if (theme.gitalk.enable == true){%>
+                <%- partial('gitalk', {post: page}) %>
+            <% } %>
+            <% if (theme.valine.enable == true){%>
+                <div id="vcomments"></div>
+            <% } %>
         </div>
-        <%- partial('gitalk', {post: page}) %>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="<%- theme.avatar %>" height=300 width=300></img>
+                    <p><%- config.author %></p>
+                    <span><%- theme.descriptionOne %></span>
+                </div>
+                <ul>
+                    <li><a href="/"><%- site.posts.length %> <p>文章</p></a></li>
+                    <li><a href="/categories"><%- site.categories.length %> <p>分类</p></a></li>
+                    <li><a href="/tags"><%- site.tags.length %> <p>标签</p></a></li>
+                </ul>
+            </div>
+            <% if (theme.TOC == true) { %>
+                <% toc = toc(page.content, {list_number: true}) %>
+                <% if (toc.length > 1) { %>
+                    <div class="box sticky animated fadeInRight faster">
+                        <div id="toc" class="subbox">
+                            <h4>目录</h4>
+                            <%- toc %>
+                        </div>
+                    </div>
+                <%}%>
+            <%}%>
+        </div>
     </div>
-    <% if (theme.TOC == true){ %>
-        <div class='side'>
-            <%- toc(page.content, {list_number: true}) %>
-        </div>
-    <%}%>
 </div>
 

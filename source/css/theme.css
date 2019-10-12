@@ -9,6 +9,8 @@
 
   --code-gradient-light: #cff0ff;
   --code-gradient-dark: #afcafd;
+
+  --maxWidth: 1284px;
 }
 
 .gradient-text {
