@@ -19,6 +19,11 @@
 # Menu setting | format = title_name: link_url
 menu:
   PAGE: /page
+# Social media links
+socials:
+  github: "https://github.com/TriDiamond"
+  twitter: "https://twitter.com/TriDiamond6"
+  stackoverflow: "https://stackoverflow.com/users/7602324/tridiamond?tab=profile"
 
 # Enable table of content
 TOC: true

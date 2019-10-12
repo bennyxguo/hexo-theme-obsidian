@@ -1332,13 +1332,50 @@ h1.title {
   top: calc(1rem + 61px);
 }
 
+.article .sidebar .subbox dl {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  font-weight: 900;
+  margin-block-start: 1.2em;
+  margin-block-end: 0;
+}
+
+.article .sidebar .box .subbox dl dd {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  margin-inline-start: 0;
+  line-height: 28px;
+  transition: all 800ms linear;
+}
+
+.article .sidebar .box .subbox dl dd a:hover,
+.article .sidebar .box .subbox dl dd a span:hover,
+.article .sidebar .box .subbox dl dd:hover {
+  color: #100e17;
+}
+
+.article .sidebar .box .subbox dl dd:nth-last-of-type(2) {
+  padding-top: 2px;
+}
+
+.article .sidebar .box .subbox dl dd a,
+.article .sidebar .box .subbox dl dd a span {
+  font-size: 28px;
+  line-height: 28px;
+  padding-top: 0;
+}
+
 .article .sidebar .box ul {
   position: relative;
   top: 1.2rem;
   right: -1rem;
   display: grid;
   grid-template-columns: 100px 100px 100px;
-  font-weight: 900px;
+  font-weight: 900;
   font-size: 18px;
 }
 
@@ -1346,6 +1383,11 @@ h1.title {
   display: block;
   max-width: 100%;
   text-align: center;
+  border-right: 1px solid rgba(158, 158, 158, 0.16);
+}
+
+.article .sidebar .box ul li:last-of-type {
+  border-right: none;
 }
 
 .article .sidebar .box ul li p {
@@ -1472,6 +1514,13 @@ h1.title {
 
 #vcomments.v .vwrap {
   border: none;
+}
+
+.article p.image-caption {
+  color: #9E9E9E;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .article-header-wrapper {
@@ -1753,6 +1802,50 @@ h1.title {
   font-family: operator mono ssm a,operator mono ssm b,operator mono,source code pro,Menlo,Consolas,Monaco,monospace;
 }
 
+.md-content p,
+.md-content pre,
+.md-content blockquote {
+  margin: 0 0 2em;
+}
+
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4 {
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+}
+
+.md-content blockquote > p {
+  margin: 0;
+}
+
+.md-content hr {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 0;
+  font-size: 28px;
+  font-weight: 300;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  border: none;
+  text-align: center;
+  color: rgba(102, 128, 153, 1);
+  /*border-top: 1px solid rgba(102, 128, 153, 0.1)*/
+}
+
+.md-content hr:before {
+  content: "...";
+  line-height: 1.4;
+  font-style: italic;
+  text-indent: 0.6em;
+  letter-spacing: 0.6em;
+}
+
 #post0 .md-content {
   color:#fff;
   font-size: 16px;
@@ -1935,14 +2028,33 @@ h4 a:hover {
 }
 
 .content hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid rgba(102, 128, 153, 0.1)
+  font-size: 28px;
+  font-weight: 300;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  border: none;
+  text-align: center;
+  color: rgba(102, 128, 153, 0.6);
+  /*border-top: 1px solid rgba(102, 128, 153, 0.1)*/
+}
+
+.content hr:before {
+  content: "...";
+  line-height: 1.4;
+  font-style: italic;
+  text-indent: 0.6em;
+  letter-spacing: 0.6em;
 }
 
 .content p {
-  margin: 0 0 .8em;
+  margin: 0 0 2em;
 }
 
 .content ul,
@@ -1994,9 +2106,17 @@ h4 a:hover {
   font-size: 0.9rem;
 }
 
+.content img {
+  border-radius: 8px;
+}
+
 code,
 pre {
   font-family: "Source Code Pro", monospace
+}
+
+pre {
+  margin: 2em 0;
 }
 
 code {
@@ -2008,7 +2128,7 @@ code {
   overflow-wrap: break-word;
   word-wrap: break-word;
   padding: .1rem .3rem .2rem;
-  border-radius: .2rem;
+  border-radius: 8px;
   opacity: 0.9;
 }
 
@@ -2020,7 +2140,7 @@ code {
 
 .content blockquote {
   color: #656565;
-  margin: 0 0 1.1em;
+  margin: 0 0 2em;
   border-left: 3px solid var(--code-gradient-light);
   border-left-width: 6px;
   background-color: rgba(119, 119, 119, 0.05);

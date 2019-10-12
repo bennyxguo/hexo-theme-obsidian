@@ -1,3 +1,8 @@
+/**
+ * Watch the TOC during scroll and fill in active status
+ * @param {} menuSelector 
+ * @param {*} options 
+ */
 function scrollSpy(menuSelector, options) {
     var menu = $(menuSelector);
     if(!menu)
@@ -26,12 +31,24 @@ function scrollSpy(menuSelector, options) {
             for(var target = menu.find("[href='#" + id + "']");
                 target.length && !target.is(menu);
                 target = target.parent()) {
-                if(target.is("li"))
-                    newActive.push(target[0]);
-            }
+                    if(target.is("li"))
+                        newActive.push(target[0]);
+                }
             active = $(newActive).addClass(activeClassName).trigger("scrollspy");
             lastId = id;
         }
+    });
+}
+
+/**
+ * Buidling the caption html in an aritle
+ */
+function buildImgCaption () {
+    var images = $('.content').find('img');
+
+    images.each(function () {
+        var caption = $(this).attr('alt');
+        $('.content').find("[alt='" + caption + "']").parent().append('<p class="image-caption">"' + caption + '"</p>');
     });
 }
 
@@ -119,19 +136,17 @@ var Obsidian = {
                 case 'push':
                     history.pushState(state, title, url)
                     $('#preview').html($(data).filter('#single'));
-                    Obsidian.preview();
                     break;
                 case 'replace':
                     history.replaceState(state, title, url)
                     $('#preview').html($(data).filter('#single'));
-                    Obsidian.preview();
                     break;
             }
             document.title = title;
             $('#preview').html($(data).filter('#single'))
             switch (flag) {
                 case 'push':
-                    Obsidian.preview()
+                    Obsidian.preview();
                     break;
                 case 'replace':
                     Obsidian.initArticleJs();
@@ -168,6 +183,7 @@ var Obsidian = {
                     'position': 'static',
                     // 'overflow-y': 'auto'
                 });
+                console.log('preivew', 'initArticleJs')
                 Obsidian.initArticleJs();
             }, 500);
         }, 0);
@@ -245,7 +261,8 @@ var Obsidian = {
         });
         Obsidian.setCodeRowWithLang();
         Obsidian.tocSpy(200);
-        initValine()
+        initValine();
+        buildImgCaption();
     },
     setCodeRowWithLang: function() {
         // Get the programming type of the current code block
@@ -635,6 +652,7 @@ $(function() {
     }
     if ($('.article').length) {
         Obsidian.tocSpy(200);
+        buildImgCaption();
     }
     initialTyped();
     Obsidian.setCodeRowWithLang();
