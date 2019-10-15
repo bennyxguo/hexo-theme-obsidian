@@ -1,5 +1,16 @@
-# Hexo-theme-obsidian <sup>v1.2.0</sup>
+<style>
+    .tag {
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-weigth: 900;
+        font-size: 12px;
+    }
+</style>
+
+# Hexo-theme-obsidian
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
+
+<span class="tag">最新版本: v1.2.0</span>
 
 **[预览](http://tridiamond.tech)** |
 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
