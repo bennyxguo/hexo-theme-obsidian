@@ -1,18 +1,8 @@
-<style>
-    .tag {
-        padding: 5px 10px;
-        border-radius: 8px;
-        font-weigth: 900;
-        font-size: 12px;
-    }
-</style>
-
 # Hexo-theme-obsidian
 > A dark Hexo theme, it's responsive, simple but elegant.
+>> 最新版本: v1.2.0
 
-<span class="tag">Latest version: v1.2.0</span>
-
-**[PREVIEW](http://tridiamond.tech)** |
+**[PREVIEW](http://tridiamond.me)** |
 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
