@@ -1,4 +1,4 @@
-# Hexo-theme-obsidian
+# Hexo-theme-obsidian <sup>v1.2.0</sup>
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
 **[预览](http://tridiamond.tech)** |
@@ -173,6 +173,26 @@ highlight:
 
 ```bash
 hexo clean && hexo g
+```
+
+### 文章展示字符数控制
+
+文章里面的参数`preview`控制在首页展示时保留的字符数
+
+``` markdown
+
+title: My awesome title
+date: 2019-07-14 18:38:45
+categories:
+    - Category1
+    - Category2
+tags: 
+    - Tag1
+    - Tag2
+mp3: http://domain.com/awesome.mp3
+cover: http://domain.com/awesome.jpg
+preview: 300
+
 ```
 
 ### 文章模版

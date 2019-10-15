@@ -22,3 +22,15 @@
   -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
 }
+
+.gradient-bg {
+  background: var(--primary) !important;
+  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+}
+
+.gradient-bg-rev {
+  background: var(--primary) !important;
+  background: -webkit-linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
+  background: linear-gradient(to right, var(--dark), var(--secondary), var(--primary)) !important;
+}

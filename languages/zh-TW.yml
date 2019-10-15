@@ -1,3 +1,4 @@
+articles: 文章
 categories: 分類
 search: 搜尋
 tags: 標籤
@@ -17,3 +18,11 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+time_suffix: mins.
+load_more: Load more
+loading: Loading...
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed

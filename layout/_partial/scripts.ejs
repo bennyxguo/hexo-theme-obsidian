@@ -4,6 +4,19 @@
 
 <%- partial('photoswipe') %>
 
+<% if (theme.google_analytics) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.google_analytics %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '<%- theme.google_analytics %>');
+    </script>
+<% } %>
+
+
 <% if (!config.highlightjs) { %>
     <!-- Highlight.js -->
     <%- css(['css/dracula.css'])%>
@@ -46,6 +59,12 @@
         var valine = new Valine();
 
         function initValine() {
+            let language = '<%- config.language %>';
+            if (!language) {
+                language = 'en';
+            } else {
+                language = language.toLowerCase();
+            }
             valine.init({
                 el: '#vcomments',
                 appId: '<%- theme.valine.app_id %>',
@@ -54,12 +73,13 @@
                 verify: '<%- theme.valine.verify %>',
                 avatar: '<%- theme.valine.avatar %>',
                 placeholder: '<%- theme.valine.placeholder %>',
-                visitor: <%- theme.valine.visitor %>
+                visitor: '<%- theme.valine.visitor %>',
+                lang: language
             });
         }
 
         $(document).ready(function () {
             initValine();
-        })
+        });
     </script>
 <% } %>

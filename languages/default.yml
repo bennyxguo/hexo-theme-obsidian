@@ -1,3 +1,4 @@
+articles: Articles
 categories: Categories
 search: Search
 tags: Tags
@@ -20,3 +21,10 @@ tag: Tag
 nav.category: Category
 nav.tag: Tag
 nav.archive: Archive
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed

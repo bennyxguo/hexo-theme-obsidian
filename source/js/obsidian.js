@@ -41,6 +41,20 @@ function scrollSpy(menuSelector, options) {
 }
 
 /**
+ * Utilise the background color to avoid scrolling flashes
+ */
+function utiliseBgColor()
+{
+    setTimeout(function () {
+        if ($("#single").length) {
+            $('html').css('background', '#fff');
+        } else {
+            $('html').css('background', '#100e17');
+        }
+    }, 500)
+}
+
+/**
  * Buidling the caption html in an aritle
  */
 function buildImgCaption () {
@@ -263,6 +277,7 @@ var Obsidian = {
         Obsidian.tocSpy(200);
         initValine();
         buildImgCaption();
+        utiliseBgColor('article');
     },
     setCodeRowWithLang: function() {
         // Get the programming type of the current code block
@@ -431,21 +446,92 @@ $(function() {
         $('.icon-icon, .image-icon').attr('href', '/')
         $('#top').show()
     }
-    $(window).on('scroll', function() {
-        if ($('.scrollbar').length && !Obsidian.P() && !$('.icon-images').hasClass('active')) {
-            var wt = $(window).scrollTop(),
-                tw  = $('#top').width(),
-                dh = document.body.scrollHeight,
-                wh  = $(window).height();
-            var width = tw / (dh - wh) * wt;
-            $('.scrollbar').width(width)
-            if (wt > 80 && window.innerWidth > 800) {
-                $('.subtitle').fadeIn()
-            } else {
-                $('.subtitle').fadeOut()
+    (() => {
+        'use strict'
+
+        let refOffset = 0;
+        let articleRefOffset = 0;
+        const articleMenuHeight = 51;
+        const menuHeight = 70;
+        const header = document.querySelector('#header');
+
+        const handler = () => {
+            const newOffset = window.scrollY || window.pageYOffset;
+            if ($('#header').length && !$('.scrollbar').length) {
+                if (newOffset > menuHeight) {
+                    if (newOffset > refOffset) {
+                        header.classList.remove('animateIn');
+                        header.classList.add('animateOut');
+                    } else {
+                        header.classList.remove('animateOut');
+                        header.classList.add('animateIn');
+                    }
+                    header.style.paddingTop = '20px';
+                    header.style.background = 'rgba(16,14,23,.86)';
+                    header.style.borderBottom = '1px solid #201c29';
+                    refOffset = newOffset;
+                } else {
+                    header.style.paddingTop = '70px';
+                    header.style.background = 'transparent';
+                    header.style.borderBottom = '0px';
+                }
+            }
+            const topHeader = document.querySelector('#top');
+            if (topHeader && $('.scrollbar').length && !Obsidian.P() && !$('.icon-images').hasClass('active')) {
+                if (newOffset > articleMenuHeight) {
+                    if (newOffset > articleRefOffset) {
+                        topHeader.classList.remove('animateIn');
+                        topHeader.classList.add('animateOut');
+                        $('.subtitle').fadeOut()
+                    } else {
+                        topHeader.classList.remove('animateOut');
+                        topHeader.classList.add('animateIn');
+                        $('.subtitle').fadeIn()
+                    }
+                    articleRefOffset = newOffset;
+                } else {
+                    $('.subtitle').fadeOut()
+                }
+                var wt = $(window).scrollTop(),
+                    tw  = $('#top').width(),
+                    dh = document.body.scrollHeight,
+                    wh  = $(window).height();
+                var width = tw / (dh - wh) * wt;
+                $('.scrollbar').width(width)
+            }
+
+            var scrollTop = $(window).scrollTop();
+            var docHeight = $(document).height();
+            var winHeight = $(window).height();
+            var winWidth = $(window).width();
+            var scrollPercent = (scrollTop) / (docHeight - winHeight);
+            var scrollPercentRounded = Math.round(scrollPercent*100);
+            var backToTopState = $('#back-to-top').css('display');
+
+            $('#back-to-top').find('.percentage').html(scrollPercentRounded + '%');
+            $('#back-to-top').find('.flow').css('height', scrollPercentRounded + '%');
+
+            if (winWidth >= 920) {
+                if (scrollPercentRounded > 10) {
+                    if (backToTopState === 'none') {
+                        $('#back-to-top').removeClass('fadeOutRight');
+                        $('#back-to-top').addClass('fadeInRight');
+                        $('#back-to-top').css('display', 'block');
+                    }
+                } else {
+                    if (backToTopState === 'block') {
+                        setTimeout(function () {
+                            $('#back-to-top').css('display', 'none');
+                        }, 400)
+                        $('#back-to-top').removeClass('fadeInRight');
+                        $('#back-to-top').addClass('fadeOutRight');
+                    }
+                }
             }
         }
-    })
+
+        window.addEventListener('scroll', handler, false);
+    })($);
     $(window).on('touchmove', function(e) {
         if ($('body').hasClass('mu')) {
             e.preventDefault()
@@ -460,6 +546,11 @@ $(function() {
         }
         if (!tag && !rel) return;
         switch (true) {
+            case (tag.indexOf('icon-top02') != -1):
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 300);
+                break;
             // nav menu
             case (tag.indexOf('switchmenu') != -1):
                 window.scrollTo(0, 0)
@@ -645,15 +736,24 @@ $(function() {
                 break;
         }
     })
+
     // 是否自动展开评论
     comment = $("#gitalk-container");
     if (comment.data('ae') == true){
         comment.click();
     }
+
     if ($('.article').length) {
         Obsidian.tocSpy(200);
         buildImgCaption();
     }
+
+    // Watch window history changes
+    window.onpopstate = function(event) {
+        utiliseBgColor();
+    };
+
+    utiliseBgColor();
     initialTyped();
     Obsidian.setCodeRowWithLang();
     console.log("%c Github %c","background:#24272A; color:#73ddd7","","https://github.com/TriDiamond/hexo-theme-obsidian")

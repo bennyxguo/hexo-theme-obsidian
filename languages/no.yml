@@ -1,3 +1,4 @@
+articles: Articles
 categories: Kategorier
 search: Søk
 tags: Tags
@@ -17,3 +18,10 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed

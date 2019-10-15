@@ -8,7 +8,7 @@
                 url(<%- page.cover || theme.welcome_cover %>);">
         </div>
         <div class="else">
-            <p class="animated fadeInDown"><%- page.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
+            <p class="animated fadeInDown"><%- page.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
             <h3 class="animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
             <% if (theme.symbols_count_time.enable) {%>
                 <p class="post-count animated fadeInDown">
@@ -98,9 +98,9 @@
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/"><%- site.posts.length %> <p>文章</p></a></li>
-                    <li><a href="/categories"><%- site.categories.length %> <p>分类</p></a></li>
-                    <li><a href="/tags"><%- site.tags.length %> <p>标签</p></a></li>
+                    <li><a href="/"><%- site.posts.length %> <p><%= __('articles') %></p></a></li>
+                    <li><a href="/categories"><%- site.categories.length %> <p><%= __('categories') %></p></a></li>
+                    <li><a href="/tags"><%- site.tags.length %> <p><%= __('tags') %></p></a></li>
                 </ul>
             </div>
             <% if (theme.TOC == true) { %>
@@ -108,7 +108,7 @@
                 <% if (toc.length > 1) { %>
                     <div class="box sticky animated fadeInRight faster">
                         <div id="toc" class="subbox">
-                            <h4>目录</h4>
+                            <h4><%= __('toc') %></h4>
                             <%- toc %>
                         </div>
                     </div>

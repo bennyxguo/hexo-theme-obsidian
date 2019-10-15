@@ -24,7 +24,7 @@
     </div>
     <% if ( first ) { %>
     <div id="post0">
-        <p class="animated fadeInDown"><%- first.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
+        <p class="animated fadeInDown"><%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
         <h1 class="animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h1>
         <% if (theme.symbols_count_time.enable) {%>
             <p class="post-count animated fadeInDown">
@@ -67,6 +67,7 @@
                     omission: '...'
                 }) %>
             <% } %>
+            <span class="read-more gradient-text"><%- link_to(first.path, __('read_article', 'Read article'), {class: "posttitle"}) %></span>
         </div>
         <% if (first.tags && first.tags.length){ %>
             <%- list_tags(first.tags, {
@@ -83,7 +84,7 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                  <span class="typed-text"></span>  
+                  <span class="typed-text"></span>
                 </p> 
             </div>
         </div>

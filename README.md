@@ -1,4 +1,4 @@
-# Hexo-theme-obsidian
+# Hexo-theme-obsidian <sup>v1.2.0</sup>
 > A dark Hexo theme, it's responsive, simple but elegant.
 
 **[PREVIEW](http://tridiamond.tech)** |
@@ -177,6 +177,26 @@ highlight:
 
 ```bash
 hexo clean && hexo g
+```
+
+### Preview character length
+
+This post parameter changes how many characters are kept for the preview at home page.
+
+``` markdown
+
+title: My awesome title
+date: 2019-07-14 18:38:45
+categories:
+    - Category1
+    - Category2
+tags: 
+    - Tag1
+    - Tag2
+mp3: http://domain.com/awesome.mp3
+cover: http://domain.com/awesome.jpg
+preview: 300
+
 ```
 
 ### Post template

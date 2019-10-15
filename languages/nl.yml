@@ -1,4 +1,4 @@
-
+articles: Articles
 categories: Categorieën
 search: Zoeken
 tags: Labels
@@ -18,3 +18,10 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Categorie
 tag: Label
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed

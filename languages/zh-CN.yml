@@ -1,3 +1,4 @@
+articles: 文章
 categories: 分类
 search: 搜索
 tags: 标签
@@ -20,3 +21,11 @@ tag: Tag
 nav.category: 分类
 nav.tag: 标签
 nav.archive: 归档
+time_suffix: 分钟
+load_more: 加载更多
+loading: 加载中...
+toc: 目录
+read_article: 查看全文
+pv: 浏览量
+uv: 访客数
+readed: 已读

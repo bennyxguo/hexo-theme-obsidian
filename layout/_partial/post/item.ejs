@@ -5,7 +5,7 @@
             url(<%- post.cover || theme.cover %>);">
     </div>
     <div class="else">
-        <p><%- post.date.locale("zh-cn").format("MMMM DD, YYYY") %></p>
+        <p><%- post.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
         <h3><%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %></h3>
         <% if (theme.symbols_count_time.enable) {%>
             <p class="post-count animated fadeInDown">
@@ -48,6 +48,7 @@
                     omission: '...'
                 }) %>
             <% } %>
+                <span class="read-more gradient-text"><%- link_to(post.path, __('read_article', 'Read article'), {class: "posttitle"}) %></span>
         </div>
         <% if (post.tags && post.tags.length){ %>
             <%- list_tags(post.tags, {
