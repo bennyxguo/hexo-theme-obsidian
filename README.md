@@ -1,4 +1,7 @@
 # Hexo-theme-obsidian
+
+[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > A dark Hexo theme, it's responsive, simple but elegant.
 >> 最新版本: v1.2.0
 
