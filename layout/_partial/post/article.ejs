@@ -8,8 +8,11 @@
                 url(<%- page.cover || theme.welcome_cover %>);">
         </div>
         <div class="else">
-            <p class="animated fadeInDown"><%- page.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
-            <h3 class="animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
+            <p class="animated fadeInDown">
+                <a href="<%- '/categories/' + page.categories.data[0].name %>"><b>「 </b><%- page.categories.data[0].name.toUpperCase() %><b> 」</b> </a>
+                <%- page.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+            </p>
+            <h3 class="post-title animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %></h3>
             <% if (theme.symbols_count_time.enable) {%>
                 <p class="post-count animated fadeInDown">
                     <% if (theme.symbols_count_time.wordCount) { %>

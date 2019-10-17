@@ -35,7 +35,7 @@ welcome_cover: /img/cover.jpg
 cover: /img/welcome-cover.jpg
 
 # Avatar
-avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
+avatar: https://res.cloudinary.com/tridiamond/image/upload/v1571154379/TriDiamondLogoCircleLighting_llbad2.png
 
 # Disable default scrollbar
 scrollbar: true
@@ -117,7 +117,7 @@ html_truncate:
   coverLength: 100
   ellipsis: '...'
   # Excluding html tags
-  excludes: ['img']
+  excludes: ['img', 'h1', 'h2']
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word

@@ -9,7 +9,7 @@
             </li>
             <%}%>
         </ul>
-        <div class="icon-menu switchmenu gradient-text animated fadeInDown"></div>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
     </div>
 </div>
 <div id="screen">
@@ -23,9 +23,12 @@
         </div>
     </div>
     <% if ( first ) { %>
-    <div id="post0">
-        <p class="animated fadeInDown"><%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
-        <h1 class="animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h1>
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「 </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+            <%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+        </p>
+        <h3 class="post-title animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h3>
         <% if (theme.symbols_count_time.enable) {%>
             <p class="post-count animated fadeInDown">
                 <% if (theme.symbols_count_time.wordCount) { %>
@@ -53,6 +56,12 @@
                 <% } %>
             </p>
         <% } %>
+        <% if (first.tags && first.tags.length){ %>
+            <%- list_tags(first.tags, {
+                show_count: false,
+                class: 'animated fadeInDown post-tags'
+            }) %>
+        <% } %>
         <div class="md-content animated fadeIn">
             <% if (theme.html_truncate.enable) { %>
                 <%- htmlTruncate(first.content, first.preview || theme.html_truncate.coverLength, {
@@ -69,12 +78,6 @@
             <% } %>
             <span class="read-more gradient-text"><%- link_to(first.path, __('read_article', 'Read article'), {class: "posttitle"}) %></span>
         </div>
-        <% if (first.tags && first.tags.length){ %>
-            <%- list_tags(first.tags, {
-                show_count: false,
-                class: 'animated fadeInDown post-tags'
-            }) %>
-        <% } %>
     </div>
     <% } %>
 </div>

@@ -1,26 +1,32 @@
 /**
+ * Hexo-obsidian-theme
+ * @author Guo Xiang - @TriDiamond
+ * @description Use for hexo obsidian theme
+ */
+
+/**
  * Watch the TOC during scroll and fill in active status
- * @param {} menuSelector 
- * @param {*} options 
+ * @param {} menuSelector
+ * @param {*} options
  */
 function scrollSpy(menuSelector, options) {
     var menu = $(menuSelector);
-    if(!menu)
+    if (!menu)
         return;
     options = options || {};
     var offset = options.offset || 0;
     var activeClassName = options.activeClassName || "active";
 
-    var scollTarget = $(".content :header").find("a.headerlink"), 
-        lastId = null, 
+    var scollTarget = $(".content :header").find("a.headerlink"),
+        lastId = null,
         active = $();
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         // Get container scroll position
         var fromTop = $(this).scrollTop() + offset;
 
         // Get id of current scroll item
-        var id = scollTarget.filter(function() {
+        var id = scollTarget.filter(function () {
             return $(this).offset().top < fromTop;
         }).last().parent().attr("id") || "";
 
@@ -28,12 +34,12 @@ function scrollSpy(menuSelector, options) {
             active.removeClass(activeClassName);
             var newActive = [];
 
-            for(var target = menu.find("[href='#" + id + "']");
-                target.length && !target.is(menu);
-                target = target.parent()) {
-                    if(target.is("li"))
-                        newActive.push(target[0]);
-                }
+            for (var target = menu.find("[href='#" + id + "']");
+                 target.length && !target.is(menu);
+                 target = target.parent()) {
+                if (target.is("li"))
+                    newActive.push(target[0]);
+            }
             active = $(newActive).addClass(activeClassName).trigger("scrollspy");
             lastId = id;
         }
@@ -43,8 +49,7 @@ function scrollSpy(menuSelector, options) {
 /**
  * Utilise the background color to avoid scrolling flashes
  */
-function utiliseBgColor()
-{
+function utiliseBgColor() {
     setTimeout(function () {
         if ($("#single").length) {
             $('html').css('background', '#fff');
@@ -57,7 +62,7 @@ function utiliseBgColor()
 /**
  * Buidling the caption html in an aritle
  */
-function buildImgCaption () {
+function buildImgCaption() {
     var images = $('.content').find('img');
 
     images.each(function () {
@@ -72,7 +77,7 @@ var Home = location.href,
     xhrUrl = '';
 
 var Obsidian = {
-    L: function(url, f, err) {
+    L: function (url, f, err) {
         if (url == xhrUrl) {
             return false;
         }
@@ -84,11 +89,11 @@ var Obsidian = {
             type: 'GET',
             url: url,
             timeout: 10000,
-            success: function(data) {
+            success: function (data) {
                 f(data);
                 xhrUrl = '';
             },
-            error: function(a, b, c) {
+            error: function (a, b, c) {
                 if (b == 'abort') {
                     err && err()
                 } else {
@@ -98,42 +103,44 @@ var Obsidian = {
             }
         });
     },
-    P: function() {
+    P: function () {
         return !!('ontouchstart' in window);
     },
-    PS: function() {
-        if (!(window.history && history.pushState)){
+    PS: function () {
+        if (!(window.history && history.pushState)) {
             return;
         }
         history.replaceState({u: Home, t: document.title}, document.title, Home);
-        window.addEventListener('popstate', function(e) {
+        window.addEventListener('popstate', function (e) {
             var state = e.state;
             if (!state) return;
             document.title = state.t;
 
             if (state.u == Home) {
                 $('#preview').css('position', 'fixed');
-                setTimeout(function() {
+                setTimeout(function () {
                     $('#preview').removeClass('show');
                     $('#container').show();
                     window.scrollTo(0, parseInt($('#container').data('scroll')));
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('#preview').html('');
                         $(window).trigger('resize');
                     }, 300);
                 }, 0);
             } else {
                 Obsidian.loading();
-                Obsidian.L(state.u, function(data) {
+                Obsidian.L(state.u, function (data) {
                     document.title = state.t;
                     $('#preview').html($(data).filter('#single'));
                     Obsidian.preview();
-                    setTimeout(function() { Obsidian.player(); }, 0);
+                    setTimeout(function () {
+                        Obsidian.player();
+                    }, 0);
                 });
             }
         });
     },
-    HS: function(tag, flag) {
+    HS: function (tag, flag) {
         var id = tag.data('id') || 0,
             url = tag.attr('href'),
             title = tag.attr('title') + " - " + $("#config-title").text();
@@ -141,7 +148,7 @@ var Obsidian = {
         if (!$('#preview').length || !(window.history && history.pushState)) location.href = url;
         Obsidian.loading();
         var state = {d: id, t: title, u: url};
-        Obsidian.L(url, function(data) {
+        Obsidian.L(url, function (data) {
             if (!$(data).filter('#single').length) {
                 location.href = url;
                 return
@@ -168,31 +175,31 @@ var Obsidian = {
                     Obsidian.loaded()
                     break;
             }
-            setTimeout(function() {
+            setTimeout(function () {
                 Obsidian.player();
                 $('#top').show();
                 comment = $("#gitalk-container");
-                if (comment.data('ae') == true){
+                if (comment.data('ae') == true) {
                     comment.click();
                 }
             }, 0)
         })
     },
-    preview: function() {
+    preview: function () {
         // preview toggle
-        $("#preview").one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+        $("#preview").one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
             var previewVisible = $('#preview').hasClass('show');
             if (!!previewVisible) {
                 $('#container').hide();
-            }else{
+            } else {
                 $('#container').show();
             }
             Obsidian.loaded();
         });
-        setTimeout(function() {
+        setTimeout(function () {
             $('#preview').addClass('show');
             $('#container').data('scroll', window.scrollY);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#preview').css({
                     'position': 'static',
                     // 'overflow-y': 'auto'
@@ -202,7 +209,7 @@ var Obsidian = {
             }, 500);
         }, 0);
     },
-    player: function() {
+    player: function () {
         var p = $('#audio');
         if (!p.length) {
             $('.icon-play').css({
@@ -211,11 +218,11 @@ var Obsidian = {
             })
             return
         }
-        var sourceSrc= $("#audio source").eq(0).attr('src')
-        if (sourceSrc == '' && p[0].src == ''){
+        var sourceSrc = $("#audio source").eq(0).attr('src')
+        if (sourceSrc == '' && p[0].src == '') {
             audiolist = $('#audio-list li');
-            mp3 = audiolist.eq([Math.floor(Math.random() * audiolist.size())])
-            p[0].src = mp3.data('url')
+            mp3 = audiolist.eq([Math.floor(Math.random() * audiolist.length)]);
+            p[0].src = mp3.data('url');
         }
 
         if (p.eq(0).data("autoplay") == true) {
@@ -223,50 +230,50 @@ var Obsidian = {
         }
 
         p.on({
-            'timeupdate': function() {
+            'timeupdate': function () {
                 var progress = p[0].currentTime / p[0].duration * 100;
                 $('.bar').css('width', progress + '%');
                 if (progress / 5 <= 1) {
                     p[0].volume = progress / 5;
-                }else {
+                } else {
                     p[0].volume = 1;
                 }
             },
-            'ended': function() {
+            'ended': function () {
                 $('.icon-pause').removeClass('icon-pause').addClass('icon-play')
             },
-            'playing': function() {
+            'playing': function () {
                 $('.icon-play').removeClass('icon-play').addClass('icon-pause')
             }
         })
     },
-    loading: function() {
+    loading: function () {
         var w = window.innerWidth;
-        var css = '<style class="loaderstyle" id="loaderstyle'+ w +'">'+
-            '@-moz-keyframes loader'+ w +'{100%{background-position:'+ w +'px 0}}'+
-            '@-webkit-keyframes loader'+ w +'{100%{background-position:'+ w +'px 0}}'+
-            '.loader'+ w +'{-webkit-animation:loader'+ w +' 3s linear infinite;-moz-animation:loader'+ w +' 3s linear infinite;}'+
+        var css = '<style class="loaderstyle" id="loaderstyle' + w + '">' +
+            '@-moz-keyframes loader' + w + '{100%{background-position:' + w + 'px 0}}' +
+            '@-webkit-keyframes loader' + w + '{100%{background-position:' + w + 'px 0}}' +
+            '.loader' + w + '{-webkit-animation:loader' + w + ' 3s linear infinite;-moz-animation:loader' + w + ' 3s linear infinite;}' +
             '</style>';
         $('.loaderstyle').remove()
         $('head').append(css)
-        $('#loader').removeClass().addClass('loader'+ w).show()
+        $('#loader').removeClass().addClass('loader' + w).show()
     },
-    loaded: function() {
+    loaded: function () {
         $('#loader').removeClass().hide()
     },
-    F: function(id, w, h) {
+    F: function (id, w, h) {
         var _height = $(id).parent().height(),
             _width = $(id).parent().width(),
             ratio = h / w;
         if (_height / _width > ratio) {
-            id.style.height = _height +'px';
-            id.style.width = _height / ratio +'px';
+            id.style.height = _height + 'px';
+            id.style.width = _height / ratio + 'px';
         } else {
-            id.style.width = _width +'px';
-            id.style.height = _width * ratio +'px';
+            id.style.width = _width + 'px';
+            id.style.height = _width * ratio + 'px';
         }
-        id.style.left = (_width - parseInt(id.style.width)) / 2 +'px';
-        id.style.top = (_height - parseInt(id.style.height)) / 2 +'px';
+        id.style.left = (_width - parseInt(id.style.width)) / 2 + 'px';
+        id.style.top = (_height - parseInt(id.style.height)) / 2 + 'px';
     },
     initArticleJs: function () {
         // initialise hightlight.js
@@ -279,7 +286,7 @@ var Obsidian = {
         buildImgCaption();
         utiliseBgColor('article');
     },
-    setCodeRowWithLang: function() {
+    setCodeRowWithLang: function () {
         // Get the programming type of the current code block
         let code = $("code");
         if (code && code.length) {
@@ -390,56 +397,57 @@ var Obsidian = {
                     "xquery": "XQuery",
                     "yaml": "YAML"
                 };
-     
+
                 var displayLangText = "";
                 if (lang in langMap) displayLangText = langMap[lang];
                 else displayLangText = lang;
-                if (item.find(".language-mark").length <= 0) {
+                if (item.find(".language-mark").length <= 0 && displayLangText) {
                     item.prepend(
-                        '<span class="language-mark" ref='+lang+'>'+displayLangText+'</span>');
+                        '<span class="language-mark" ref=' + lang + '>「 ' + displayLangText + ' 」</span>');
                 }
-                
+
             });
-        };
+        }
+        ;
     },
     tocSpy: function (offset) {
         var tocContainer = $("#toc");
         var toc = tocContainer, tocHeight = toc.height();
         scrollSpy(tocContainer, {offset: 200});
 
-        $(".toc-item").on("scrollspy", function() {
+        $(".toc-item").on("scrollspy", function () {
             var tocTop = toc.scrollTop(),
                 link = $(this).children(".toc-link"),
                 thisTop = link.position().top;
             // make sure the highlighted element contains no child
-            if($(this).height() != link.height())
+            if ($(this).height() != link.height())
                 return;
             // if the highlighted element is above current view of toc
-            if(thisTop <= 0)
+            if (thisTop <= 0)
                 toc.scrollTop(tocTop + thisTop);
             // else if below current view of toc
-            else if(tocHeight <= thisTop)
+            else if (tocHeight <= thisTop)
                 toc.scrollTop(tocTop + thisTop + link.outerHeight() - tocHeight);
         });
     }
 };
 
-$(function() {
+$(function () {
     if (Obsidian.P()) {
         $('body').addClass('touch')
     }
     if ($('#preview').length) {
         Obsidian.PS();
         $('.pview a').addClass('pviewa')
-        setTimeout(function() {
+        setTimeout(function () {
             $('html, body').removeClass('loading')
         }, 500);
     } else {
         $('#single').css('min-height', window.innerHeight)
-        setTimeout(function() {
+        setTimeout(function () {
             $('html, body').removeClass('loading')
         }, 500)
-        window.addEventListener('popstate', function(e) {
+        window.addEventListener('popstate', function (e) {
             if (e.state) location.href = e.state.u;
         })
         Obsidian.player();
@@ -471,7 +479,11 @@ $(function() {
                     header.style.borderBottom = '1px solid #201c29';
                     refOffset = newOffset;
                 } else {
-                    header.style.paddingTop = '70px';
+                    if ($(window).width() <= 780) {
+                        header.style.paddingTop = '30px';
+                    } else {
+                        header.style.paddingTop = '70px';
+                    }
                     header.style.background = 'transparent';
                     header.style.borderBottom = '0px';
                 }
@@ -493,9 +505,9 @@ $(function() {
                     $('.subtitle').fadeOut()
                 }
                 var wt = $(window).scrollTop(),
-                    tw  = $('#top').width(),
+                    tw = $('#top').width(),
                     dh = document.body.scrollHeight,
-                    wh  = $(window).height();
+                    wh = $(window).height();
                 var width = tw / (dh - wh) * wt;
                 $('.scrollbar').width(width)
             }
@@ -505,7 +517,7 @@ $(function() {
             var winHeight = $(window).height();
             var winWidth = $(window).width();
             var scrollPercent = (scrollTop) / (docHeight - winHeight);
-            var scrollPercentRounded = Math.round(scrollPercent*100);
+            var scrollPercentRounded = Math.round(scrollPercent * 100);
             var backToTopState = $('#back-to-top').css('display');
 
             $('#back-to-top').find('.percentage').html(scrollPercentRounded + '%');
@@ -532,12 +544,12 @@ $(function() {
 
         window.addEventListener('scroll', handler, false);
     })($);
-    $(window).on('touchmove', function(e) {
+    $(window).on('touchmove', function (e) {
         if ($('body').hasClass('mu')) {
             e.preventDefault()
         }
     })
-    $('body').on('click', function(e) {
+    $('body').on('click', function (e) {
         var tag = $(e.target).attr('class') || '',
             rel = $(e.target).attr('rel') || '';
         // .content > ... > img
@@ -555,6 +567,12 @@ $(function() {
             case (tag.indexOf('switchmenu') != -1):
                 window.scrollTo(0, 0)
                 $('html, body').toggleClass('mu');
+                var switchMenu = $('.switchmenu');
+                if (switchMenu.hasClass('icon-menu')) {
+                    switchMenu.removeClass('icon-menu').addClass('icon-cross');
+                } else {
+                    switchMenu.removeClass('icon-cross').addClass('icon-menu');
+                }
                 return false;
                 break;
             // next page
@@ -570,12 +588,12 @@ $(function() {
                 if (num >= Pages) {
                     return
                 }
-                tag.html('加载中...').data('status', 'loading')
+                tag.html(tag.attr('data-loading')).data('status', 'loading')
                 Obsidian.loading()
-                Obsidian.L(tag.attr('href'), function(data) {
+                Obsidian.L(tag.attr('href'), function (data) {
                     var link = $(data).find('.more').attr('href');
                     if (link != undefined) {
-                        tag.attr('href', link).html('加载更多').data('status', 'loaded')
+                        tag.attr('href', link).html(tag.attr('data-load-more')).data('status', 'loaded')
                         tag.data('page', parseInt(tag.data('page')) + 1)
                     } else {
                         $('#pager').remove()
@@ -584,14 +602,14 @@ $(function() {
                     $('#primary').append($(data).find('.post'))
                     $(window).scrollTop(tempScrollTop + 100);
                     Obsidian.loaded()
-                    $('html,body').animate({ scrollTop: tempScrollTop + 400 }, 500);
+                    $('html,body').animate({scrollTop: tempScrollTop + 400}, 500);
                     document.querySelectorAll('pre code').forEach((block) => {
                         hljs.highlightBlock(block);
                     });
                     Obsidian.setCodeRowWithLang();
                     initValine()
-                }, function() {
-                    tag.html('加载更多').data('status', 'loaded')
+                }, function () {
+                    tag.html(tag.attr('data-load-more')).data('status', 'loaded')
                 })
                 return false;
                 break;
@@ -606,12 +624,12 @@ $(function() {
                 return false;
                 break;
             // qrcode
-            case (tag.indexOf('icon-scan') != -1):
+            case (tag.indexOf('icon-QRcode-o') != -1):
                 if ($('.icon-scan').hasClass('tg')) {
                     $('#qr').toggle()
                 } else {
                     $('.icon-scan').addClass('tg')
-                    $('#qr').qrcode({ width: 128, height: 128, text: location.href}).toggle()
+                    $('#qr').qrcode({width: 128, height: 128, text: location.href}).toggle()
                 }
                 return false;
                 break;
@@ -651,23 +669,23 @@ $(function() {
                 break;
             // toc
             case (tag.indexOf('toc-text') != -1 || tag.indexOf('toc-link') != -1
-                  || tag.indexOf('toc-number') != -1):
+                || tag.indexOf('toc-number') != -1):
                 hash = '';
-                if (e.target.nodeName == 'SPAN'){
-                  hash = $(e.target).parent().attr('href')
-                }else{
-                  hash = $(e.target).attr('href')
+                if (e.target.nodeName == 'SPAN') {
+                    hash = $(e.target).parent().attr('href')
+                } else {
+                    hash = $(e.target).attr('href')
                 }
                 to = $(".content :header").find('[href=' + hash + ']')
                 $("html,body").animate({
-                  scrollTop: to.offset().top - 80
+                    scrollTop: to.offset().top - 80
                 }, 300);
                 return false;
                 break;
             // quick view
             case (tag.indexOf('pviewa') != -1):
                 $('body').removeClass('mu')
-                setTimeout(function() {
+                setTimeout(function () {
                     Obsidian.HS($(e.target), 'push')
                     $('.toc').fadeIn(1000);
                 }, 300)
@@ -680,7 +698,7 @@ $(function() {
                     var items = [];
                     var index = 0;
                     var imgs = [];
-                    $('.content img').each(function(i, v){
+                    $('.content img').each(function (i, v) {
                         // get index
                         if (e.target.src == v.src) {
                             index = i;
@@ -699,32 +717,32 @@ $(function() {
                         zoomEl: false,
                         allowRotationOnUserZoom: true,
                         history: false,
-                        getThumbBoundsFn: function(index) {
+                        getThumbBoundsFn: function (index) {
                             // See Options -> getThumbBoundsFn section of documentation for more info
                             var thumbnail = imgs[index],
                                 pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                                rect = thumbnail.getBoundingClientRect(); 
+                                rect = thumbnail.getBoundingClientRect();
 
-                            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                            return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
                         }
                     };
-                    var lightBox= new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                    var lightBox = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
                     lightBox.init();
                 }
                 return false;
                 break;
-              // comment
-            case - 1 != tag.indexOf("comment"): 
+            // comment
+            case -1 != tag.indexOf("comment"):
                 Obsidian.loading(),
-                comment = $('#gitalk-container');
+                    comment = $('#gitalk-container');
                 gitalk = new Gitalk({
-                  clientID: comment.data('ci'),
-                  clientSecret: comment.data('cs'),
-                  repo: comment.data('r'),
-                  owner: comment.data('o'),
-                  admin: comment.data('a'),
-                  id: decodeURI(window.location.pathname),
-                  distractionFreeMode: comment.data('d')
+                    clientID: comment.data('ci'),
+                    clientSecret: comment.data('cs'),
+                    repo: comment.data('r'),
+                    owner: comment.data('o'),
+                    admin: comment.data('a'),
+                    id: decodeURI(window.location.pathname),
+                    distractionFreeMode: comment.data('d')
                 })
                 $(".comment").removeClass("link")
                 gitalk.render('gitalk-container')
@@ -739,7 +757,7 @@ $(function() {
 
     // 是否自动展开评论
     comment = $("#gitalk-container");
-    if (comment.data('ae') == true){
+    if (comment.data('ae') == true) {
         comment.click();
     }
 
@@ -749,13 +767,13 @@ $(function() {
     }
 
     // Watch window history changes
-    window.onpopstate = function(event) {
+    window.onpopstate = function (event) {
         utiliseBgColor();
     };
 
     utiliseBgColor();
     initialTyped();
     Obsidian.setCodeRowWithLang();
-    console.log("%c Github %c","background:#24272A; color:#73ddd7","","https://github.com/TriDiamond/hexo-theme-obsidian")
+    console.log("%c Github %c", "background:#24272A; color:#73ddd7", "", "https://github.com/TriDiamond/hexo-theme-obsidian")
 })
 

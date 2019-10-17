@@ -1,5 +1,25 @@
 # Changelog
 
+## 🚀 1.3.0 (Oct 18, 2019)
+
+Replenish the UI, a much more smooth and elegant! 🔆
+
+### Features ✨
+- Added post category display next to post date!
+
+### Changes 🙌
+- Replenished overall UI, looks much more smooth and elegant.
+- Added water waves for the reading tracking ball! 🔵
+- Upgraded all the control icons.
+- Replenished the playing tracking effect.
+- Replenished all the responsive styles
+- Css changed to use stylus instead of traditional css, for easier editing.
+- Moved all the plugin js and css to CDN, to speed up blog start up speed.
+
+### Bug fixes 🐛
+- Fixed the language problem with loading more.
+- Fixed the article comments are same for all articles.
+
 ## 🚀 1.2.0 (Oct 15, 2019)
 
 Enhanced bunch of features and add bunch of fun stuffs. Hope you all enjoy them!

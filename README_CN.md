@@ -1,12 +1,13 @@
 # Hexo-theme-obsidian
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
->> 最新版本: v1.2.0
+
+`最新版本: v1.3.0`
 
 **[预览](http://tridiamond.me)** |
 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
 **[更新日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
-![screenshot](https://s2.ax1x.com/2019/10/01/uNBcND.png)
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
 
 ## 安装
 

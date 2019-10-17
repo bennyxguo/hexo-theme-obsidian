@@ -1,13 +1,16 @@
 <div class="post" id="post">
     <div class="post-cover" style="
-        background-image: 
+            background-image:
             radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
             url(<%- post.cover || theme.cover %>);">
     </div>
     <div class="else">
-        <p><%- post.date.locale(config.language || '').format("MMMM DD, YYYY") %></p>
-        <h3><%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %></h3>
-        <% if (theme.symbols_count_time.enable) {%>
+        <p class="animated fadeInDown">
+            <a href="<%- '/categories/' + post.categories.data[0].name %>"><b>「</b> <%- post.categories.data[0].name.toUpperCase() %><b> 」</b> </a>
+            <%- post.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+        </p>
+        <h3 class="post-title animated fadeInDown"><%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %></h3>
+        <% if (theme.symbols_count_time.enable) { %>
             <p class="post-count animated fadeInDown">
                 <% if (theme.symbols_count_time.wordCount) { %>
                     <span>
@@ -33,8 +36,14 @@
                     </span>
                 <% } %>
             </p>
+            <% if (post.tags && post.tags.length){ %>
+                <%- list_tags(post.tags, {
+                    show_count: false,
+                    class: 'animated fadeInDown post-tags'
+                }) %>
+            <% } %>
         <% } %>
-        <div class="md-content">
+        <div class="md-content animated fadeIn">
             <% if (theme.html_truncate.enable) { %>
                 <%- htmlTruncate(post.content, theme.html_truncate.postLength, {
                     ellipsis: theme.html_truncate.ellipsis,
@@ -45,17 +54,11 @@
             <% } else { %>
                 <%- truncate(strip_html(post.content), {
                     length: 500,
-                    omission: '...'
+                    omission: "..."
                 }) %>
             <% } %>
-                <span class="read-more gradient-text"><%- link_to(post.path, __('read_article', 'Read article'), {class: "posttitle"}) %></span>
+            <span class="read-more gradient-text"><%- link_to(post.path, __('read_article', 'Read article'), {class: 'posttitle'}) %></span>
         </div>
-        <% if (post.tags && post.tags.length){ %>
-            <%- list_tags(post.tags, {
-                show_count: false,
-                class: 'post-tags'
-            }) %>
-        <% } %>
     </div>
 </div>
 
