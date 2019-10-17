@@ -2,13 +2,13 @@
 
 ## 🚀 1.3.0 (Oct 18, 2019)
 
-Replenish the UI, a much more smooth and elegant! 🔆
+Upgraded UI, a much more smooth and elegant look! ✨
 
 ### Features ✨
 - Added post category display next to post date!
 
 ### Changes 🙌
-- Replenished overall UI, looks much more smooth and elegant.
+- Regraded overall UI, looks much more smooth and elegant. ✨
 - Added water waves for the reading tracking ball! 🔵
 - Upgraded all the control icons.
 - Replenished the playing tracking effect.
