@@ -26,3 +26,7 @@ read_article: Read article
 pv: Page views
 uv: Unique visitors
 readed: Readed
+word_count: Words count
+read_time: Reading time
+read_count: Read count
+default_category: Article

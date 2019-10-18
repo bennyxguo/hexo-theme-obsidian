@@ -1,5 +1,17 @@
 # Changelog
 
+## 🚀 1.3.1 (Oct 18, 2019)
+
+### Features ✨
+- Added busuanzi site statistic support.
+
+### Changes 🙌
+- Changed view count support base on comment plugin.
+
+### Bug fixes 🐛
+- Fixed when article categories are empty, generating files failed.
+- Fixed responsive style problems.
+
 ## 🚀 1.3.0 (Oct 18, 2019)
 
 Upgraded UI, a much more smooth and elegant look! ✨
@@ -10,7 +22,7 @@ Upgraded UI, a much more smooth and elegant look! ✨
 ### Changes 🙌
 - Regraded overall UI, looks much more smooth and elegant. ✨
 - Added water waves for the reading tracking ball! 🔵
-- Upgraded all the control icons.
+- Upgraded all the control icons.`
 - Replenished the playing tracking effect.
 - Replenished all the responsive styles
 - Css changed to use stylus instead of traditional css, for easier editing.

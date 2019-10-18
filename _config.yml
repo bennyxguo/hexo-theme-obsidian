@@ -88,7 +88,7 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: true
+  enable: false
   app_id: 
   app_key: 
   notify: false
@@ -122,3 +122,10 @@ html_truncate:
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
   reserveLastWord: true
+
+# Enable Busuanzi statistic plugin
+# see http://ibruce.info/2015/04/04/busuanzi/
+busuanzi:
+  enable: true
+  page: true
+  site: true

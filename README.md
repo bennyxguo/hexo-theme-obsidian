@@ -154,6 +154,19 @@ html_truncate:
   # Reserving the last complete word, without breaking the word
   reserveLastWord: true
   
+# Enable Busuanzi statistic plugin
+# see http://ibruce.info/2015/04/04/busuanzi/
+busuanzi:
+  enable: true
+  
+```
+
+### Comments
+
+You can choose from using Valine or Gitalk
+
+- If you are using `Valine`, you need to turn off `busuanzi`, because Valine has article view count support.
+- If you are using `Gitalk`, you may turn on `busuanzi`, to have article view count enable.
 ```
 
 ### Code block style

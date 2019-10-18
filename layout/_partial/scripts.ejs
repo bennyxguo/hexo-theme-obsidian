@@ -1,15 +1,27 @@
+<% if (theme.gitalk.enable == true) { %>
+    <%- css(['//unpkg.com/gitalk/dist/gitalk.css'])%>
+    <%- js(['//unpkg.com/gitalk/dist/gitalk.min.js'])%>
+<% } %>
 <%- js(['//cdn.bootcss.com/jquery/3.4.1/jquery.min.js', 'js/plugin.js', 'js/obsidian.js', 'js/jquery.truncate.js'])%>
 <%- js(['//cdn.bootcss.com/typed.js/2.0.10/typed.min.js']) %>
+<%- js(['//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js']) %>
+
+<% if (theme.busuanzi.enable == true) { %>
+    <%- js(['js/busuanzi.min.js']) %>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+<% } %>
 
 <%- partial('photoswipe') %>
 
-<% if (theme.gitalk.enable == true) { %>
-    <%- js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%>
-<% } %>
-
 <% if (theme.google_analytics) { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.google_analytics %>"></script>
+    <script async src="//www.googletagmanager.com/gtag/js?id=<%- theme.google_analytics %>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

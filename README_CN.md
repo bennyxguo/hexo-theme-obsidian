@@ -151,7 +151,20 @@ html_truncate:
   # 截取到最后的时候保留完成的字（只对英文有用）
   reserveLastWord: true
   
+# Busuanzi 浏览量统计插件
+# see http://ibruce.info/2015/04/04/busuanzi/
+busuanzi:
+  enable: true
+  
 ```
+
+### 评论插件
+
+评论插件可以选择使用 `Valine` 或者 `Gitalk`
+
+- 如果你是使用 `Valine`, 你需要关闭 `busuanzi`, 因为 Valine 自带有文章浏览量统计.
+- 如果你是使用 `Gitalk`, 你可以打开 `busuanzi` 文章详情页就会显示文章浏览量统计.
+
 
 ### 代码块样式
 

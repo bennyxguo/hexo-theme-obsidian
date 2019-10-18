@@ -18,9 +18,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
-nav.category: 分类
-nav.tag: 标签
-nav.archive: 归档
 time_suffix: 分钟
 load_more: 加载更多
 loading: 加载中...
@@ -29,3 +26,7 @@ read_article: 查看全文
 pv: 浏览量
 uv: 访客数
 readed: 已读
+word_count: 文章字数
+read_time: 阅读约需
+read_count: 阅读次数
+default_category: 文章

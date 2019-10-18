@@ -282,7 +282,12 @@ var Obsidian = {
         });
         Obsidian.setCodeRowWithLang();
         Obsidian.tocSpy(200);
-        initValine();
+        if ($('#vcomments').length) {
+            initValine();
+        }
+        if ($('span[id^="busuanzi_"]').length) {
+            initialBusuanzi();
+        }
         buildImgCaption();
         utiliseBgColor('article');
     },
@@ -607,7 +612,9 @@ $(function () {
                         hljs.highlightBlock(block);
                     });
                     Obsidian.setCodeRowWithLang();
-                    initValine()
+                    if ($('#vcomments').length) {
+                        initValine();
+                    }
                 }, function () {
                     tag.html(tag.attr('data-load-more')).data('status', 'loaded')
                 })
@@ -735,14 +742,16 @@ $(function () {
             case -1 != tag.indexOf("comment"):
                 Obsidian.loading(),
                     comment = $('#gitalk-container');
-                gitalk = new Gitalk({
+                console.log(comment.data('a'))
+                var gitalk = new Gitalk({
                     clientID: comment.data('ci'),
                     clientSecret: comment.data('cs'),
                     repo: comment.data('r'),
                     owner: comment.data('o'),
-                    admin: comment.data('a'),
-                    id: decodeURI(window.location.pathname),
-                    distractionFreeMode: comment.data('d')
+                    admin: [comment.data('a')],
+                    id: md5(window.location.pathname),
+                    distractionFreeMode: comment.data('d'),
+                    labels: ['Gitalk']
                 })
                 $(".comment").removeClass("link")
                 gitalk.render('gitalk-container')

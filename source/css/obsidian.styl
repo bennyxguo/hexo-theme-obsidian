@@ -1902,6 +1902,8 @@ h1.title {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.85;
+    animation-delay: 800ms;
+    animation-duration: 800ms;
   }
 }
 
@@ -2020,6 +2022,13 @@ h1.title {
       justify-content: center;
       align-content: center;
       color: #fff;
+
+      i {
+        margin-right: 5px;
+        color: #7a7a8c;
+        font-weight: 900;
+        font-style: normal;
+      }
 
       b {
         font-size: 20px;
@@ -2749,6 +2758,10 @@ pre {
       display: block;
       padding-top: 0;
       grid-gap: 2rem;
+
+      .sidebar {
+        display: none;
+      }
     }
   }
 
@@ -3007,11 +3020,10 @@ pre {
 
     .post-count {
       margin: 15px 30px 0 0;
+      i {
+        display: none;
+      }
     }
-
-    //.post-tags-list {
-    //  margin: 10px 30px 0 0;
-    //}
   }
 
   .screen-gradient-after {
@@ -3109,9 +3121,9 @@ pre {
 
   .article-header {
     .article-cover {
-      width: 100%;
+      width: 90%;
       height: 350px;
-      left: 0;
+      top: 0;
     }
 
     .else {

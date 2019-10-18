@@ -25,7 +25,11 @@
     <% if ( first ) { %>
     <div id="post0" class="else">
         <p class="animated fadeInDown">
-            <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「 </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+            <% if (first.categories.data[0]) { %>
+                <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「 </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+            <% } else { %>
+                <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+            <% } %>
             <%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %>
         </p>
         <h3 class="post-title animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h3>
@@ -33,13 +37,13 @@
             <p class="post-count animated fadeInDown">
                 <% if (theme.symbols_count_time.wordCount) { %>
                     <span>
-                        <b class="iconfont icon-text2"></b>
+                        <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
                         <%= symbolsCount(first.content) %>
                     </span>
                 <% } %>
                 <% if (theme.symbols_count_time.readCount) { %>
                     <span>
-                        <b class="iconfont icon-timer__s"></b>
+                        <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
                         <%= symbolsTime(
                                 first.content,
                                 theme.symbols_count_time.awl,
@@ -50,7 +54,7 @@
                 <% } %>
                 <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
                     <span id="<%- '/' + first.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
-                        <b class="iconfont icon-read"></b>
+                        <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
                         <i class="leancloud-visitors-count">1000000</i>
                     </span>
                 <% } %>
