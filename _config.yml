@@ -130,5 +130,3 @@ html_truncate:
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
   enable: true
-  page: true
-  site: true

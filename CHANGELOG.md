@@ -1,5 +1,13 @@
 # Changelog
 
+## 🚀 1.3.2 (Oct 21, 2019)
+
+### Changes 🙌
+- Changed the font color of `*word*` (italic) font in post content.
+
+### Bug fixes 🐛
+- Home page added first post reacting height, if the first post's height is higher than the window height, it will react to it's content's full height.
+
 ## 🚀 1.3.1 (Oct 18, 2019)
 
 ### Features ✨

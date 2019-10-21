@@ -1,8 +1,8 @@
 # Hexo-theme-obsidian
 > A dark Hexo theme, it's responsive, simple but elegant.
 
-- `Latest version: v1.3.1`
-- Last updated at: 2019-10-18
+- `Latest version: v1.3.2`
+- `Last updated at: 2019-10-21`
 
 **[PREVIEW](http://tridiamond.me)** |
 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
