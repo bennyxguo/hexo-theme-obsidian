@@ -1,8 +1,8 @@
 # Hexo-theme-obsidian
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
-- `最新版本: v1.3.2`
-- `最后更新时间: 2019-10-21`
+- `最新版本: v1.3.3`
+- `最后更新时间: 2019-10-23`
 
 **[预览](http://tridiamond.me)** |
 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
@@ -157,6 +157,12 @@ html_truncate:
 busuanzi:
   enable: true
   
+# Sharejs 分享
+# see https://github.com/overtrue/share.js/
+sharejs:
+  enable: true
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+  
 ```
 
 ### 评论插件
@@ -166,12 +172,15 @@ busuanzi:
 - 如果你是使用 `Valine`, 你需要关闭 `busuanzi`, 因为 Valine 自带有文章浏览量统计.
 - 如果你是使用 `Gitalk`, 你可以打开 `busuanzi` 文章详情页就会显示文章浏览量统计.
 
-
 ### 代码块样式
 
 > 因为Obsidian theme 使用手动启用 highlight.js 代码高亮
   为了可以正常显示代码高亮的样式
   请务必在hexo默认配置里面关闭`highlight`。
+  
+在博客根目录的`_config.yml`修改
+
+> ⚠️ 注意不是主题里面的`_config.yml`，在主题里面加这个是无效的哦
 
 ```yaml
 ...
@@ -185,7 +194,7 @@ highlight:
 ...
 ```
 
-> 修改了默认highlight配置后需要重新生成文件
+修改了默认highlight配置后需要重新生成文件
 
 ```bash
 hexo clean && hexo g

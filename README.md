@@ -1,8 +1,8 @@
 # Hexo-theme-obsidian
 > A dark Hexo theme, it's responsive, simple but elegant.
 
-- `Latest version: v1.3.2`
-- `Last updated at: 2019-10-21`
+- `Latest version: v1.3.3`
+- `Last updated at: 2019-10-23`
 
 **[PREVIEW](http://tridiamond.me)** |
 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
@@ -34,7 +34,6 @@ theme: obsidian
 Open `/themes/obsidian/_config.yml` can change the theme configs
 
 ``` yaml
-
 #! ---------------------------------------------------------------
 #! Obsidian theme use manual highlight.js
 #! To maintain the code block css display properly
@@ -160,6 +159,12 @@ html_truncate:
 busuanzi:
   enable: true
   
+# Enable social media sharing
+# see https://github.com/overtrue/share.js/
+sharejs:
+  enable: true
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+  
 ```
 
 ### Comments
@@ -168,7 +173,6 @@ You can choose from using Valine or Gitalk
 
 - If you are using `Valine`, you need to turn off `busuanzi`, because Valine has article view count support.
 - If you are using `Gitalk`, you may turn on `busuanzi`, to have article view count enable.
-```
 
 ### Code block style
 
@@ -176,6 +180,11 @@ You can choose from using Valine or Gitalk
   Because Obsidian theme use manual highlight.js
   To maintain the code block css display properly
   please change your default highlight setting as off!!
+  
+Hexo configuration file `_config.yml` located at the ROOT path of your blog.
+
+> ⚠️ Please note do not make these changes in the theme's config file, 
+  changing configs in the theme config file `_config.yml` will not work properly. 
 
 ```yaml
 ...
@@ -189,7 +198,7 @@ highlight:
 ...
 ```
 
-> Rebuild files after you changed the config
+Rebuild files after you changed the config
 
 ```bash
 hexo clean && hexo g

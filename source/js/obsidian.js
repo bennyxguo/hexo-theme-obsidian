@@ -204,7 +204,6 @@ var Obsidian = {
                     'position': 'static',
                     // 'overflow-y': 'auto'
                 });
-                console.log('preivew', 'initArticleJs')
                 Obsidian.initArticleJs();
             }, 500);
         }, 0);
@@ -290,6 +289,7 @@ var Obsidian = {
         }
         buildImgCaption();
         utiliseBgColor('article');
+        Obsidian.initialShare();
     },
     setCodeRowWithLang: function () {
         // Get the programming type of the current code block
@@ -443,6 +443,16 @@ var Obsidian = {
             $('#mark').css('height', firstPostHeight + postSpacing + 'px');
             $('#screen').css('height', firstPostHeight + postSpacing + 'px');
         }
+    },
+    initialShare: function () {
+        var $config = {
+            title               : document.title,
+            description         : document.description,
+            wechatQrcodeTitle   : "微信扫一扫：分享", // 微信二维码提示文字
+            wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
+        };
+
+        socialShare('.share-component-cc', $config);
     }
 };
 
@@ -481,7 +491,7 @@ $(function () {
         const header = document.querySelector('#header');
 
         const handler = () => {
-            const newOffset = window.scrollY || window.pageYOffset;
+            let newOffset = window.scrollY || window.pageYOffset;
             if ($('#header').length && !$('.scrollbar').length) {
                 if (newOffset > menuHeight) {
                     if (newOffset > refOffset) {
@@ -506,7 +516,7 @@ $(function () {
                 }
             }
             const topHeader = document.querySelector('#top');
-            if (topHeader && $('.scrollbar').length && !Obsidian.P() && !$('.icon-images').hasClass('active')) {
+            if (topHeader && $('.scrollbar').length && !$('.icon-images').hasClass('active')) {
                 if (newOffset > articleMenuHeight) {
                     if (newOffset > articleRefOffset) {
                         topHeader.classList.remove('animateIn');
@@ -575,6 +585,14 @@ $(function () {
         }
         if (!tag && !rel) return;
         switch (true) {
+            case (tag.indexOf('share') != -1):
+                let shareComponent = $(".share-component-cc");
+                if (shareComponent.css('opacity') != '1') {
+                    $(".share-component-cc").css('opacity', 1);
+                } else {
+                    $(".share-component-cc").css('opacity', 0);
+                }
+                break;
             case (tag.indexOf('icon-top02') != -1):
                 $("html,body").animate({
                     scrollTop: 0
@@ -754,7 +772,6 @@ $(function () {
             case -1 != tag.indexOf("comment"):
                 Obsidian.loading(),
                     comment = $('#gitalk-container');
-                console.log(comment.data('a'))
                 var gitalk = new Gitalk({
                     clientID: comment.data('ci'),
                     clientSecret: comment.data('cs'),
@@ -785,6 +802,7 @@ $(function () {
     if ($('.article').length) {
         Obsidian.tocSpy(200);
         buildImgCaption();
+        Obsidian.initialShare();
     }
 
     // Watch window history changes

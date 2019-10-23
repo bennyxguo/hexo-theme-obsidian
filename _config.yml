@@ -130,3 +130,8 @@ html_truncate:
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
   enable: true
+
+#Enable social media sharing
+sharejs:
+  enable: true
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'

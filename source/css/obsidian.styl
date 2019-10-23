@@ -1,31 +1,5 @@
 @import "theme.styl";
 
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform: scale(0.3);
-  }
-  50% {
-    -webkit-transform: scale(1.0);
-  }
-  100% {
-    -webkit-transform: scale(0.3);
-  }
-
-}
-
-@-moz-keyframes loading {
-  0% {
-    -moz-transform: scale(0.3);
-  }
-  50% {
-    -moz-transform: scale(1.0);
-  }
-  100% {
-    -moz-transform: scale(0.3);
-  }
-
-}
-
 /* Responsive style */
 body {
   margin: 0;
@@ -40,24 +14,8 @@ body {
   position: relative;
   overflow-x: hidden;
 
-  &:before {
-    position: absolute;
-    content: '';
-    width: 24px;
-    height: 24px;
-    left: 50%;
-    top: 50%;
-    margin-left: -7px;
-    margin-top: -7px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-animation: loading 2s ease-out forwards infinite;
-    -moz-animation: loading 2s ease-out forwards infinite;
+  > .la-ball-atom {
     display: none;
-    background: var(--primary) !important;
-    background: -webkit-linear-gradient(-45deg, var(--primary), var(--secondary), var(--dark)) !important;
-    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--dark)) !important;
   }
 }
 
@@ -208,8 +166,12 @@ html {
 }
 
 body.loading {
-  &:before {
+  .la-ball-atom {
     display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   #container {
@@ -316,6 +278,24 @@ audio {
     position: relative;
     z-index: 10;
   }
+
+  .la-ball-atom {
+    float: left;
+    margin-right: 10px;
+    animation-delay 1.6s;
+    animation-duration: 800ms;
+  }
+}
+
+.la-ball-atom {
+  color: #64d6e2 !important;
+}
+
+.la-ball-atom > div:nth-child(1) {
+  color: var(--dark);
+  background: var(--primary) !important;
+  background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
 }
 
 .icon-cross {
@@ -537,13 +517,6 @@ body.mu {
 }
 
 body.touch {
-  #top {
-    position: relative;
-  }
-
-  .scrollbar {
-    display: none;
-  }
   margin-top: 0;
 
   .article {
@@ -568,7 +541,7 @@ body.touch {
   width: 24px;
   height: 24px;
   position: absolute;
-  left: 14px;
+  left: 15px;
   top: 15px;
   background: #b2fefa !important;
   background: -webkit-linear-gradient(to right, var(--primary), var(--secondary), var(--dark)) !important;
@@ -591,10 +564,19 @@ body.touch {
   -webkit-text-fill-color: transparent !important;
   -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%)
   font-size: 14px;
   margin-top: 16px;
   display: none;
   transition: display 400ms ease-in-out;
+}
+
+.icon-home {
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
 }
 
 .icon-play {
@@ -611,11 +593,13 @@ body.touch {
   -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
   transition: display 400ms ease-in-out;
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
 }
 
 .icon-pause {
   position: absolute;
-  left: 65px;
+  left: 68px;
   top: 14px;
   font-size: 17px;
   cursor: pointer;
@@ -628,11 +612,12 @@ body.touch {
   -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
   transition: display 400ms ease-in-out;
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
 }
 
 .icon-images {
   position: absolute;
-  left: 70px;
   top: 17px;
   font-size: 18px;
   cursor: pointer;
@@ -644,6 +629,13 @@ body.touch {
   -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
   left: 100px;
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
+}
+
+.icon-share1 {
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
 }
 
 .icon-images.active {
@@ -688,7 +680,7 @@ body.touch {
 }
 
 .share {
-  a {
+  >a {
     display: inline-block;
     margin-right: 15px;
     background: #b2fefa !important;
@@ -704,6 +696,34 @@ body.touch {
     }
   }
   position: relative;
+  animation-delay: 800ms;
+  animation-duration: 1.2s;
+  .share-component {
+    position: absolute;
+    display: flex;
+    top: 38px;
+    right: 5px;
+    background: rgba(16, 14, 23, 1);
+    border-radius: 0 0 16px 16px;
+    padding: .6em 1.6em;
+    box-shadow: 0 0 30px rgba(16, 14, 23, 0.3);
+    border-bottom: 1px solid #201c29;
+    border-left: 1px solid #201c29;
+    border-right: 1px solid #201c29;
+    z-index: 1 !important;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+    a {
+      display: block;
+    }
+    .icon-wechat .wechat-qrcode {
+      top: 50px;
+      &:after {
+        top: -15px;
+        border-color: transparent transparent #fff transparent;
+      }
+    }
+  }
 }
 
 #qr {
@@ -2705,12 +2725,36 @@ pre {
   }
 }
 
+.social-share .social-share-icon {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 16px;
+  transition: all 400ms linear;
+}
+
 .animateIn {
   transform: translateY(0px);
 }
 
 .animateOut {
   transform: translateY(-100%);
+  &#top {
+    .share-component {
+      margin-right: 10em;
+      padding: 1em 0.8em;
+      right: 55px;
+      background: rgba(255, 255, 255, 0.86);
+      border: none;
+      box-shadow: none;
+    }
+    .social-share .social-share-icon {
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      font-size: 12px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2743,6 +2787,34 @@ pre {
 
     h1 {
       font-size: 50px;
+    }
+  }
+
+  .share-component {
+    margin-right: 5px;
+    padding: 0.4em 0.8em;
+    right: 0;
+    background: rgba(16, 14, 23, 0.86);
+    border: none;
+    box-shadow: none;
+  }
+
+  .animateOut {
+    &#top {
+      .share-component {
+        margin-right: 5px;
+        padding: 0.4em 0.8em;
+        right: 0;
+        background: rgba(16, 14, 23, 0.96);
+        border: none;
+        box-shadow: none;
+      }
+      .social-share .social-share-icon {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 12px;
+      }
     }
   }
 
@@ -3112,8 +3184,12 @@ pre {
     left: 50px;
   }
 
+  .icon-home {
+    left: 15px;
+  }
+
   .icon-play {
-    left: 50px;
+    display: none;
   }
 
   .comment.link {

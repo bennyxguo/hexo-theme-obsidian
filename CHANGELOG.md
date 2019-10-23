@@ -1,5 +1,13 @@
 # Changelog
 
+## 🚀 1.3.3 (Oct 23, 2019)
+
+### Features ✨
+- Added social sharing feature - [`share.js`](https://github.com/overtrue/share.js)
+
+### Changes 🙌
+- Changed the loading icon to `Load Awesome`'s `la-ball-atom`. - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
+
 ## 🚀 1.3.2 (Oct 21, 2019)
 
 ### Changes 🙌
