@@ -13,7 +13,7 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.3.1"
+version: "1.3.4"
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -21,7 +21,11 @@ version: "1.3.1"
 
 # Menu setting | format = title_name: link_url
 menu:
-  PAGE: /page
+  ABOUT: /whoami
+  CATEGORIES: /categories
+  TAGS: /tags
+  ARCHIVES: /archives
+
 # Social media links
 socials:
   github: "https://github.com/TriDiamond"
@@ -51,7 +55,7 @@ descriptionOne: "Think like an artist, develop like an artisan"
 descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
 
 # If you use google analytics, please fill in the ID
-google_analytics:
+google_analytics: 'UA-149874671-1'
 
 # Website favicon
 favicon: /img/favicon.png
@@ -77,13 +81,13 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
-  autoExpand: false
-  clientID: ''
-  clientSecret: ''
-  repo: ''
-  owner: ''
-  admin: ['']
+  enable: true
+  autoExpand: true
+  clientID: 'ec894e2b66f752e8b7fb'
+  clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+  repo: 'blog-comments'
+  owner: 'TriDiamond'
+  admin: ['TriDiamond']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -92,8 +96,8 @@ gitalk:
 # see https://valine.js.org/quickstart.html
 valine:
   enable: false
-  app_id: 
-  app_key: 
+  app_id: QHCOIEBlyjBUMAjaE5ilzafk-gzGzoHsz
+  app_key: ggeGwz8ypB9uiAIYSRH5T0PF
   notify: false
   verify: false
   avatar: 'mp'

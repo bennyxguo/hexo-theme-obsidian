@@ -436,10 +436,14 @@ var Obsidian = {
         });
     },
     reactToWindowHeight: function () {
-        const postSpacing = 315;
-        var winHeight = $(window).height();
-        var firstPostHeight = $('#post0').height();
-        if (firstPostHeight + postSpacing > winHeight) {
+        let postSpacing = 315;
+        let winHeight = $(window).height();
+        let winWidth = $(window).width();
+        let firstPostHeight = $('#post0').height();
+        if (winWidth <= 900) {
+            postSpacing = 100;
+        }
+        if (firstPostHeight + postSpacing > winHeight || winWidth <= 900) {
             $('#mark').css('height', firstPostHeight + postSpacing + 'px');
             $('#screen').css('height', firstPostHeight + postSpacing + 'px');
         }
