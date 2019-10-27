@@ -6,7 +6,6 @@
 
 ![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
 ![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
-![Download Count](https://img.shields.io/github/downloads/TriDiamond/hexo-theme-obsidian)
 ![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
 
 **[PREVIEW](http://tridiamond.me)** |
