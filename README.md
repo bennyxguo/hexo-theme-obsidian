@@ -4,8 +4,10 @@
 
 > A dark Hexo theme, it's responsive, simple but elegant.
 
-- `Latest version: v1.3.3`
-- `Last updated at: 2019-10-23`
+![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
+![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
+![Download Count](https://img.shields.io/github/downloads/TriDiamond/hexo-theme-obsidian)
+![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
 
 **[PREVIEW](http://tridiamond.me)** |
 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
@@ -290,3 +292,7 @@ type: "tags"
 cd themes/osidian
 git pull
 ```
+
+## Related
+
+I have made a [`Typro`](https://typora.io/) theme [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian) especially for this blog theme.

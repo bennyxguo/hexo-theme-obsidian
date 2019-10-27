@@ -1,8 +1,10 @@
 # Hexo-theme-obsidian
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
-- `最新版本: v1.3.3`
-- `最后更新时间: 2019-10-23`
+![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
+![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
+![Download Count](https://img.shields.io/github/downloads/TriDiamond/hexo-theme-obsidian)
+![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
 
 **[预览](http://tridiamond.me)** |
 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
@@ -283,3 +285,7 @@ type: "tags"
 cd themes/osidian
 git pull
 ```
+
+## 相关
+
+做了一个 [`Typro`](https://typora.io/) 主题 [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian) 专门给写博客的你们.

@@ -2,14 +2,14 @@
 
 ## 🚀 v1.3.4 (Oct 24, 2019)
 
-### Changes 🙌
+### Changes 💥
 - Enhanced web app UI responsive styles.
 - Enhanced `ul` and `ol` UI styles.
 
 ### Bug fixes 🐛
 - Fixed font page link styles.
-- Fixed TOC title too long cause overflowing of texts.
-- Fixed header with link on hover text become white.
+- Fixed TOC title too long cause overflowing.
+- Fixed header with link on hover text.
 
 ## 🚀 v1.3.3 (Oct 23, 2019)
 
