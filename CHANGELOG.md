@@ -1,4 +1,20 @@
 # Changelog
+[中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
+
+## 🚀 v1.3.5 (Nov 4, 2019)
+
+Code block styles and color syntax looks way more awesome now! OMG！Hope you all enjoy this update！❤️
+
+### Changes 💥
+- Loader leaving added smoother transition effect.
+- Changed code highlighting plugin, swapped highlight.js with codemirror to have a better color syntax. A more IDE like syntax! ✨(#6)
+- Restyled the code block, now looks even more professional! ✨
+- Complete rewritten TOC css styles, added a pulsing active ball to the current title. Also fixed the clicking space glitchy issue. (#13)
+
+### Bug fixes 🐛
+- Fixed a few icon position problems.
+- Fixed article nav bar subtitle overflowing issue.
+- Fixed a few font-family issue here and there.
 
 ## 🚀 v1.3.4 (Oct 24, 2019)
 
@@ -65,14 +81,14 @@ Enhanced bunch of features and add bunch of fun stuffs. Hope you all enjoy them!
 
 ### Features ✨
 - Added English language support! Hooray！
-- Home page added "Read article" so it's more clean that it's just a summary, click to read full article.
+- Home page added "Read article" so it's more clear that it's just a summary, click to read full article.
 - Added back to top button, also with a fun progress tracking effect!
 - Footer theme added theme version display.
 - Article added a parameter to set the number of characters this particular article should keep.
 
 ### Changes 💥
 - Added sticky effect for both home page and article page navigation bar, with auto hide when scroll, allow reading with less undistraction.
-- Readded google analytics js, which was removed before.
+- Re-added google analytics js, which was removed before.
 - Article top progress bar is enlarged to more catch eyeballs.
 
 ### Bug fixes 🐛

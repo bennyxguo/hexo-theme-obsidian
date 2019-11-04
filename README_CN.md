@@ -4,10 +4,18 @@
 ![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
 ![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
 ![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
+[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **[预览](http://tridiamond.me)** |
 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
 **[更新日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+
+💻 **[预览](http://tridiamond.me)**
+
+- 🇨🇳 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+
+- 🇺🇸 [English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
+**[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
 
@@ -33,12 +41,14 @@ theme: obsidian
 
 打开 `/themes/obsidian/_config.yml` 文件可以改变主题配置
 
-``` yaml
+<details>
+<summary>详细配置文件，点击展开</summary>
 
+``` yaml
 #! ---------------------------------------------------------------
-#! Obsidian theme 使用手动启用 highlight.js 代码高亮
-#! 为了可以正常显示代码高亮的样式
-#! 请务必在hexo默认配置里面关闭highlight
+#! 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
+#! 但是Hexo默认的highlight配置还是需要关闭的。
+#! ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
@@ -164,7 +174,16 @@ sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
   
+# 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
+# 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
+# modes文档请看: https://codemirror.net/mode/
+# codemirror官网： https://codemirror.net/
+# 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
+codemirror:
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+  
 ```
+</details>
 
 ### 评论插件
 
@@ -174,10 +193,10 @@ sharejs:
 - 如果你是使用 `Gitalk`, 你可以打开 `busuanzi` 文章详情页就会显示文章浏览量统计.
 
 ### 代码块样式
-
-> 因为Obsidian theme 使用手动启用 highlight.js 代码高亮
-  为了可以正常显示代码高亮的样式
-  请务必在hexo默认配置里面关闭`highlight`。
+  
+> 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
+  但是Hexo默认的highlight配置还是需要关闭的。
+  ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
   
 在博客根目录的`_config.yml`修改
 
@@ -193,6 +212,18 @@ highlight:
   tab_replace:
 
 ...
+```
+
+Codemirror代码高亮配置
+
+```yaml
+# 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
+# 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
+# modes文档请看: https://codemirror.net/mode/
+# codemirror官网： https://codemirror.net/
+# 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
+codemirror:
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 ```
 
 修改了默认highlight配置后需要重新生成文件

@@ -1,16 +1,18 @@
 # Hexo-theme-obsidian
 
-[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 > A dark Hexo theme, it's responsive, simple but elegant.
 
 ![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
 ![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
 ![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
+[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**[PREVIEW](http://tridiamond.me)** |
-**[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
-**[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+💻 **[PREVIEW](http://tridiamond.me)**
+
+- 🇺🇸 **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+
+- 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
+   **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
@@ -37,11 +39,15 @@ theme: obsidian
 
 Open `/themes/obsidian/_config.yml` can change the theme configs
 
+<details>
+<summary>Full detail config</summary>
+
 ``` yaml
 #! ---------------------------------------------------------------
-#! Obsidian theme use manual highlight.js
-#! To maintain the code block css display properly
-#! please change your default highlight setting as off!!
+#! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
+#! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
+#! !! So Please make sure you disabled Hexo's default highlight setting !!
+#! ---------------------------------------------------------------
 #! Rebuild files after you changed the config:
 #! `hexo clean && hexo g`
 #! ---------------------------------------------------------------
@@ -169,7 +175,16 @@ sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
   
+# Use codemirror instead of highlight js for better colors
+# if you want more language support check the modes list at official website
+# modes see: https://codemirror.net/mode/
+# see https://codemirror.net/
+codemirror:
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+  
 ```
+
+</details>
 
 ### Comments
 
@@ -180,10 +195,9 @@ You can choose from using Valine or Gitalk
 
 ### Code block style
 
-> Turn off default `highlight` to ensure code block style display properly. 
-  Because Obsidian theme use manual highlight.js
-  To maintain the code block css display properly
-  please change your default highlight setting as off!!
+> Since version `v1.3.5` code block highlight has changed from `highlight.js` to
+  `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
+  !! So Please make sure you disabled Hexo's default highlight setting !!
   
 Hexo configuration file `_config.yml` located at the ROOT path of your blog.
 
@@ -200,6 +214,17 @@ highlight:
   tab_replace:
 
 ...
+```
+
+Codemirror settings
+
+```yaml
+# Use codemirror instead of highlight js for better color syntax
+# if you want more language support check the modes list at official website
+# modes see: https://codemirror.net/mode/
+# see https://codemirror.net/
+codemirror:
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 ```
 
 Rebuild files after you changed the config

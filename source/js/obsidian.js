@@ -276,9 +276,9 @@ var Obsidian = {
     },
     initArticleJs: function () {
         // initialise hightlight.js
-        document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-        });
+        // document.querySelectorAll('pre code').forEach((block) => {
+        //     hljs.highlightBlock(block);
+        // });
         Obsidian.setCodeRowWithLang();
         Obsidian.tocSpy(200);
         if ($('#vcomments').length) {
@@ -296,8 +296,8 @@ var Obsidian = {
         let code = $("code");
         if (code && code.length) {
             code.each(function () {
-                var item = $(this);
-                var lang = "";
+                var item = $(this),
+                    lang = "";
                 if (item[0].className.indexOf(' ') > -1) {
                     lang = item[0].className.split(' ')[0];
                 } else {
@@ -407,10 +407,26 @@ var Obsidian = {
                 if (lang in langMap) displayLangText = langMap[lang];
                 else displayLangText = lang;
                 if (item.find(".language-mark").length <= 0 && displayLangText) {
-                    item.prepend(
-                        '<span class="language-mark" ref=' + lang + '>「 ' + displayLangText + ' 」</span>');
-                }
+                    // reset code block styles
+                    item.css('background', 'transparent');
+                    item.css('padding', 0);
 
+                    var $code = item.text();
+
+                    item.empty();
+
+                    var myCodeMirror = CodeMirror(this, {
+                        value: $code,
+                        mode: Obsidian.getCodeMirrorMode(lang),
+                        lineNumbers: !item.is('.inline'),
+                        readOnly: true,
+                        lineWrapping: true,
+                        theme: 'dracula'
+                    });
+
+                    item.find('.CodeMirror').prepend(
+                        '<span class="language-mark" ref=' + lang + '> <b class="iconfont icon-code" style="line-height: 0.7rem"></b> ' + displayLangText + '</span>');
+                }
             });
         }
         ;
@@ -457,6 +473,347 @@ var Obsidian = {
         };
 
         socialShare('.share-component-cc', $config);
+    },
+    v: function (t, e) {
+    if (t)
+        switch (t) {
+            case "javascript":
+            case "text/javascript":
+            case "js":
+                return t = "javascript";
+            case "json":
+                return e ? t : t = {
+                    name: "javascript",
+                    json: !0
+                };
+            case "jsonld":
+            case "json-ld":
+                return e ? t : "application/ld+json";
+            case "text/typescript":
+            case "typescript":
+            case "ts":
+                return e ? "typescript" : t = {
+                    name: "javascript",
+                    typescript: !0
+                };
+            case "clojure":
+                return t;
+            case "coffee":
+            case "coffeescript":
+            case "css":
+                return t;
+            case "less":
+                return e ? "less" : "text/x-less";
+            case "scss":
+                return e ? "scss" : t = "text/x-scss";
+            case "gfm":
+            case "github flavored markdown":
+                return t = "gfm";
+            case "markdown":
+            case "md":
+            case "mkd":
+                return t;
+            case "xml":
+            case "xaml":
+            case "mjml":
+            case "xul":
+            case "enml":
+                return e ? t : "xml";
+            case "haskell":
+                return t;
+            case "htmlmixed":
+            case "html":
+            case "xhtml":
+            case "svg":
+            case "epub":
+                return e ? /^html/.exec(t) ? "html" : t : t = "htmlmixed";
+            case "lua":
+                return t;
+            case "lisp":
+            case "commonlisp":
+            case "common lisp":
+                return t = "commonlisp";
+            case "pascal":
+                return t;
+            case "perl":
+            case "perl5":
+            case "perl4":
+            case "perl3":
+            case "perl2":
+                return "perl";
+            case "perl6":
+                return t;
+            case "php+html":
+                return e ? "php" : "application/x-httpd-php";
+            case "php":
+            case "php3":
+            case "php4":
+            case "php5":
+            case "php6":
+                return e ? t : "text/x-php";
+            case "cython":
+                return e ? t : t = "text/x-cython";
+            case "python":
+                return e ? t : t = "text/x-python";
+            case "ruby":
+                return t;
+            case "shell":
+            case "sh":
+            case "zsh":
+            case "bash":
+                return t = "shell";
+            case "sql":
+            case "sql lite":
+            case "sqlite":
+                return e ? t : t = "text/x-sql";
+            case "mssql":
+                return e ? t : t = "text/x-mssql";
+            case "mysql":
+                return e ? t : t = "text/x-mysql";
+            case "mariadb":
+                return e ? t : t = "text/x-mariadb";
+            case "cassandra":
+            case "cql":
+                return e ? t : t = "text/x-cassandra";
+            case "plsql":
+                return e ? t : t = "text/x-plsql";
+            case "stex":
+            case "tex":
+            case "latex":
+                return e ? t : "text/x-stex";
+            case "tiddlywiki":
+            case "wiki":
+                return e ? t : t = "tiddlywiki";
+            case "vb":
+            case "visual basic":
+            case "visualbasic":
+            case "basic":
+                return e ? t : t = "vb";
+            case "vbscript":
+            case "velocity":
+                return t;
+            case "verilog":
+                return e ? t : t = "text/x-verilog";
+            case "xquery":
+                return t;
+            case "yaml":
+            case "yml":
+                return e ? t : "yaml";
+            case "go":
+            case "groovy":
+            case "nginx":
+                return t;
+            case "octave":
+            case "matlab":
+                return e ? t : "text/x-octave";
+            case "c":
+            case "clike":
+            case "csrc":
+                return e ? t : t = "text/x-csrc";
+            case "c++":
+            case "c++src":
+            case "cpp":
+            case "cc":
+            case "hpp":
+            case "h++":
+            case "h":
+                return e ? t : t = "text/x-c++src";
+            case "obj-c":
+            case "objc":
+            case "objective c":
+            case "objective-c":
+            case "objectivec":
+                return e ? t : t = "text/x-objectivec";
+            case "text/x-scala":
+            case "scala":
+                return e ? t : t = "text/x-scala";
+            case "csharp":
+            case "c#":
+            case "cs":
+                return e ? t : t = "text/x-csharp";
+            case "java":
+                return e ? t : t = "text/x-java";
+            case "squirrel":
+                return e ? t : t = "text/x-squirrel";
+            case "ceylon":
+                return e ? t : t = "text/x-ceylon";
+            case "kotlin":
+                return e ? t : t = "text/x-kotlin";
+            case "swift":
+                return t = "swift";
+            case "r":
+            case "rlang":
+            case "r-lang":
+                return e ? t : t = "text/x-rsrc";
+            case "d":
+            case "diff":
+            case "erlang":
+            case "http":
+            case "jade":
+                return t;
+            case "rst":
+            case "restructuredtext":
+                return t = "rst";
+            case "rust":
+            case "jinja2":
+                return t;
+            case "aspx":
+            case "asp":
+            case "asp.net":
+                return e ? t : t = "application/x-aspx";
+            case "jsp":
+                return e ? t : t = "application/x-jsp";
+            case "erb":
+                return e ? t : t = "application/x-erb";
+            case "ejs":
+            case "embeddedjs":
+            case "embedded javaScript":
+                return e ? t : t = "application/x-ejs";
+            case "powershell":
+            case "bat":
+            case "cmd":
+                return e ? t : "application/x-powershell";
+            case "dockerfile":
+                return e ? t : "text/x-dockerfile";
+            case "jsx":
+            case "react":
+                return e ? t : "text/jsx";
+            case "tsx":
+                return e ? t : "text/typescript-jsx";
+            case "vue.js":
+            case "vue":
+            case "vue-template":
+                return e ? t : "script/x-vue";
+            case "nsis":
+                return e ? t : "text/x-nsis";
+            case "mathematica":
+                return e ? t : "text/x-mathematica";
+            case "tiki":
+            case "tiki wiki":
+            case "tiki-wiki":
+            case "tikiwiki":
+                return "tiki";
+            case "properties":
+            case "ini":
+                return e ? t : "text/x-properties";
+            case "livescript":
+                return e ? t : "text/x-livescript";
+            case "asm":
+            case "assembly":
+            case "nasm":
+            case "gas":
+                return e ? t : "assembly";
+            case "toml":
+                return e ? t : "text/x-toml";
+            case "sequence":
+                return "sequence";
+            case "flow":
+            case "flowchart":
+                return "flow";
+            case "mermaid":
+                return "mermaid";
+            case "ocaml":
+                return e ? t : "text/x-ocaml";
+            case "f#":
+            case "fsharp":
+                return e ? t : "text/x-fsharp";
+            case "elm":
+                return e ? t : "text/x-elm";
+            case "pgp":
+            case "pgp-keys":
+            case "pgp-key":
+            case "pgp-signature":
+            case "asciiarmor":
+            case "ascii-armor":
+            case "ascii armor":
+                return e ? t : "application/pgp";
+            case "spreadsheet":
+            case "excel":
+                return e ? t : "text/x-spreadsheet";
+            case "elixir":
+                return "elixir";
+            case "cmake":
+                return e ? t : "text/x-cmake";
+            case "cypher":
+            case "cypher-query":
+                return e ? t : "application/x-cypher-query";
+            case "dart":
+                return "dart";
+            case "django":
+                return e ? t : "text/x-django";
+            case "dtd":
+            case "xml-dtd":
+            case "xml dtd":
+            case "xmldtd":
+                return e ? t : "application/xml-dtd";
+            case "dylan":
+                return e ? t : "text/x-dylan";
+            case "handlebars":
+                return e ? t : "text/x-handlebars-template";
+            case "idl":
+                return e ? t : "text/x-idl";
+            case "webidl":
+            case "web-idl":
+            case "web idl":
+                return e ? t : "text/x-webidl";
+            case "yacas":
+                return e ? t : "text/x-yacas";
+            case "mbox":
+                return e ? t : "application/mbox";
+            case "vhdl":
+                return e ? t : "text/x-vhdl";
+            case "julia":
+                return "julia";
+            case "haxe":
+                return e ? t : "text/x-haxe";
+            case "hxml":
+                return e ? t : "text/x-hxml";
+            case "fortran":
+                return e ? t : "text/x-fortran";
+            case "protobuf":
+                return e ? t : "text/x-protobuf";
+            case "makefile":
+                return e ? t : "text/x-makefile";
+            case "tcl":
+                return e ? t : "text/x-tcl";
+            case "scheme":
+                return e ? t : "text/x-scheme";
+            case "twig":
+                return e ? t : "text/x-twig";
+            case "sas":
+                return e ? t : "text/x-sas";
+            case "pseudocode":
+                return e ? t : "text/x-pseudocode";
+            case "julia":
+            case "text/x-julia":
+            case "stylus":
+            case "cobol":
+            case "oz":
+            case "sparql":
+            case "crystal":
+                return t;
+            case "asn.1":
+                return e ? "ASN.1" : t = "text/x-ttcn-asn";
+            case "gherkin":
+            case "smalltalk":
+            case "turtle":
+                return t;
+            default:
+                return ""
+        }
+    },
+    getCodeMirrorMode: function(t, e, n) {
+        var i = ((t = (t = t ? t.toLowerCase() : "").replace(/^\s*\.*lang(uage)*-/g, "").replace(/[{}]/g, "").trim()).split(/\s+/) || [t])[0],
+            r = Obsidian.v(t, n);
+        return r || t == i || (r = Obsidian.v(i.replace(/(^[.])|(,$)/g, ""), n)), r || (n ? i : e ? null : t)
+    },
+    loadingOut: function () {
+        setTimeout(function () {
+            $('html, body').removeClass('loading')
+            setTimeout(function () {
+                $('.loader').css('z-index', '-1');
+            }, 600)
+        }, 500);
     }
 };
 
@@ -470,14 +827,10 @@ $(function () {
     if ($('#preview').length) {
         Obsidian.PS();
         $('.pview a').addClass('pviewa')
-        setTimeout(function () {
-            $('html, body').removeClass('loading')
-        }, 500);
+        Obsidian.loadingOut();
     } else {
         $('#single').css('min-height', window.innerHeight)
-        setTimeout(function () {
-            $('html, body').removeClass('loading')
-        }, 500)
+        Obsidian.loadingOut();
         window.addEventListener('popstate', function (e) {
             if (e.state) location.href = e.state.u;
         })
@@ -819,4 +1172,3 @@ $(function () {
     Obsidian.setCodeRowWithLang();
     console.log("%c Github %c", "background:#24272A; color:#73ddd7", "", "https://github.com/TriDiamond/hexo-theme-obsidian")
 })
-

@@ -7,7 +7,9 @@
     <div class="else">
         <p class="animated fadeInDown">
             <% if (post.categories.data[0]) { %>
-                <a href="<%- '/categories/' + post.categories.data[0].name %>"><b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+                <a href="<%- '/categories/' + post.categories.data[0].name %>">
+                  <b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b>
+                </a>
             <% } else { %>
                 <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
             <% } %>
@@ -65,4 +67,3 @@
         </div>
     </div>
 </div>
-
