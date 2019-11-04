@@ -6,13 +6,9 @@
 ![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
 [![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**[预览](http://tridiamond.me)** |
-**[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
-**[更新日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[预览](http://tridiamond.me)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
-💻 **[预览](http://tridiamond.me)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
-
-- 🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
+🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
 **[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
