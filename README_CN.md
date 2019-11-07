@@ -11,7 +11,23 @@
 🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
 **[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
-![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+
+<details>
+<summary>更多主题展示</summary>
+
+### 分类页
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
+
+### 多级分类
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+
+### 标签页
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
+
+### 文章页
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
+</details>
 
 ## 安装
 

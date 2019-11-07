@@ -13,7 +13,23 @@
    **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 
-![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1571332123/blog/A-Obsidian_mlnj3q.png)
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+
+<details>
+<summary>More screen shots</summary>
+
+### Categories Page
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
+
+### Categories Leveled
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+
+### Tags Page
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
+
+### Articles
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
+</details>
 
 ## Install
 
