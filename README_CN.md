@@ -58,6 +58,11 @@ theme: obsidian
 # 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
   PAGE: /page
+  
+# 分类页和标签页自定义标题配置
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
 
 # 是否启用目录
 TOC: true

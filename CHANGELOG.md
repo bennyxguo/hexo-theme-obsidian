@@ -1,6 +1,29 @@
 # Changelog
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.0 (Nov 8, 2019)
+
+🎉 Lets celebrate the new `Categories` and `Tags` page UI！Now the categories page support multi-levels! Hope you guys love this update! ❤️
+
+### Features ✨
+- Added a icon logo display next to the original logo (Which was just a word).
+- New icon logo has a spinning effect when you come back to the top of the page!
+- Complete new `Categories` and `Tags` page UI with multi-level categories support! (#12)
+- English fonts changed to google's `Rubik` fonts, now looks way more awesome!
+- Added pages title custom title name, can be changed in theme config file.
+
+Page custom titles
+```yaml
+# Page custom titles
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
+```
+
+### Changes 💥
+- All navigation bars added shadows to standout a bit more, well just to look more awesome!
+- Article page navigation home icon changed to the icon logo of the site.
+
 ## 🚀 v1.3.5 (Nov 4, 2019)
 
 Code block styles and color syntax looks way more awesome now! OMG！Hope you all enjoy this update！❤️

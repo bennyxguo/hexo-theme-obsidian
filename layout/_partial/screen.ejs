@@ -1,7 +1,10 @@
 <% var first = page.posts.sort("date", "desc").eq(0); %>
 <div id="header">
     <div>
-        <a class="image-logo animated fadeInDown" href="/"></a>
+        <div class="logo animated fadeInDown">
+            <img src="/img/favicon.png" alt="">
+            <a class="image-logo" href="/"></a>
+        </div>
         <ul id="menu-menu" class="menu text-menu">
             <% for (var i in theme.menu){ %>
             <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">

@@ -20,7 +20,7 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.3.5"
+version: "1.4.0"
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -32,6 +32,11 @@ menu:
   CATEGORIES: /categories
   TAGS: /tags
   ARCHIVES: /archives
+
+# Page custom titles
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
 
 # Social media links
 socials:
@@ -49,7 +54,7 @@ welcome_cover: /img/cover.jpg
 cover: /img/welcome-cover.jpg
 
 # Avatar
-avatar: https://res.cloudinary.com/tridiamond/image/upload/v1571154379/TriDiamondLogoCircleLighting_llbad2.png
+avatar: https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg
 
 # Disable default scrollbar
 scrollbar: true

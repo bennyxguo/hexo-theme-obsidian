@@ -63,6 +63,11 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 # Menu setting | format = title_name: link_url
 menu:
   PAGE: /page
+  
+# Page custom titles
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
 
 # Enable table of content
 TOC: true
