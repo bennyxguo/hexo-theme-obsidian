@@ -13,7 +13,7 @@
    **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 
-![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
 <details>
 <summary>More screen shots</summary>
@@ -23,6 +23,9 @@
 
 ### Categories Leveled
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-categories-level_xtxty9.png)
+
+### Archives
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323148/blog/A-Obsidian-archives_ffpwf9.png)
 
 ### Articles
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
@@ -81,6 +84,7 @@ menu:
 page_titles:
   categories: "Categories"
   tags: "Tags"
+  archives: "Archived"
 
 # Enable table of content
 TOC: true

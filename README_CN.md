@@ -11,7 +11,7 @@
 🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
 **[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
-![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148015/blog/A-Obsidian-full_vcjfgm.png)
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
 <details>
 <summary>更多主题展示</summary>
@@ -21,6 +21,9 @@
 
 ### 多级分类
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-categories-level_xtxty9.png)
+
+### 归档页
+![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323148/blog/A-Obsidian-archives_ffpwf9.png)
 
 ### 文章页
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
@@ -76,6 +79,7 @@ menu:
 page_titles:
   categories: "Categories"
   tags: "Tags"
+  archives: "Archived"
 
 # 是否启用目录
 TOC: true

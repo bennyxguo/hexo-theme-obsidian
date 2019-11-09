@@ -1,6 +1,27 @@
 # Changelog
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.1 (Nov 9, 2019)
+
+✨ Shipped a complete redesigned `archives` page UI and enhanced modern `link style`! Stay being awesome! 👽
+
+### Features ✨
+- Complete redesigned `Archives` page!
+- Added fade in transition for all pages!
+- Archives page now also allow custom header name config! Check out the example theme config below:
+
+```yaml
+# Page custom titles
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
+  archives: "Archived"
+```
+
+### Changes 💥
+- New link styles for all pages!
+- Redesigned the Read full article button for home page!
+
 ## 🚀 v1.4.0 (Nov 8, 2019)
 
 🎉 Lets celebrate the new `Categories` and `Tags` page UI！Now the categories page support multi-levels! Hope you guys love this update! ❤️

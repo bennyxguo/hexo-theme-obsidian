@@ -20,7 +20,7 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.4.0"
+version: "1.4.1"
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -37,6 +37,7 @@ menu:
 page_titles:
   categories: "Categories"
   tags: "Tags"
+  archives: "Archived"
 
 # Social media links
 socials:

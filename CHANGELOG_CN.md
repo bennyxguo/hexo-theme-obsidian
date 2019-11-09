@@ -1,5 +1,26 @@
 # Changelog
 
+## 🚀 v1.4.1 (十一月 10， 2019)
+
+✨ 重新设计了`归档`页面UI和所有页面的`链接样式`！Stay being awesome! 👽
+
+### Features ✨
+- 重新设计了归档页UI！
+- 所有`page`都添加了渐渐展示的效果！
+- 归档页也支持自定义标题文案，参考一下主题配置：
+
+```yaml
+# Page custom titles
+page_titles:
+  categories: "Categories"
+  tags: "Tags"
+  archives: "Archived"
+```
+
+### Changes 💥
+- 所有页面的链接都用上了现在最流行的链接CSS效果。
+- 重新设计了`阅读文章`的样式和UI。
+
 ## 🚀 v1.4.0 (2019-11-08)
 
 🎉 全新的`分类`和`标签`页UI，分类页现在支持多级分类展示哦，自带很炫酷的效果！希望你们喜欢这次的更新！ ❤️
