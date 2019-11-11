@@ -79,7 +79,7 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 # Menu setting | format = title_name: link_url
 menu:
   PAGE: /page
-  
+
 # Page custom titles
 page_titles:
   categories: "Categories"
@@ -125,7 +125,7 @@ rss: atom.xml
 autoplay: false
 
 # default mp3 file
-mp3: 
+mp3:
   - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
@@ -183,25 +183,25 @@ html_truncate:
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
   reserveLastWord: true
-  
+
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
   enable: true
-  
+
 # Enable social media sharing
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
-  
+
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
-  
+
 ```
 </details>
 
@@ -217,11 +217,11 @@ You can choose from using Valine or Gitalk
 > Since version `v1.3.5` code block highlight has changed from `highlight.js` to
   `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
   !! So Please make sure you disabled Hexo's default highlight setting !!
-  
+
 Hexo configuration file `_config.yml` located at the ROOT path of your blog.
 
-> ⚠️ Please note do not make these changes in the theme's config file, 
-  changing configs in the theme config file `_config.yml` will not work properly. 
+> ⚠️ Please note do not make these changes in the theme's config file,
+  changing configs in the theme config file `_config.yml` will not work properly.
 
 ```yaml
 ...
@@ -263,7 +263,7 @@ date: 2019-07-14 18:38:45
 categories:
     - Category1
     - Category2
-tags: 
+tags:
     - Tag1
     - Tag2
 mp3: http://domain.com/awesome.mp3
@@ -283,7 +283,7 @@ date: 2019-07-14 18:38:45
 categories:
     - Category1
     - Category2
-tags: 
+tags:
     - Tag1
     - Tag2
 mp3: http://domain.com/awesome.mp3
@@ -334,6 +334,31 @@ type: "tags"
 ``` bash
 cd themes/osidian
 git pull
+```
+
+## Using the search engine
+
+### Installation guide:
+
+Install by npm
+
+```bash
+$ npm install hexo-generator-search --save
+```
+
+Adding the plugin config in your root `_config.yml`
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+Regenrate files
+
+```bash
+hexo clean && hexo g
 ```
 
 ## Related

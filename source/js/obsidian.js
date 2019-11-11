@@ -3,6 +3,10 @@
  * @author Guo Xiang - @TriDiamond
  * @description Use for hexo obsidian theme
  */
+//JSHint ingores
+/* jshint -W093 */
+/* jshint -W030 */
+/* jshint -W119 */
 
 /**
  * Watch the TOC during scroll and fill in active status
@@ -56,7 +60,7 @@ function utiliseBgColor() {
         } else {
             $('html').css('background', '#100e17');
         }
-    }, 500)
+    }, 500);
 }
 
 /**
@@ -95,7 +99,7 @@ var Obsidian = {
             },
             error: function (a, b, c) {
                 if (b == 'abort') {
-                    err && err()
+                    err && err();
                 } else {
                     window.location.href = url;
                 }
@@ -151,28 +155,28 @@ var Obsidian = {
         Obsidian.L(url, function (data) {
             if (!$(data).filter('#single').length) {
                 location.href = url;
-                return
+                return;
             }
             switch (flag) {
                 case 'push':
-                    history.pushState(state, title, url)
+                    history.pushState(state, title, url);
                     $('#preview').html($(data).filter('#single'));
                     break;
                 case 'replace':
-                    history.replaceState(state, title, url)
+                    history.replaceState(state, title, url);
                     $('#preview').html($(data).filter('#single'));
                     break;
             }
             document.title = title;
-            $('#preview').html($(data).filter('#single'))
+            $('#preview').html($(data).filter('#single'));
             switch (flag) {
                 case 'push':
                     Obsidian.preview();
                     break;
                 case 'replace':
                     Obsidian.initArticleJs();
-                    window.scrollTo(0, 0)
-                    Obsidian.loaded()
+                    window.scrollTo(0, 0);
+                    Obsidian.loaded();
                     break;
             }
             setTimeout(function () {
@@ -182,8 +186,8 @@ var Obsidian = {
                 if (comment.data('ae') == true) {
                     comment.click();
                 }
-            }, 0)
-        })
+            }, 0);
+        });
     },
     preview: function () {
         // preview toggle
@@ -214,10 +218,10 @@ var Obsidian = {
             $('.icon-play').css({
                 'color': '#dedede',
                 'cursor': 'not-allowed'
-            })
-            return
+            });
+            return;
         }
-        var sourceSrc = $("#audio source").eq(0).attr('src')
+        var sourceSrc = $("#audio source").eq(0).attr('src');
         if (sourceSrc == '' && p[0].src == '') {
             audiolist = $('#audio-list li');
             mp3 = audiolist.eq([Math.floor(Math.random() * audiolist.length)]);
@@ -239,12 +243,12 @@ var Obsidian = {
                 }
             },
             'ended': function () {
-                $('.icon-pause').removeClass('icon-pause').addClass('icon-play')
+                $('.icon-pause').removeClass('icon-pause').addClass('icon-play');
             },
             'playing': function () {
-                $('.icon-play').removeClass('icon-play').addClass('icon-pause')
+                $('.icon-play').removeClass('icon-play').addClass('icon-pause');
             }
-        })
+        });
     },
     loading: function () {
         var w = window.innerWidth;
@@ -253,12 +257,12 @@ var Obsidian = {
             '@-webkit-keyframes loader' + w + '{100%{background-position:' + w + 'px 0}}' +
             '.loader' + w + '{-webkit-animation:loader' + w + ' 3s linear infinite;-moz-animation:loader' + w + ' 3s linear infinite;}' +
             '</style>';
-        $('.loaderstyle').remove()
-        $('head').append(css)
-        $('#loader').removeClass().addClass('loader' + w).show()
+        $('.loaderstyle').remove();
+        $('head').append(css);
+        $('#loader').removeClass().addClass('loader' + w).show();
     },
     loaded: function () {
-        $('#loader').removeClass().hide()
+        $('#loader').removeClass().hide();
     },
     F: function (id, w, h) {
         var _height = $(id).parent().height(),
@@ -293,7 +297,7 @@ var Obsidian = {
     },
     setCodeRowWithLang: function () {
         // Get the programming type of the current code block
-        let code = $("code");
+        var code = $("code");
         if (code && code.length) {
             code.each(function () {
                 var item = $(this),
@@ -429,7 +433,6 @@ var Obsidian = {
                 }
             });
         }
-        ;
     },
     tocSpy: function (offset) {
         var tocContainer = $("#toc");
@@ -452,10 +455,10 @@ var Obsidian = {
         });
     },
     reactToWindowHeight: function () {
-        let postSpacing = 315;
-        let winHeight = $(window).height();
-        let winWidth = $(window).width();
-        let firstPostHeight = $('#post0').height();
+        var postSpacing = 315;
+        var winHeight = $(window).height();
+        var winWidth = $(window).width();
+        var firstPostHeight = $('#post0').height();
         if (winWidth <= 900) {
             postSpacing = 100;
         }
@@ -799,57 +802,62 @@ var Obsidian = {
             case "turtle":
                 return t;
             default:
-                return ""
+                return "";
         }
     },
     getCodeMirrorMode: function(t, e, n) {
         var i = ((t = (t = t ? t.toLowerCase() : "").replace(/^\s*\.*lang(uage)*-/g, "").replace(/[{}]/g, "").trim()).split(/\s+/) || [t])[0],
             r = Obsidian.v(t, n);
-        return r || t == i || (r = Obsidian.v(i.replace(/(^[.])|(,$)/g, ""), n)), r || (n ? i : e ? null : t)
+        return r || t == i || (r = Obsidian.v(i.replace(/(^[.])|(,$)/g, ""), n)), r || (n ? i : e ? null : t);
     },
     loadingOut: function () {
         setTimeout(function () {
-            $('html, body').removeClass('loading')
+            $('html, body').removeClass('loading');
             setTimeout(function () {
                 $('.loader').css('z-index', '-1');
-            }, 600)
+            }, 600);
         }, 500);
     }
 };
 
 $(function () {
+    var inputArea       = document.querySelector("#local-search-input");
+    if (inputArea) {
+      inputArea.onclick   = function(){ getSearchFile(); this.onclick = null; };
+      inputArea.onkeydown = function(){ if(event.keyCode == 13) return false; };
+    }
     if ($('#post0').length) {
         Obsidian.reactToWindowHeight();
     }
     if (Obsidian.P()) {
-        $('body').addClass('touch')
+        $('body').addClass('touch');
     }
     if ($('#preview').length) {
         Obsidian.PS();
-        $('.pview a').addClass('pviewa')
+        $('.pview a').addClass('pviewa');
         Obsidian.loadingOut();
     } else {
-        $('#single').css('min-height', window.innerHeight)
+        $('#single').css('min-height', window.innerHeight);
         Obsidian.loadingOut();
         window.addEventListener('popstate', function (e) {
             if (e.state) location.href = e.state.u;
-        })
+        });
         Obsidian.player();
-        $('.icon-icon, .image-icon').attr('href', '/')
-        $('#top').show()
+        $('.icon-icon, .image-icon').attr('href', '/');
+        $('#top').show();
     }
     (() => {
-        'use strict'
+        'use strict';
 
-        let refOffset = 0;
-        let articleRefOffset = 0;
-        const articleMenuHeight = 51;
-        const menuHeight = 70;
-        const header = document.querySelector('#header');
-        const logoImg = document.querySelector('.logo > img');
+        var refOffset = 0,
+            articleRefOffset = 0,
+            articleMenuHeight = 51,
+            menuHeight = 70,
+            header = document.querySelector('#header'),
+            logoImg = document.querySelector('.logo > img');
 
-        const handler = () => {
-            let newOffset = window.scrollY || window.pageYOffset;
+        var handler = () => {
+            var newOffset = window.scrollY || window.pageYOffset;
             if ($('#header').length && !$('.scrollbar').length) {
                 if (newOffset > menuHeight) {
                     if (newOffset > refOffset) {
@@ -877,31 +885,31 @@ $(function () {
                         logoImg.classList.add('spin');
                         setTimeout(function () {
                             logoImg.classList.remove('spin');
-                        }, 2000)
+                        }, 2000);
                     }
                 }
             }
-            const topHeader = document.querySelector('#top');
-            const homeIcon = document.querySelector('#home-icon');
+            var topHeader = document.querySelector('#top');
+            var homeIcon = document.querySelector('#home-icon');
             if (topHeader && $('.scrollbar').length && !$('.icon-images').hasClass('active')) {
                 if (newOffset > articleMenuHeight) {
                     if (newOffset > articleRefOffset) {
                         topHeader.classList.remove('animateIn');
                         topHeader.classList.add('animateOut');
-                        $('.subtitle').fadeOut()
+                        $('.subtitle').fadeOut();
                     } else {
                         topHeader.classList.remove('animateOut');
                         topHeader.classList.add('animateIn');
-                        $('.subtitle').fadeIn()
+                        $('.subtitle').fadeIn();
                     }
                     articleRefOffset = newOffset;
                 } else {
-                    $('.subtitle').fadeOut()
+                    $('.subtitle').fadeOut();
                     if (!homeIcon.classList.contains('spin')) {
                         homeIcon.classList.add('spin');
                         setTimeout(function () {
                             homeIcon.classList.remove('spin');
-                        }, 2000)
+                        }, 2000);
                     }
                 }
                 var wt = $(window).scrollTop(),
@@ -909,16 +917,16 @@ $(function () {
                     dh = document.body.scrollHeight,
                     wh = $(window).height();
                 var width = tw / (dh - wh) * wt;
-                $('.scrollbar').width(width)
+                $('.scrollbar').width(width);
             }
 
-            var scrollTop = $(window).scrollTop();
-            var docHeight = $(document).height();
-            var winHeight = $(window).height();
-            var winWidth = $(window).width();
-            var scrollPercent = (scrollTop) / (docHeight - winHeight);
-            var scrollPercentRounded = Math.round(scrollPercent * 100);
-            var backToTopState = $('#back-to-top').css('display');
+            var scrollTop = $(window).scrollTop(),
+                docHeight = $(document).height(),
+                winHeight = $(window).height(),
+                winWidth = $(window).width(),
+                scrollPercent = (scrollTop) / (docHeight - winHeight),
+                scrollPercentRounded = Math.round(scrollPercent * 100),
+                backToTopState = $('#back-to-top').css('display');
 
             $('#back-to-top').find('.percentage').html(scrollPercentRounded + '%');
             $('#back-to-top').find('.flow').css('height', scrollPercentRounded + '%');
@@ -934,24 +942,27 @@ $(function () {
                     if (backToTopState === 'block') {
                         setTimeout(function () {
                             $('#back-to-top').css('display', 'none');
-                        }, 400)
+                        }, 400);
                         $('#back-to-top').removeClass('fadeInRight');
                         $('#back-to-top').addClass('fadeOutRight');
                     }
                 }
             }
-        }
+        };
 
         window.addEventListener('scroll', handler, false);
     })($);
     $(window).on('touchmove', function (e) {
         if ($('body').hasClass('mu')) {
-            e.preventDefault()
+            e.preventDefault();
         }
-    })
+    });
     $('body').on('click', function (e) {
         var tag = $(e.target).attr('class') || '',
-            rel = $(e.target).attr('rel') || '';
+            rel = $(e.target).attr('rel') || '',
+            set,
+            clone;
+
         // .content > ... > img
         if (e.target.nodeName == "IMG" && $(e.target).parents('div.content').length > 0) {
             tag = 'pimg';
@@ -959,7 +970,7 @@ $(function () {
         if (!tag && !rel) return;
         switch (true) {
             case (tag.indexOf('share') != -1):
-                let shareComponent = $(".share-component-cc");
+                var shareComponent = $(".share-component-cc");
                 if (shareComponent.css('opacity') != '1') {
                     $(".share-component-cc").css('opacity', 1);
                 } else {
@@ -973,7 +984,7 @@ $(function () {
                 break;
             // nav menu
             case (tag.indexOf('switchmenu') != -1):
-                window.scrollTo(0, 0)
+                window.scrollTo(0, 0);
                 $('html, body').toggleClass('mu');
                 var switchMenu = $('.switchmenu');
                 if (switchMenu.hasClass('icon-menu')) {
@@ -982,34 +993,33 @@ $(function () {
                     switchMenu.removeClass('icon-cross').addClass('icon-menu');
                 }
                 return false;
-                break;
             // next page
             case (tag.indexOf('more') != -1):
                 tag = $('.more');
                 if (tag.data('status') == 'loading') {
-                    return false
+                    return false;
                 }
                 var num = parseInt(tag.data('page')) || 1;
                 if (num == 1) {
-                    tag.data('page', 1)
+                    tag.data('page', 1);
                 }
                 if (num >= Pages) {
-                    return
+                    return;
                 }
-                tag.html(tag.attr('data-loading')).data('status', 'loading')
-                Obsidian.loading()
+                tag.html(tag.attr('data-loading')).data('status', 'loading');
+                Obsidian.loading();
                 Obsidian.L(tag.attr('href'), function (data) {
                     var link = $(data).find('.more').attr('href');
                     if (link != undefined) {
-                        tag.attr('href', link).html(tag.attr('data-load-more')).data('status', 'loaded')
-                        tag.data('page', parseInt(tag.data('page')) + 1)
+                        tag.attr('href', link).html(tag.attr('data-load-more')).data('status', 'loaded');
+                        tag.data('page', parseInt(tag.data('page')) + 1);
                     } else {
-                        $('#pager').remove()
+                        $('#pager').remove();
                     }
                     var tempScrollTop = $(window).scrollTop();
-                    $('#primary').append($(data).find('.post'))
+                    $('#primary').append($(data).find('.post'));
                     $(window).scrollTop(tempScrollTop + 100);
-                    Obsidian.loaded()
+                    Obsidian.loaded();
                     $('html,body').animate({scrollTop: tempScrollTop + 400}, 500);
                     document.querySelectorAll('pre code').forEach((block) => {
                         hljs.highlightBlock(block);
@@ -1019,88 +1029,82 @@ $(function () {
                         initValine();
                     }
                 }, function () {
-                    tag.html(tag.attr('data-load-more')).data('status', 'loaded')
-                })
+                    tag.html(tag.attr('data-load-more')).data('status', 'loaded');
+                });
                 return false;
-                break;
             // home
             case (tag.indexOf('icon-home') != -1):
                 $('.toc').fadeOut(100);
                 if ($('#preview').hasClass('show')) {
                     history.back();
                 } else {
-                    location.href = $('.icon-home').data('url')
+                    location.href = $('.icon-home').data('url');
                 }
                 return false;
-                break;
             // qrcode
             case (tag.indexOf('icon-QRcode-o') != -1):
                 if ($('.icon-scan').hasClass('tg')) {
-                    $('#qr').toggle()
+                    $('#qr').toggle();
                 } else {
-                    $('.icon-scan').addClass('tg')
-                    $('#qr').qrcode({width: 128, height: 128, text: location.href}).toggle()
+                    $('.icon-scan').addClass('tg');
+                    $('#qr').qrcode({width: 128, height: 128, text: location.href}).toggle();
                 }
                 return false;
-                break;
             // audio play
             case (tag.indexOf('icon-play') != -1):
-                $('#audio')[0].play()
-                $('.icon-play').removeClass('icon-play').addClass('icon-pause')
+                $('#audio')[0].play();
+                $('.icon-play').removeClass('icon-play').addClass('icon-pause');
                 return false;
-                break;
             // audio pause
             case (tag.indexOf('icon-pause') != -1):
-                $('#audio')[0].pause()
-                $('.icon-pause').removeClass('icon-pause').addClass('icon-play')
+                $('#audio')[0].pause();
+                $('.icon-pause').removeClass('icon-pause').addClass('icon-play');
                 return false;
-                break;
             // history state
             case (tag.indexOf('posttitle') != -1):
-                Obsidian.HS($(e.target), 'push')
+                $('body').removeClass('fixed');
+                Obsidian.HS($(e.target), 'push');
                 // initialArticleTyped();
                 return false;
-                break;
             // history state
             case (tag.indexOf('menu-link') != -1):
-                Obsidian.HS($(e.target), 'push')
+                $('body').removeClass('fixed');
+                Obsidian.HS($(e.target), 'push');
                 return false;
-                break;
             // prev, next post
             case (rel == 'prev' || rel == 'next'):
+                var t;
                 if (rel == 'prev') {
-                    var t = $('#prev_next a')[0].text
+                    t = $('#prev_next a')[0].text;
                 } else {
-                    var t = $('#prev_next a')[1].text
+                    t = $('#prev_next a')[1].text;
                 }
-                $(e.target).attr('title', t)
-                Obsidian.HS($(e.target), 'replace')
+                $(e.target).attr('title', t);
+                Obsidian.HS($(e.target), 'replace');
                 return false;
-                break;
             // toc
-            case (tag.indexOf('toc-text') != -1 || tag.indexOf('toc-link') != -1
-                || tag.indexOf('toc-number') != -1):
+            case (tag.indexOf('toc-text') != -1 ||
+                  tag.indexOf('toc-link') != -1 ||
+                  tag.indexOf('toc-number') != -1):
                 hash = '';
                 if (e.target.nodeName == 'SPAN') {
-                    hash = $(e.target).parent().attr('href')
+                    hash = $(e.target).parent().attr('href');
                 } else {
-                    hash = $(e.target).attr('href')
+                    hash = $(e.target).attr('href');
                 }
-                to = $(".content :header").find('[href="' + hash + '"]')
+                to = $(".content :header").find('[href="' + hash + '"]');
                 $("html,body").animate({
                     scrollTop: to.offset().top - 80
                 }, 300);
                 return false;
-                break;
             // quick view
             case (tag.indexOf('pviewa') != -1):
-                $('body').removeClass('mu')
+                $('body').removeClass('mu');
                 setTimeout(function () {
-                    Obsidian.HS($(e.target), 'push')
+                    Obsidian.HS($(e.target), 'push');
                     $('.toc').fadeIn(1000);
-                }, 300)
+                }, 300);
                 return false;
-                break;
             // photoswipe
             case (tag.indexOf('pimg') != -1):
                 var pswpElement = $('.pswp').get(0);
@@ -1140,7 +1144,6 @@ $(function () {
                     lightBox.init();
                 }
                 return false;
-                break;
             // comment
             case -1 != tag.indexOf("comment"):
                 Obsidian.loading(),
@@ -1154,55 +1157,63 @@ $(function () {
                     id: md5(window.location.pathname),
                     distractionFreeMode: comment.data('d'),
                     labels: ['Gitalk']
-                })
-                $(".comment").removeClass("link")
-                gitalk.render('gitalk-container')
+                });
+                $(".comment").removeClass("link");
+                gitalk.render('gitalk-container');
                 Obsidian.loaded();
                 return false;
-                break;
             case (tag.indexOf('category-list-child') != -1):
                 tag = $(e.target);
+                set = $('.set');
+                clone = $('.clone-element');
                 var categoryMask = $('.category-mask'),
                     categoryDisplay = categoryMask.css('display'),
-                    set = $('.set'),
-                    clone = $('.clone-element')
                     setHeight = set.height();
 
                 if (categoryDisplay == 'none') {
                     tag.parent('.category-list-item').addClass('active');
                     tag.find(".category-list-item").each(function () {
                         $(this).addClass('sub-active');
-                    })
+                    });
                     clone.append(set.html()).show();
-                    clone.css('top', set.offset().top)
-                    clone.css('left', set.offset().left)
+                    clone.css('top', set.offset().top);
+                    clone.css('left', set.offset().left);
                     set.empty().css('height', setHeight + 'px');
                     $('.category-mask').fadeIn(500);
                 }
                 return false;
-                break;
             case (tag.indexOf('category-mask') != -1):
-                var set = $('.set');
-                var clone = $('.clone-element');
+                set = $('.set');
+                clone = $('.clone-element');
                 set.append(clone.html()).css('height', 'auto');
                 clone.empty().hide();
                 $('.category-list-item.active').each(function () {
                     var that = $(this);
                     setTimeout(function () {
                         that.removeClass('active');
-                    }, 400)
+                    }, 400);
                     $(".sub-active").each(function() {
                         $(this).removeClass('sub-active');
-                    })
-                })
+                    });
+                });
                 $('.category-mask').fadeOut(500);
                 return false;
-                break;
+            case (tag.indexOf('search-bar') != -1 || tag.indexOf('search-box-close') != -1):
+                var searchBox = $('.search-box'),
+                    searchBoxDisplay = $('.search-box').css('display');
+
+                if (searchBoxDisplay != 'block') {
+                  $('body').addClass('fixed');
+                  searchBox.fadeIn(400);
+                } else {
+                  $('body').removeClass('fixed');
+                  searchBox.fadeOut(400);
+                }
+                return false;
             default:
                 return true;
-                break;
         }
-    })
+    });
 
     // 是否自动展开评论
     comment = $("#gitalk-container");
@@ -1219,10 +1230,13 @@ $(function () {
     // Watch window history changes
     window.onpopstate = function (event) {
         utiliseBgColor();
+        if ($('.search-box').css('display') == 'block') {
+          $('body').addClass('fixed');
+        }
     };
 
     utiliseBgColor();
     initialTyped();
     Obsidian.setCodeRowWithLang();
-    console.log("%c Github %c", "background:#24272A; color:#73ddd7", "", "https://github.com/TriDiamond/hexo-theme-obsidian")
-})
+    console.log("%c Github %c", "background:#24272A; color:#73ddd7", "", "https://github.com/TriDiamond/hexo-theme-obsidian");
+});

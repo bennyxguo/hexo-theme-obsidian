@@ -8,7 +8,7 @@
 
 **[预览](http://tridiamond.me)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
-🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** | 
+🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
 **[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
@@ -74,7 +74,7 @@ theme: obsidian
 # 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
   PAGE: /page
-  
+
 # 分类页和标签页自定义标题配置
 page_titles:
   categories: "Categories"
@@ -120,7 +120,7 @@ rss: atom.xml
 autoplay: false
 
 # 默认mp3文件
-mp3: 
+mp3:
   - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
@@ -178,18 +178,18 @@ html_truncate:
   keepWhitespaces: true
   # 截取到最后的时候保留完成的字（只对英文有用）
   reserveLastWord: true
-  
+
 # Busuanzi 浏览量统计插件
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
   enable: true
-  
+
 # Sharejs 分享
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
-  
+
 # 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
 # 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
 # modes文档请看: https://codemirror.net/mode/
@@ -197,7 +197,7 @@ sharejs:
 # 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
-  
+
 ```
 </details>
 
@@ -209,11 +209,11 @@ codemirror:
 - 如果你是使用 `Gitalk`, 你可以打开 `busuanzi` 文章详情页就会显示文章浏览量统计.
 
 ### 代码块样式
-  
+
 > 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
   但是Hexo默认的highlight配置还是需要关闭的。
   ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
-  
+
 在博客根目录的`_config.yml`修改
 
 > ⚠️ 注意不是主题里面的`_config.yml`，在主题里面加这个是无效的哦
@@ -259,7 +259,7 @@ date: 2019-07-14 18:38:45
 categories:
     - Category1
     - Category2
-tags: 
+tags:
     - Tag1
     - Tag2
 mp3: http://domain.com/awesome.mp3
@@ -279,7 +279,7 @@ date: 2019-07-14 18:38:45
 categories:
     - 分类1
     - 分类2
-tags: 
+tags:
     - 标签1
     - 标签2
 mp3: http://domain.com/awesome.mp3
@@ -330,6 +330,31 @@ type: "tags"
 ``` bash
 cd themes/osidian
 git pull
+```
+
+## 使用搜索功能
+
+### 安装说明:
+
+NPM安装
+
+```bash
+$ npm install hexo-generator-search --save
+```
+
+在你的根目录配置 `_config.yml` 里面添加hexo-generator-search的配置
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
+
+重新生成静态文件
+
+```bash
+hexo clean && hexo g
 ```
 
 ## 相关

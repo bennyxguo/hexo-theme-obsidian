@@ -1,4 +1,21 @@
 <% var first = page.posts.sort("date", "desc").eq(0); %>
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+      <div id="local-search-result"
+           class="local-search-result-cls"
+           data-initialise="<%= __('search_initialise') %>"
+           data-start="<%= __('search_start') %>"
+           data-empty="<%= __('search_empty') %>"
+      >
+        <span><%= __('search_start')  %></span>
+      </div>
+    </div>
+</div>
 <div id="header">
     <div>
         <div class="logo animated fadeInDown">
@@ -11,6 +28,9 @@
                 <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false, class: "menu-link"})%>
             </li>
             <%}%>
+            <% if (config.search) { %>
+                <li class="animated fadeInDown search-bar iconfont icon-search"></li>
+            <% } %>
         </ul>
         <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
     </div>
@@ -20,7 +40,7 @@
         <div class="cover animated fadeIn" style="
             animation-delay: 900ms;
             animation-duration: 2.8s;
-            background-image: 
+            background-image:
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
                 url(<%= first.cover || "/img/cover.jpg" %>);">
         </div>
@@ -95,7 +115,7 @@
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
                   <span class="typed-text"></span>
-                </p> 
+                </p>
             </div>
         </div>
     </div>

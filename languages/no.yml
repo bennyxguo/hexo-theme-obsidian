@@ -28,3 +28,6 @@ readed: Readed
 word_count: Word count
 read_time: Read time
 default_category: Article
+search_initialise: Initialising search index...
+search_start: Please input search keywords.
+search_empty: No result found, please try other keywords.
