@@ -1,4 +1,10 @@
 # Hexo-theme-obsidian
+
+▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+█░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+v1.x | ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+
 > 一款暗色的Hexo主题, 拥有响应式布局, 简约而优雅.
 
 ![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
@@ -16,16 +22,16 @@
 <details>
 <summary>更多主题展示</summary>
 
-### 分类页
+## 分类页
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
 
-### 多级分类
+## 多级分类
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-categories-level_xtxty9.png)
 
-### 归档页
+## 归档页
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323148/blog/A-Obsidian-archives_ffpwf9.png)
 
-### 文章页
+## 文章页
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
 </details>
 
@@ -211,8 +217,8 @@ codemirror:
 ### 代码块样式
 
 > 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
-  但是Hexo默认的highlight配置还是需要关闭的。
-  ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
+>  但是Hexo默认的highlight配置还是需要关闭的。
+>  ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
 
 在博客根目录的`_config.yml`修改
 
@@ -297,7 +303,7 @@ hexo new page categories
 
 分类模版
 
-```
+```yaml
 title: categories
 date: 2019-07-14 12:39:04
 type: "categories"
@@ -315,7 +321,7 @@ hexo new page tags
 
 标签模版
 
-```
+```yaml
 title: tags
 date: 2014-12-22 12:39:04
 type: "tags"
@@ -334,7 +340,7 @@ git pull
 
 ## 使用搜索功能
 
-### 安装说明:
+### 安装说明
 
 NPM安装
 

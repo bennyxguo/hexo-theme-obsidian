@@ -5,6 +5,7 @@
 🎉 Obsidian 主题加添了等待已久的搜索功能！希望大家喜欢！
 
 ### ✨新功能
+
 - 加添了等待已久的搜索功能!
 
 > 此搜索功能是基于 [`hexo-generator-search`](https://github.com/wzpan/hexo-generator-search) 生成的本地索引,
@@ -15,7 +16,7 @@
 NPM安装
 
 ```bash
-$ npm install hexo-generator-search --save
+npm install hexo-generator-search --save
 ```
 
 在你的根目录配置 `_config.yml` 里面添加hexo-generator-search的配置
@@ -40,6 +41,7 @@ hexo clean && hexo g
 ✨ 重新设计了`归档`页面UI和所有页面的`链接样式`！Stay being awesome! 👽
 
 ### Features ✨
+
 - 重新设计了归档页UI！
 - 所有`page`都添加了渐渐展示的效果！
 - 归档页也支持自定义标题文案，参考一下主题配置：
@@ -53,6 +55,7 @@ page_titles:
 ```
 
 ### Changes 💥
+
 - 所有页面的链接都用上了现在最流行的链接CSS效果。
 - 重新设计了`阅读文章`的样式和UI。
 
@@ -61,6 +64,7 @@ page_titles:
 🎉 全新的`分类`和`标签`页UI，分类页现在支持多级分类展示哦，自带很炫酷的效果！希望你们喜欢这次的更新！ ❤️
 
 ### ✨ 新功能
+
 - 在文字logo旁边我添加了icon logo
 - 新的icon logo，当你每次回到页面顶部时会有旋转效果哦！
 - 全新的分类和标签页UI，并且支持了多级分类展示！(#12)
@@ -68,6 +72,7 @@ page_titles:
 - 分类页和标签页添加了自定义标题，可以在主题配置里面自行配置
 
 分类页和标签页自定义标题配置
+
 ```yaml
 # 分类页和标签页自定义标题配置
 page_titles:
@@ -76,6 +81,7 @@ page_titles:
 ```
 
 ### 💥 更变
+
 - 所有导航添加了阴影，只是为了看起来更加炫酷，没别的
 - 文章页的home icon换成了icon logo
 
@@ -84,12 +90,14 @@ page_titles:
 现在代码的高亮与IDE的高亮更加相似了，也变得更加专业，更加高尚了！希望你们喜欢这次的更新！Happy blogging！❤️
 
 ### 💥 更变
+
 - 首次打开加载图片加了渐出效果，首次进入页面感觉更加舒服了。
 - 替换了代码块的高亮插件，`highlight.js`换成了`codemirror`。现在代码的高亮与IDE的高亮更加相似了！✨ (#6)
 - 代码块的UI也升级了，现在看起来更加专业高尚了！✨
 - TOC目录样式重写了，当前的标题前面加了一个"脈动回来"的特效。这个改动也一并修复了目录标题的点击位子有时候错位的问题。(#13)
 
 ### 🐛 Bug修复
+
 - 修复有一些Icons位置和布局中的问题。
 - 修复了文章导航的标题太长会超出高度的问题。
 - 修复了一些文字字体没有限定好的问题。
@@ -97,10 +105,12 @@ page_titles:
 ## 🚀 v1.3.4 (Oct 24, 2019)
 
 ### 💥 更变
+
 - 再次优化了手机端响应的样式。
 - 优化了`ul`和`ol`的UI。
 
 ### 🐛 Bug修复
+
 - 修复了首页链接样式。
 - 修复了TOC标题太长而超出框外的问题。
 - 修复了标题如果是链接样式的问题。
@@ -108,9 +118,11 @@ page_titles:
 ## 🚀 v1.3.3 (2019-10-23)
 
 ### ✨ 新功能
+
 - 添加了分享功能 - [`share.js`](https://github.com/overtrue/share.js)
 
 ### 💥 更变
+
 - 页面首次加载图标换成了`Load Awesome`的 `la-ball-atom`. - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
 
 ## 🚀 v1.3.2 (2019-10-21)

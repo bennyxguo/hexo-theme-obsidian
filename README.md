@@ -1,5 +1,10 @@
 # Hexo-theme-obsidian
 
+▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+█░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+v1.x | ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+
 > A dark Hexo theme, it's responsive, simple but elegant.
 
 ![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
@@ -12,29 +17,28 @@
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
    **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
-
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
 <details>
 <summary>More screen shots</summary>
 
-### Categories Page
+## Categories Page
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
 
-### Categories Leveled
+## Categories Leveled
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-categories-level_xtxty9.png)
 
-### Archives
+## Archives
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323148/blog/A-Obsidian-archives_ffpwf9.png)
 
-### Articles
+## Articles
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
 </details>
 
 ## Install
 
 ``` bash
-$ git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
+git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
 ```
 
 ## Usage
@@ -209,19 +213,20 @@ codemirror:
 
 You can choose from using Valine or Gitalk
 
-- If you are using `Valine`, you need to turn off `busuanzi`, because Valine has article view count support.
+- If you are using `Valine`, you need to turn off `busuanzi`,because Valine has article view count support.
 - If you are using `Gitalk`, you may turn on `busuanzi`, to have article view count enable.
 
 ### Code block style
 
 > Since version `v1.3.5` code block highlight has changed from `highlight.js` to
-  `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
-  !! So Please make sure you disabled Hexo's default highlight setting !!
+> `codemirror`, Hexo default highlight need to be disabled to take affect.
+> !! So Please make sure you disabled Hexo's default highlight setting !!
 
 Hexo configuration file `_config.yml` located at the ROOT path of your blog.
 
 > ⚠️ Please note do not make these changes in the theme's config file,
-  changing configs in the theme config file `_config.yml` will not work properly.
+> changing configs in the theme config file `_config.yml`
+> will not work properly.
 
 ```yaml
 ...
@@ -256,7 +261,7 @@ hexo clean && hexo g
 
 This post parameter changes how many characters are kept for the preview at home page.
 
-``` markdown
+```markdown
 
 title: My awesome title
 date: 2019-07-14 18:38:45
@@ -276,7 +281,7 @@ preview: 300
 
 Post template settings
 
-``` markdown
+```markdown
 
 title: My awesome title
 date: 2019-07-14 18:38:45
@@ -301,7 +306,7 @@ hexo new page categories
 
 Categories template
 
-```
+```yaml
 title: categories
 date: 2019-07-14 12:39:04
 type: "categories"
@@ -338,7 +343,7 @@ git pull
 
 ## Using the search engine
 
-### Installation guide:
+### Installation guide
 
 Install by npm
 
