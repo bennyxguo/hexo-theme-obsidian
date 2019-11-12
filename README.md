@@ -1,9 +1,5 @@
 # Hexo-theme-obsidian
-
-▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
-█░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
-░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
-v1.x | ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 
 > A dark Hexo theme, it's responsive, simple but elegant.
 
