@@ -6,14 +6,10 @@
         <div class="iconfont icon-cross search-box-close"></div>
     </form>
     <div class="search-scrollable">
-      <div id="local-search-result"
-           class="local-search-result-cls"
-           data-initialise="<%= __('search_initialise') %>"
-           data-start="<%= __('search_start') %>"
-           data-empty="<%= __('search_empty') %>"
-      >
-        <span><%= __('search_start')  %></span>
-      </div>
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="<%= __('search_initialise') %>"
+            data-start="<%= __('search_start') %>" data-empty="<%= __('search_empty') %>">
+            <span><%= __('search_start')  %></span>
+        </div>
     </div>
 </div>
 <div id="header">
@@ -29,7 +25,7 @@
             </li>
             <%}%>
             <% if (config.search) { %>
-                <li class="animated fadeInDown search-bar iconfont icon-search"></li>
+            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
             <% } %>
         </ul>
         <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
@@ -49,61 +45,64 @@
     <div id="post0" class="else">
         <p class="animated fadeInDown">
             <% if (first.categories.data[0]) { %>
-                <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「 </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+            <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「
+                </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
             <% } else { %>
-                <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+            <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
             <% } %>
             <%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %>
         </p>
-        <h3 class="post-title animated fadeInDown"><%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h3>
+        <h3 class="post-title animated fadeInDown">
+            <%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h3>
         <% if (theme.symbols_count_time.enable) {%>
-            <p class="post-count animated fadeInDown">
-                <% if (theme.symbols_count_time.wordCount) { %>
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
-                        <%= symbolsCount(first.content) %>
-                    </span>
-                <% } %>
-                <% if (theme.symbols_count_time.readCount) { %>
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
-                        <%= symbolsTime(
+        <p class="post-count animated fadeInDown">
+            <% if (theme.symbols_count_time.wordCount) { %>
+            <span>
+                <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+                <%= symbolsCount(first.content) %>
+            </span>
+            <% } %>
+            <% if (theme.symbols_count_time.readCount) { %>
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
+                <%= symbolsTime(
                                 first.content,
                                 theme.symbols_count_time.awl,
                                 theme.symbols_count_time.wpm,
                                 theme.symbols_count_time.suffix
                         ) %>
-                    </span>
-                <% } %>
-                <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
-                    <span id="<%- '/' + first.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
-                        <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
-                        <i class="leancloud-visitors-count">1000000</i>
-                    </span>
-                <% } %>
-            </p>
+            </span>
+            <% } %>
+            <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+            <span id="<%- '/' + first.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                <i class="leancloud-visitors-count">1000000</i>
+            </span>
+            <% } %>
+        </p>
         <% } %>
         <% if (first.tags && first.tags.length){ %>
-            <%- list_tags(first.tags, {
+        <%- list_tags(first.tags, {
                 show_count: false,
                 class: 'animated fadeInDown post-tags'
             }) %>
         <% } %>
         <div class="md-content animated fadeIn">
             <% if (theme.html_truncate.enable) { %>
-                <%- htmlTruncate(first.content, first.preview || theme.html_truncate.coverLength, {
+            <%- htmlTruncate(first.content, first.preview || theme.html_truncate.coverLength, {
                     ellipsis: theme.html_truncate.ellipsis,
                     excludes: theme.html_truncate.excludes,
                     keepWhitespaces: theme.html_truncate.keepWhitespaces,
                     reserveLastWord: theme.html_truncate.reserveLastWord
                 }) %>
             <% } else { %>
-                <%- truncate(strip_html(first.content), {
+            <%- truncate(strip_html(first.content), {
                     length: 200,
                     omission: '...'
                 }) %>
             <% } %>
-            <span class="read-more"><%- link_to(first.path, __('read_article', 'Read article'), {class: "posttitle"}) %> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><%- link_to(first.path, __('read_article', 'Read article'), {class: "posttitle"}) %>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
     <% } %>
@@ -114,7 +113,7 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                  <span class="typed-text"></span>
+                    <span class="typed-text"></span>
                 </p>
             </div>
         </div>

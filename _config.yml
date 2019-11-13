@@ -1,9 +1,21 @@
 #! ---------------------------------------------------------------
+#! ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█ 
+#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█ 
+#! ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀ 
+#! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+#! ---------------------------------------------------------------
 #! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
+#! Thanks to and inspirated by CSS-Tricks
 #! @author: TriDiamond
 #! @github: https://github.com/TriDiamond
+#! @changelogs: https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md
+#! @feedbacks: https://github.com/TriDiamond/hexo-theme-obsidian/issues/new
 #! ---------------------------------------------------------------
 
+#! ---------------------------------------------------------------
+#! █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
+#! █░▀█ █░█ ░█░ █▀▀ ░▀▄ 
+#! ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
@@ -20,7 +32,7 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.4.2"
+version: "1.4.3"
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -159,3 +171,6 @@ sharejs:
 # see https://codemirror.net/
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+
+# Enabling mathjax support
+mathjax: true

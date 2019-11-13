@@ -202,6 +202,9 @@ sharejs:
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
+# Enabling mathjax support
+mathjax: true
+
 ```
 </details>
 
@@ -328,6 +331,15 @@ type: "tags"
 
 > Theme will auto generate tags contents.
 
+### MathJax Support
+
+Default enables mathjax support, can change it to `false` to turn it off.
+
+```yaml
+# Enabling mathjax support
+mathjax: true
+```
+
 ## Update Theme
 
 > Please backup your `_config.yml` file before update
@@ -365,3 +377,13 @@ hexo clean && hexo g
 ## Related
 
 I have made a [`Typro`](https://typora.io/) theme [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian) especially for this blog theme.
+
+## Feedback
+
+> Please check the [ISSUES](https://github.com/TriDiamond/hexo-theme-obsidian/issues) before try to use the following contact methods! 
+> Maybe the question you have had being asked by others or it's already being answered. Thanks!
+
+You can give me feedback or issue you have through the following methods:
+
+- [Create a issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
+- Joint QQGroup `909955326`

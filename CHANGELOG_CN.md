@@ -1,5 +1,18 @@
 # Changelog
 
+## 🚀 v1.4.3 (Nov 13, 2019)
+
+添加了 `MathJax` 支持! 文章的特效更加顺滑了.
+
+### ✨新功能
+
+- 添加了 `MathJax` 支持.
+
+### 更变
+
+- 目录现在只展示到三级，可以解决超过三级后的文字会超出内容框外。 ([#20](https://github.com/TriDiamond/hexo-theme-obsidian/issues/20))
+- 文章的特效更加顺滑了。
+
 ## 🚀 v1.4.2 (2019-11-11)
 
 🎉 Obsidian 主题加添了等待已久的搜索功能！希望大家喜欢！

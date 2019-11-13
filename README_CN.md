@@ -200,6 +200,9 @@ sharejs:
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
+# 启用 mathjax 支持
+mathjax: true
+
 ```
 </details>
 
@@ -325,6 +328,15 @@ type: "tags"
 
 > 主题会自动生成标签内容，模版里面留空不用改动就可以了。
 
+### MathJax 支持
+
+默认是启用MathJax支持的, 如果需要关闭改变主题配置为 `false`。
+
+```yaml
+# 启用 mathjax 支持
+mathjax: true
+```
+
 ## 更新主题
 
 > 更新前请先备份主题里的 `_config.yml` 文件
@@ -362,3 +374,13 @@ hexo clean && hexo g
 ## 相关
 
 做了一个 [`Typro`](https://typora.io/) 主题 [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian) 专门给写博客的你们.
+
+## 反馈
+
+> 大家记得先看一下[ISSUE](https://github.com/TriDiamond/hexo-theme-obsidian/issues)里面有没有你的问题，已经解答了的。
+> 很有可能你的问题已经被问过了，或者可以在Issue里面就找到答案了！谢谢配合！
+
+可以通过以下方式反馈问题：
+
+- [创建新 issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
+- 加入QQ群 `909955326`

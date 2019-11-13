@@ -1,4 +1,5 @@
 <%- partial('_partial/head') %>
+
 <body class="loading">
     <div class="loader">
         <div class="la-ball-atom la-2x">
@@ -31,5 +32,7 @@
         <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
     </p>
 </footer>
+<%- partial('_partial/mathjax', null, {cache: true}) %>
 <%- partial('_partial/scripts', null, {cache: true}) %>
+
 </html>
