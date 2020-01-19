@@ -60,7 +60,7 @@ theme: obsidian
 #! ---------------------------------------------------------------
 #! 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
 #! 但是Hexo默认的highlight配置还是需要关闭的。
-#! ！！所以无比把Hexo默认的highlight配置改为`enable: flase` ！！
+#! ！！所以务必把Hexo默认的highlight配置改为`enable: false` ！！
 #! ---------------------------------------------------------------
 #! highlight:
 #!  enable: false
