@@ -15,7 +15,7 @@
 <div id="header">
     <div>
         <div class="logo animated fadeInDown">
-            <img src="/img/favicon.png" alt="">
+            <img src="<%- url_for(theme.favicon) %>" alt="">
             <a class="image-logo" href="/"></a>
         </div>
         <ul id="menu-menu" class="menu text-menu">
@@ -38,7 +38,7 @@
             animation-duration: 2.8s;
             background-image:
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
-                url(<%= first.cover || "/img/cover.jpg" %>);">
+                url(<%- url_for(first.cover || "/img/cover.jpg") %>);">
         </div>
     </div>
     <% if ( first ) { %>
