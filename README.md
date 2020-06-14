@@ -1,4 +1,5 @@
 # Hexo-theme-obsidian
+
 v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 
 > A dark Hexo theme, it's responsive, simple but elegant.
@@ -11,7 +12,7 @@ v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 **[PREVIEW](http://tridiamond.me)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
-   **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+**[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
@@ -19,21 +20,26 @@ v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 <summary>More screen shots</summary>
 
 ## Categories Page
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148012/blog/A-Obsidian-categories_mgdti7.png)
 
 ## Categories Leveled
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-categories-level_xtxty9.png)
 
 ## Archives
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323148/blog/A-Obsidian-archives_ffpwf9.png)
 
 ## Articles
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573148016/blog/A-Obsidian-articles_wlsu2v.png)
+
 </details>
 
 ## Install
 
-``` bash
+```bash
 git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
 ```
 
@@ -43,10 +49,9 @@ git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
 
 Open `Hexo` config file `_config.yml`, set theme to `obsidian`
 
-``` yaml
-...
+```yaml
+---
 theme: obsidian
-...
 ```
 
 ### Theme settings
@@ -56,7 +61,7 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 <details>
 <summary>Full detail config</summary>
 
-``` yaml
+```yaml
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
@@ -137,11 +142,11 @@ mp3:
 gitalk:
   enable: false
   autoExpand: false
-  clientID: ''
-  clientSecret: ''
-  repo: ''
-  owner: ''
-  admin: ['']
+  clientID: ""
+  clientSecret: ""
+  repo: ""
+  owner: ""
+  admin: [""]
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -154,8 +159,8 @@ valine:
   app_key:
   notify: false
   verify: false
-  avatar: 'mp'
-  placeholder: 'Leave your throughs behind~'
+  avatar: "mp"
+  placeholder: "Leave your throughs behind~"
   visitor: true
 
 # Enable symbols-count-time plugin
@@ -176,9 +181,9 @@ html_truncate:
   postLength: 250
   # Characters kept for cover posts
   coverLength: 100
-  ellipsis: '...'
+  ellipsis: "..."
   # Excluding html tags
-  excludes: ['img']
+  excludes: ["img"]
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
@@ -193,19 +198,20 @@ busuanzi:
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
-  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+  disabled: "facebook,douban,linkedin,diandian,tencent,google"
 
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+  modes:
+    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
 
 # Enabling mathjax support
 mathjax: true
-
 ```
+
 </details>
 
 ### Comments
@@ -228,15 +234,12 @@ Hexo configuration file `_config.yml` located at the ROOT path of your blog.
 > will not work properly.
 
 ```yaml
-...
-
+---
 highlight:
   enable: false
   line_number: true
   auto_detect: true
   tab_replace:
-
-...
 ```
 
 Codemirror settings
@@ -247,7 +250,8 @@ Codemirror settings
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+  modes:
+    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
 ```
 
 Rebuild files after you changed the config
@@ -261,19 +265,13 @@ hexo clean && hexo g
 This post parameter changes how many characters are kept for the preview at home page.
 
 ```markdown
-
 title: My awesome title
 date: 2019-07-14 18:38:45
-categories:
-    - Category1
-    - Category2
-tags:
-    - Tag1
-    - Tag2
+categories: - Category1 - Category2
+tags: - Tag1 - Tag2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 preview: 300
-
 ```
 
 ### Post template
@@ -281,18 +279,12 @@ preview: 300
 Post template settings
 
 ```markdown
-
 title: My awesome title
 date: 2019-07-14 18:38:45
-categories:
-    - Category1
-    - Category2
-tags:
-    - Tag1
-    - Tag2
+categories: - Category1 - Category2
+tags: - Tag1 - Tag2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
-
 ```
 
 ### Create categories page
@@ -344,7 +336,7 @@ mathjax: true
 
 > Please backup your `_config.yml` file before update
 
-``` bash
+```bash
 cd themes/osidian
 git pull
 ```
@@ -380,10 +372,11 @@ I have made a [`Typro`](https://typora.io/) theme [`Obsidian`](https://github.co
 
 ## Feedback
 
-> Please check the [ISSUES](https://github.com/TriDiamond/hexo-theme-obsidian/issues) before try to use the following contact methods! 
+> Please check the [ISSUES](https://github.com/TriDiamond/hexo-theme-obsidian/issues) before try to use the following contact methods!
 > Maybe the question you have had being asked by others or it's already being answered. Thanks!
 
 You can give me feedback or issue you have through the following methods:
 
 - [Create a issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
 - Joint QQGroup `909955326`
+- [Join Telegram Group](https://t.me/joinchat/R2m4eho2lbcHLR7nDvxd6A)
