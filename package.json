@@ -25,5 +25,9 @@
   "devDependencies": {
     "hexo-wordcount": "^6.0.1",
     "hexo-html-truncate": "^1.0.0"
+  },
+  "dependencies": {
+    "css-select": "^2.1.0",
+    "lodash": "^4.17.19"
   }
 }

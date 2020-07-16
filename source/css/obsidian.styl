@@ -2675,8 +2675,12 @@ h1.title {
       li {
         list-style: none;
         margin: 5px 0;
+        position: relative;
+        padding: 0 0 0 1em;
 
         &:before {
+          position: absolute;
+          left: 0;
           content: "•";
           margin: 0 1rem 0 0;
           color: var(--secondary);
@@ -2691,7 +2695,7 @@ h1.title {
     }
 
     ol {
-      margin: 0 0 2rem 0;
+      margin: 0 0 2rem 1rem;
       padding-left: 20px;
       counter-reset: li;
       padding-inline-start: 0;
@@ -2700,8 +2704,10 @@ h1.title {
         list-style: none;
         margin: 5px 0;
         counter-increment: li;
+        position: relative;
 
         &:before {
+          position: absolute;
           content: counter(li);
           color: var(--secondary);
           display: inline-block;
@@ -3042,8 +3048,12 @@ h1.title {
     li {
       list-style: none;
       margin: 5px 0;
+      position: relative;
+      padding: 1em;
 
       &:before {
+        position: absolute;
+        left: 0;
         content: "•";
         margin: 0 1rem 0 0;
         color: var(--dark);
@@ -3066,11 +3076,13 @@ h1.title {
       list-style: none;
       margin: 5px 0;
       counter-increment: li;
+      position: relative;
 
       &:before {
         content: counter(li);
         color: var(--dark);
         display: inline-block;
+        position: absolute;
         width: 1em;
         margin-left: -1.5em;
         margin-right: 0.5em;

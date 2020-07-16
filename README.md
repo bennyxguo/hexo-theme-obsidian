@@ -54,6 +54,20 @@ Open `Hexo` config file `_config.yml`, set theme to `obsidian`
 theme: obsidian
 ```
 
+### Installing required packages
+
+First open your terminal, and `cd` in the theme folder `obsidian`.
+
+```shell
+cd themes/obsidian
+```
+
+Then run `npm` to install all required packages for the theme.
+
+```shell
+npm install
+```
+
 ### Theme settings
 
 Open `/themes/obsidian/_config.yml` can change the theme configs
@@ -87,9 +101,9 @@ menu:
 
 # Page custom titles
 page_titles:
-  categories: "Categories"
-  tags: "Tags"
-  archives: "Archived"
+  categories: 'Categories'
+  tags: 'Tags'
+  archives: 'Archived'
 
 # Enable table of content
 TOC: true
@@ -110,8 +124,8 @@ scrollbar: true
 keywords: TriDiamond Obsidian
 
 # Website slogans
-descriptionOne: "Think like an artist, develop like an artisan"
-descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # If you use google analytics, please fill in the ID
 google_analytics:
@@ -142,11 +156,11 @@ mp3:
 gitalk:
   enable: false
   autoExpand: false
-  clientID: ""
-  clientSecret: ""
-  repo: ""
-  owner: ""
-  admin: [""]
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -159,8 +173,8 @@ valine:
   app_key:
   notify: false
   verify: false
-  avatar: "mp"
-  placeholder: "Leave your throughs behind~"
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
   visitor: true
 
 # Enable symbols-count-time plugin
@@ -181,9 +195,9 @@ html_truncate:
   postLength: 250
   # Characters kept for cover posts
   coverLength: 100
-  ellipsis: "..."
+  ellipsis: '...'
   # Excluding html tags
-  excludes: ["img"]
+  excludes: ['img']
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
@@ -198,15 +212,14 @@ busuanzi:
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
-  disabled: "facebook,douban,linkedin,diandian,tencent,google"
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
 # Enabling mathjax support
 mathjax: true
@@ -250,8 +263,7 @@ Codemirror settings
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 ```
 
 Rebuild files after you changed the config
@@ -300,7 +312,7 @@ Categories template
 ```yaml
 title: categories
 date: 2019-07-14 12:39:04
-type: "categories"
+type: 'categories'
 ```
 
 > Theme will auto generate categories contents.
