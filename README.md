@@ -1,18 +1,25 @@
-# Hexo-theme-obsidian
+<p align="center"><a href="https://tridiamond.tech" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img-blog.csdnimg.cn/20200930013332450.png" alt="TriDiamond logo"></a></p>
 
-v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+<h1 align="center">Hexo Theme: Obsidian</h1>
 
-> A dark Hexo theme, it's responsive, simple but elegant.
+<div align="center">
 
-![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
-![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
-![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
-[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ <br>
+A dark Hexo theme, it's responsive, simple but elegant.
+
+  <p align="center">
+    <img src="https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian">
+    <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
+  </p>
 
 **[PREVIEW](http://tridiamond.me)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+
+</div>
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
@@ -87,9 +94,9 @@ menu:
 
 # Page custom titles
 page_titles:
-  categories: "Categories"
-  tags: "Tags"
-  archives: "Archived"
+  categories: 'Categories'
+  tags: 'Tags'
+  archives: 'Archived'
 
 # Enable table of content
 TOC: true
@@ -110,8 +117,8 @@ scrollbar: true
 keywords: TriDiamond Obsidian
 
 # Website slogans
-descriptionOne: "Think like an artist, develop like an artisan"
-descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # If you use google analytics, please fill in the ID
 google_analytics:
@@ -142,11 +149,11 @@ mp3:
 gitalk:
   enable: false
   autoExpand: false
-  clientID: ""
-  clientSecret: ""
-  repo: ""
-  owner: ""
-  admin: [""]
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -159,8 +166,8 @@ valine:
   app_key:
   notify: false
   verify: false
-  avatar: "mp"
-  placeholder: "Leave your throughs behind~"
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
   visitor: true
 
 # Enable symbols-count-time plugin
@@ -181,9 +188,9 @@ html_truncate:
   postLength: 250
   # Characters kept for cover posts
   coverLength: 100
-  ellipsis: "..."
+  ellipsis: '...'
   # Excluding html tags
-  excludes: ["img"]
+  excludes: ['img']
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
@@ -198,15 +205,14 @@ busuanzi:
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
-  disabled: "facebook,douban,linkedin,diandian,tencent,google"
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
 # Enabling mathjax support
 mathjax: true
@@ -250,8 +256,7 @@ Codemirror settings
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 ```
 
 Rebuild files after you changed the config
@@ -300,7 +305,7 @@ Categories template
 ```yaml
 title: categories
 date: 2019-07-14 12:39:04
-type: "categories"
+type: 'categories'
 ```
 
 > Theme will auto generate categories contents.
