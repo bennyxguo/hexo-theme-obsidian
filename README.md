@@ -61,6 +61,20 @@ Open `Hexo` config file `_config.yml`, set theme to `obsidian`
 theme: obsidian
 ```
 
+### Installing required packages
+
+First open your terminal, and `cd` in the theme folder `obsidian`.
+
+```shell
+cd themes/obsidian
+```
+
+Then run `npm` to install all required packages for the theme.
+
+```shell
+npm install
+```
+
 ### Theme settings
 
 Open `/themes/obsidian/_config.yml` can change the theme configs

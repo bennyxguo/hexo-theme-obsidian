@@ -1,7 +1,7 @@
 #! ---------------------------------------------------------------
-#! ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█ 
-#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█ 
-#! ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀ 
+#!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
 #! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 #! ---------------------------------------------------------------
 #! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
@@ -13,9 +13,9 @@
 #! ---------------------------------------------------------------
 
 #! ---------------------------------------------------------------
-#! █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
-#! █░▀█ █░█ ░█░ █▀▀ ░▀▄ 
-#! ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
+#! █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
@@ -32,7 +32,8 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.4.3"
+# !! DO NOT EDIT THIS !!
+version: '1.4.4'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -47,15 +48,15 @@ menu:
 
 # Page custom titles
 page_titles:
-  categories: "Categories"
-  tags: "Tags"
-  archives: "Archived"
+  categories: 'Categories'
+  tags: 'Tags'
+  archives: 'Archived'
 
 # Social media links
 socials:
-  github: "https://github.com/TriDiamond"
-  twitter: "https://twitter.com/TriDiamond6"
-  stackoverflow: "https://stackoverflow.com/users/7602324/tridiamond?tab=profile"
+  github: 'https://github.com/TriDiamond'
+  twitter: 'https://twitter.com/TriDiamond6'
+  stackoverflow: 'https://stackoverflow.com/users/7602324/tridiamond?tab=profile'
 
 # Enable table of content
 TOC: true
@@ -76,8 +77,8 @@ scrollbar: true
 keywords: TriDiamond Obsidian
 
 # Website slogans
-descriptionOne: "Think like an artist, develop like an artisan"
-descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # If you use google analytics, please fill in the ID
 google_analytics: 'UA-149874671-1'

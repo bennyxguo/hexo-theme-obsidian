@@ -50,9 +50,22 @@ $ git clone https://github.com/TriDiamond/hexo-theme-obsidian.git obsidian
 打开 `Hexo` 配置文件 `_config.yml`, 设置主题为 `obsidian`
 
 ```yaml
-
 ---
 theme: obsidian
+```
+
+### 安装主题需要的 NPM 依赖
+
+首先打开你的终端，并且 `cd` 到主题 `themes/obsidian` 目录
+
+```shell
+cd themes/obsidian
+```
+
+然后执行 `npm` 命令，安装所有主题需要的依赖包
+
+```shell
+npm install
 ```
 
 ### 主题配置
@@ -85,9 +98,9 @@ menu:
 
 # 分类页和标签页自定义标题配置
 page_titles:
-  categories: "Categories"
-  tags: "Tags"
-  archives: "Archived"
+  categories: 'Categories'
+  tags: 'Tags'
+  archives: 'Archived'
 
 # 是否启用目录
 TOC: true
@@ -108,8 +121,8 @@ scrollbar: true
 keywords: TriDiamond Obsidian
 
 # 网站口号
-descriptionOne: "Think like an artist, develop like an artisan"
-descriptionTwo: "艺术家思维去思考问题，工匠创造精神去开发"
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # 如果使用google analytics, 请填写ID
 google_analytics:
@@ -139,11 +152,11 @@ mp3:
 # 查看 https://github.com/gitalk/gitalk
 gitalk:
   autoExpand: false
-  clientID: ""
-  clientSecret: ""
-  repo: ""
-  owner: ""
-  admin: [""]
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -156,8 +169,8 @@ valine:
   app_key:
   notify: false
   verify: false
-  avatar: "mp"
-  placeholder: "Leave your throughs behind~"
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
   visitor: true
 
 # 文章字数和阅读时间统计插件
@@ -179,9 +192,9 @@ html_truncate:
   # 封面文章保留多少个字符
   coverLength: 100
   # 省略符号
-  ellipsis: "..."
+  ellipsis: '...'
   # 需要过滤的html标签
-  excludes: ["img"]
+  excludes: ['img']
   # 截取时保留空白空格字符
   keepWhitespaces: true
   # 截取到最后的时候保留完成的字（只对英文有用）
@@ -196,7 +209,7 @@ busuanzi:
 # see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
-  disabled: "facebook,douban,linkedin,diandian,tencent,google"
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
 # 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
@@ -204,8 +217,7 @@ sharejs:
 # codemirror官网： https://codemirror.net/
 # 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
 # 启用 mathjax 支持
 mathjax: true
@@ -231,7 +243,6 @@ mathjax: true
 > ⚠️ 注意不是主题里面的`_config.yml`，在主题里面加这个是无效的哦
 
 ```yaml
-
 ---
 highlight:
   enable: false
@@ -249,8 +260,7 @@ Codemirror 代码高亮配置
 # codemirror官网： https://codemirror.net/
 # 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
 codemirror:
-  modes:
-    ["javascript", "css", "xml", "htmlmixed", "clike", "php", "shell", "python"]
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 ```
 
 修改了默认 highlight 配置后需要重新生成文件
@@ -299,7 +309,7 @@ hexo new page categories
 ```yaml
 title: categories
 date: 2019-07-14 12:39:04
-type: "categories"
+type: 'categories'
 ```
 
 > 主题会自动生成分类内容，模版里面留空不用改动就可以了。
@@ -317,7 +327,7 @@ hexo new page tags
 ```yaml
 title: tags
 date: 2014-12-22 12:39:04
-type: "tags"
+type: 'tags'
 ```
 
 > 主题会自动生成标签内容，模版里面留空不用改动就可以了。
