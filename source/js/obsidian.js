@@ -1102,7 +1102,7 @@ $(function () {
               500
             );
             document.querySelectorAll('pre code').forEach(block => {
-              hljs.highlightBlock(block);
+              if(typeof hljs !== 'undefined') hljs.highlightBlock(block);
             });
             Obsidian.setCodeRowWithLang();
             if ($('#vcomments').length) {
@@ -1180,7 +1180,7 @@ $(function () {
         } else {
           hash = $(e.target).attr('href');
         }
-        to = $('.content :header').find('[href="' + hash + '"]');
+        to = $('.content :header').find('[href="' + decodeURIComponent(hash) + '"]');
         $('html,body').animate(
           {
             scrollTop: to.offset().top - 80,
