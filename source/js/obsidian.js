@@ -219,9 +219,9 @@ var Obsidian = {
       function () {
         var previewVisible = $('#preview').hasClass('show');
         if (!!previewVisible) {
-          $('#container,.search-box').hide();
+          $('#container').hide();
         } else {
-          $('#container,.search-box').show();
+          $('#container').show();
         }
         Obsidian.loaded();
       }
@@ -230,6 +230,7 @@ var Obsidian = {
       $('#preview').addClass('show');
       $('#container').data('scroll', window.scrollY);
       setTimeout(function () {
+        $('body').removeClass('fixed');
         $('#preview').css({
           position: 'static',
           // 'overflow-y': 'auto'
