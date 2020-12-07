@@ -43,7 +43,7 @@ function scrollSpy(menuSelector, options) {
       var newActive = [];
 
       for (
-        var target = menu.find("[href='#" + id + "']").length ? menu.find("[href='#" + id + "']") : menu.find("[href='#" + encodeURIComponent(id) + "']");
+        var target = menu.find('[href="#' + id + '"],[href="#' + encodeURIComponent(id) + '"]');
         target.length && !target.is(menu);
         target = target.parent()
       ) {
@@ -1181,7 +1181,7 @@ $(function () {
         } else {
           hash = $(e.target).attr('href');
         }
-        to = $('.content :header').find('[href="' + decodeURIComponent(hash) + '"]');
+        to = $('.content :header').find('[href="' + hash + '"],[href="' + decodeURIComponent(hash) + '"]');
         $('html,body').animate(
           {
             scrollTop: to.offset().top - 80,
