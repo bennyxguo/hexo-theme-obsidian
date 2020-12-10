@@ -43,7 +43,7 @@ function scrollSpy(menuSelector, options) {
       var newActive = [];
 
       for (
-        var target = menu.find("[href='#" + id + "']");
+        var target = menu.find('[href="#' + id + '"],[href="#' + encodeURIComponent(id) + '"]');
         target.length && !target.is(menu);
         target = target.parent()
       ) {
@@ -166,7 +166,7 @@ var Obsidian = {
   HS: function (tag, flag) {
     var id = tag.data('id') || 0,
       url = tag.attr('href'),
-      title = tag.attr('title') + ' - ' + $('#config-title').text();
+      title = (tag.attr('title') || tag[0].innerText) + ' - ' + $('#config-title').text();
 
     if (!$('#preview').length || !(window.history && history.pushState)) location.href = url;
     Obsidian.loading();
@@ -230,6 +230,7 @@ var Obsidian = {
       $('#preview').addClass('show');
       $('#container').data('scroll', window.scrollY);
       setTimeout(function () {
+        $('body').removeClass('fixed');
         $('#preview').css({
           position: 'static',
           // 'overflow-y': 'auto'
@@ -1102,7 +1103,7 @@ $(function () {
               500
             );
             document.querySelectorAll('pre code').forEach(block => {
-              hljs.highlightBlock(block);
+              if(typeof hljs !== 'undefined') hljs.highlightBlock(block);
             });
             Obsidian.setCodeRowWithLang();
             if ($('#vcomments').length) {
@@ -1180,7 +1181,7 @@ $(function () {
         } else {
           hash = $(e.target).attr('href');
         }
-        to = $('.content :header').find('[href="' + hash + '"]');
+        to = $('.content :header').find('[href="' + hash + '"],[href="' + decodeURIComponent(hash) + '"]');
         $('html,body').animate(
           {
             scrollTop: to.offset().top - 80,
