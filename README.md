@@ -379,7 +379,7 @@ search:
   content: true
 ```
 
-Regenrate files
+Regenerate files
 
 ```bash
 hexo clean && hexo g
