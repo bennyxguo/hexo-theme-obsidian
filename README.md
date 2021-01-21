@@ -399,3 +399,7 @@ You can give me feedback or issue you have through the following methods:
 - [Create a issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
 - Joint QQGroup `909955326`
 - [Join Telegram Group](https://t.me/joinchat/R2m4eho2lbcHLR7nDvxd6A)
+
+## `My DISCORD community server`
+
+<a href="https://discord.gg/VC7CrYfds5"><img alt="discord" src="https://img.shields.io/discord/801943105913225246?label=discord&style=for-the-badge)"/></a>
