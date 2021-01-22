@@ -1,18 +1,25 @@
-# Hexo-theme-obsidian
+<p align="center"><a href="https://tridiamond.tech" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img-blog.csdnimg.cn/20200930013332450.png" alt="TriDiamond logo"></a></p>
 
-v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+<h1 align="center">Hexo Theme: Obsidian</h1>
 
-> 一款暗色的 Hexo 主题, 拥有响应式布局, 简约而优雅.
+<div align="center">
 
-![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
-![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
-![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
-[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ <br>
+一款暗色的 Hexo 主题, 拥有响应式布局, 简约而优雅.
 
-**[预览](http://tridiamond.me)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+  <p align="center">
+    <img src="https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian">
+    <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
+  </p>
+
+**[预览](http://tridiamond.tech)** | **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 🇺🇸 **[English Doc](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README.md)** |
 **[ChangeLog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+
+</div>
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 

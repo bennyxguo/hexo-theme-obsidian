@@ -1,18 +1,25 @@
-# Hexo-theme-obsidian
+<p align="center"><a href="https://tridiamond.tech" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img-blog.csdnimg.cn/20200930013332450.png" alt="TriDiamond logo"></a></p>
 
-v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+<h1 align="center">Hexo Theme: Obsidian</h1>
 
-> A dark Hexo theme, it's responsive, simple but elegant.
+<div align="center">
 
-![Latest Release Version](https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian)
-![Latest Release Date](https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian)
-![License](https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian)
-[![Join the chat at https://gitter.im/TriDiamond/hexo-theme-obsidian](https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg)](https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ <br>
+A dark Hexo theme, it's responsive, simple but elegant.
 
-**[PREVIEW](http://tridiamond.me)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+  <p align="center">
+    <img src="https://img.shields.io/github/v/release/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/release-date/TriDiamond/hexo-theme-obsidian">
+    <img src="https://img.shields.io/github/license/TriDiamond/hexo-theme-obsidian">
+    <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
+  </p>
+
+**[PREVIEW](http://tridiamond.tech)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
+
+</div>
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
@@ -372,7 +379,7 @@ search:
   content: true
 ```
 
-Regenrate files
+Regenerate files
 
 ```bash
 hexo clean && hexo g
@@ -392,3 +399,7 @@ You can give me feedback or issue you have through the following methods:
 - [Create a issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
 - Joint QQGroup `909955326`
 - [Join Telegram Group](https://t.me/joinchat/R2m4eho2lbcHLR7nDvxd6A)
+
+## `My DISCORD community server`
+
+<a href="https://discord.gg/VC7CrYfds5"><img alt="discord" src="https://img.shields.io/discord/801943105913225246?label=discord&style=for-the-badge)"/></a>
