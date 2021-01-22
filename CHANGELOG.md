@@ -2,6 +2,12 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.5 (Jan 22, 2021)
+
+### Improvements
+
+- Changed the fonts links from using `loli.net` to using `baomitu.com` (which is hosted by 360, it's more stable). This changes will improve the website from loading up faster.
+
 ## 🚀 v1.4.4 (Sep 16, 2020)
 
 Fixed couple of issues, get ready for some new features! Here thank you all for the 300+ stars so far, I will keep working on improving this theme! ❤️
