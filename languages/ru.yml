@@ -6,6 +6,8 @@ tagcloud: Облако меток
 tweets: Твиты
 prev: Назад
 next: Вперед
+prev_post: Предыдущая статья
+next_post: Следующая статья
 comment: Комментарии
 archive_a: Архив
 archive_b: "Архив: %s"

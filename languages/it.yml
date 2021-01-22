@@ -6,6 +6,8 @@ tagcloud: Tag Cloud
 tweets: Tweet
 prev: Prec
 next: Succ
+prev_post: Post Precedente
+next_post: Post Successivo
 comment: Commenti
 archive_a: Archivio
 archive_b: "Archivio: %s"
