@@ -94,6 +94,20 @@
                     <%}%>
             </ul>
             <%}%>
+            <% if (theme.post_navigation == true) {%>
+            <div class="post-nav">
+                <hr>
+                <% if (page.prev){ %>
+                    <div class="post-nav-item"><%= __('prev_post') %>:<a href="<%- url_for(page.prev.path) %>" rel="prev" 
+                        title="<%- page.prev.title %>"><%- page.prev.title %>
+                      </a></div>
+                <% } %>
+                <% if (page.next){ %>
+                    <div class="post-nav-item"><%= __('next_post') %>:<a href="<%- url_for(page.next.path) %>" rel="next" 
+                        title="<%- page.next.title %>"><%- page.next.title %></a></div>
+                <% } %>                
+            </div>   
+            <% } %>            
             <% if (theme.gitalk.enable == true){%>
             <%- partial('gitalk', {post: page}) %>
             <% } %>

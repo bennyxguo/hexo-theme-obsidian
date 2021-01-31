@@ -6,6 +6,8 @@ tagcloud: Tag Cloud
 tweets: Tweets
 prev: Vorige
 next: Volgende
+prev_post: Vorig artikel
+next_post: Volgend artikel
 comment: Commentaren
 archive_a: Archieven
 archive_b: "Archieven: %s"

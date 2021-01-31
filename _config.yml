@@ -192,3 +192,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 '
+# Show previous post and next post in post footer if exists
+# Available values: true | false
+post_navigation: true
+

@@ -6,6 +6,8 @@ tagcloud: Tag Cloud
 tweets: Tweets
 prev: Forrige
 next: Neste
+prev_post: Forrige Artikkel
+next_post: Neste Artikkel
 comment: Kommentarer
 archive_a: Arkiv
 archive_b: "Arkiv: %s"
