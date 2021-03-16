@@ -400,6 +400,22 @@ You can give me feedback or issue you have through the following methods:
 - Joint QQGroup `909955326`
 - [Join Telegram Group](https://t.me/joinchat/R2m4eho2lbcHLR7nDvxd6A)
 
-## `My DISCORD community server`
+## Donation
 
-<a href="https://discord.gg/VC7CrYfds5"><img alt="discord" src="https://img.shields.io/discord/801943105913225246?label=discord&style=for-the-badge)"/></a>
+Are you **enjoying this project** ? 👋
+
+You can express your ❤️ by _buying me a coffee_ ☕️ to keep this project **maintained and stay alive**, I would ❤️ to **dedicate more time and effort** on it!
+
+If there are enough coffee ☕️ I would like to become a **full time open source developer**! Keep producing more _awesome themes and applications to the world_!
+
+However you could just **sharing this project with your friends**, that would _help me a lot as well_! 👊
+
+Thanks for your love in advance! ☀️
+
+|                                                                                                    Donating using Paypal                                                                                                     |                                                                                                 Donating in China                                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> | <a href="https://afdian.net/@tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> |
+
+## Join the Community
+
+<a href="https://discord.gg/VC7CrYfds5" target="_blank"><img src="https://discordapp.com/api/guilds/801943105913225246/widget.png?style=banner3" alt="ObsidiaNext Community Discord Server"></a>
