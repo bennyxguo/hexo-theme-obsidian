@@ -149,7 +149,7 @@ symbols_count_time:
 html_truncate:
   enable: true
   # Characters kept for posts
-  postLength: 250
+  postLength: 100
   # Characters kept for cover posts
   coverLength: 100
   ellipsis: '...'
