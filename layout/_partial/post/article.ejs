@@ -130,6 +130,12 @@
                         <dd><a href="<%- theme.socials.bilibili %>" target="_blank"><span
                                     class=" iconfont icon-bilibili"></span></a></dd>
                         <% } %>
+                        <% if (page.social == false){%>
+                        <dd></dd>
+                        <dd><a href="<%- page.socials.page %>" target="_blank"><span
+                                    class=" iconfont icon-page"></span></a></dd>
+                        <dd></dd>
+                        <% } %>
                     </dl>
                 </div>
                 <ul>
