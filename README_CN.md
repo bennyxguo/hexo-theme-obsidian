@@ -228,6 +228,14 @@ codemirror:
 
 # 启用 mathjax 支持
 mathjax: true
+
+# 启用备案
+beian: true
+# 备案地区，例子：粤ICP备
+#beianloc:
+# 备案ID，例子：2021022134号
+#beianid:
+
 ```
 
 </details>
@@ -243,7 +251,7 @@ mathjax: true
 
 > 版本`v1.3.5`开始代码高亮已经用`codemirror`替换了`highlight.js`，
 > 但是 Hexo 默认的 highlight 配置还是需要关闭的。
-> ！！所以无比把 Hexo 默认的 highlight 配置改为`enable: flase` ！！
+> ！！所以务必把 Hexo 默认的 highlight 配置改为`enable: flase` ！！
 
 在博客根目录的`_config.yml`修改
 
@@ -297,10 +305,13 @@ preview: 300
 ```markdown
 title: My awesome title
 date: 2019-07-14 18:38:45
+author: example
 categories: - 分类 1 - 分类 2
 tags: - 标签 1 - 标签 2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
+is3rdparty: true
+socials: page: https://example
 ```
 
 ### 创建分类页

@@ -30,11 +30,13 @@
             <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
         </span>
         <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
+        <% if (theme.beian == true) { %>
         </br>
-        粤ICP备
+        <%= theme.beianloc %>
         <span class="gradient-text">
-            <%- link_to("https://beian.miit.gov.cn/", "2021022134号", {external: true})%>
+            <%- link_to("https://beian.miit.gov.cn/", theme.beianid, {external: true})%>
         </span>
+        <% } %>
     </p>
 </footer>
 <%- partial('_partial/mathjax', null, {cache: true}) %>
