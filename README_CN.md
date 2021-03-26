@@ -311,7 +311,9 @@ tags: - 标签 1 - 标签 2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 is3rdparty: true
-socials: page: https://example
+socials: 
+  page: https://example
+avatar: /example.jpg
 ```
 
 ### 创建分类页
