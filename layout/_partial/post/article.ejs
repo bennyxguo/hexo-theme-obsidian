@@ -122,7 +122,7 @@
                     <p><%- page.author || config.author %></p>
                     <span><%- page.slogan || theme.descriptionOne %></span>
                     <dl>
-                        <% if (page.3rdparty == false){%>
+                        <% if (page.is3rdparty == false){%>
                         <dd><a href="<%- theme.socials.github %>" target="_blank"><span
                                     class=" iconfont icon-github"></span></a></dd>
                         <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
@@ -130,7 +130,7 @@
                         <dd><a href="<%- theme.socials.bilibili %>" target="_blank"><span
                                     class=" iconfont icon-bilibili"></span></a></dd>
                         <% } %>
-                        <% if (page.3rdparty == true){%>
+                        <% if (page.is3rdparty == true){%>
                         <dd></dd>
                         <dd><a href="<%- page.socials.page %>" target="_blank"><span
                                     class=" iconfont icon-page"></span></a></dd>
