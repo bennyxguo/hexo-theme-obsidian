@@ -314,6 +314,7 @@ is3rdparty: true
 socials: 
   page: https://example
 avatar: /example.jpg
+slogan: example
 ```
 
 ### 创建分类页

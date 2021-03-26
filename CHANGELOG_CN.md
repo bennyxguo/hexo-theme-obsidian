@@ -17,9 +17,10 @@ beian: true
 title: example
 author: 第三方作者名
 is3rdparty: true
-socials:
+socials: 
   page: https://example
-
+avatar: /example.jpg
+slogan: example
 ```
 
 ## 🚀 v1.4.5 (2021-01-22)
