@@ -97,6 +97,7 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
 </script>
 <% } %>
 
+<% if (theme.mouse_effect.pop) { %>
 <style>
     .fireworks {
         position: absolute;
@@ -107,8 +108,10 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
     }
 </style>
 <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
-<script src="https://kcn3388.com/js/mouse/anime.min.js"></script>
-<script src="https://kcn3388.com/js/mouse/cursor.js"></script>
-<script type=”text/javascript”>
-    fireworks.setCanvasSize();
-</script>
+<%- js(['js/mouse/pop/anime.min.js']) %>
+<%- js(['js/mouse/pop/cursor.js']) %>
+<% } %>
+
+<% if (theme.mouse_effect.font) { %>
+<%- js(['js/mouse/font.js']) %>
+<% } %>
