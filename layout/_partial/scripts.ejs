@@ -1,3 +1,4 @@
+<%- js(['live2d-widget/autoload.js'])%>
 <% if (theme.gitalk.enable == true) { %> <%-
 css(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css'])%> <%-
 js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%> <% } %> <%-
@@ -95,3 +96,19 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
   });
 </script>
 <% } %>
+
+<style>
+    .fireworks {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+<script src="https://kcn3388.com/js/mouse/anime.min.js"></script>
+<script src="https://kcn3388.com/js/mouse/cursor.js"></script>
+<script type=”text/javascript”>
+    fireworks.setCanvasSize();
+</script>
