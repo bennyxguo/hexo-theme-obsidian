@@ -424,6 +424,8 @@ Thanks for your love in advance! ☀️
 | :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
 | <img src="https://img-blog.csdnimg.cn/20210330175112304.png" alt="Buy Me A Coffee" width="150"> | <img src="https://img-blog.csdnimg.cn/20210330175153827.png" alt="Buy Me A Coffee" width="150"> |
 
+> 所有赞助人将被列为咖啡支持者，并在本节的赞助人名单中显示。
+
 ## Join the Community
 
 <a href="https://discord.gg/VC7CrYfds5" target="_blank"><img src="https://discordapp.com/api/guilds/801943105913225246/widget.png?style=banner3" alt="ObsidiaNext Community Discord Server"></a>
