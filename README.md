@@ -412,9 +412,19 @@ However you could just **sharing this project with your friends**, that would _h
 
 Thanks for your love in advance! ☀️
 
-|                                                                                                    Donating using Paypal                                                                                                     |                                                                                                 Donating in China                                                                                                 |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> | <a href="https://afdian.net/@tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> |
+|                                                                                                    Donating using Paypal                                                                                                     |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> |
+
+> All donator will be enlisted as Coffee Supporter and displayed in the Sponsor list in this section.
+
+---
+
+|                                              Wechat 微信支付                                               |                                             Alipay 支付宝支付                                              |
+| :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+| <img src="https://img-blog.csdnimg.cn/20210330175112304.png" alt="Buy Me A Coffee" style="height: 130px" > | <img src="https://img-blog.csdnimg.cn/20210330175153827.png" alt="Buy Me A Coffee" style="height: 130px" > |
+
+> 所有赞助人将被列为咖啡支持者，并在本节的赞助人名单中显示。
 
 ## Join the Community
 
