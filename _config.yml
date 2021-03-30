@@ -211,5 +211,10 @@ beianloc: 粤ICP备
 beianid: 2021022134号
 
 mouse_effect: 
-    pop: false
-    font: true
+  pop: false
+  font: true
+
+mouse:
+  enable: true
+  default: /mouse_type/package1/arr118.png
+  pointer: /mouse_type/package1/arr117.png

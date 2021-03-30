@@ -115,3 +115,14 @@ js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']
 <% if (theme.mouse_effect.font) { %>
 <%- js(['js/mouse/font.js']) %>
 <% } %>
+
+<% if(theme.mouse.enable) { %>
+<style>
+body {
+  cursor: url(<%- url_for(theme.mouse.default) %>), default;
+}
+a:hover {
+    cursor: url(<%- url_for(theme.mouse.pointer)%>), pointer;
+}
+</style>
+<% } %>
