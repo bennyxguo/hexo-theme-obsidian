@@ -14,7 +14,7 @@ A dark Hexo theme, it's responsive, simple but elegant.
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[PREVIEW](http://tridiamond.tech)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[PREVIEW](https://obsidian.tridiamond.tech/)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
@@ -412,9 +412,19 @@ However you could just **sharing this project with your friends**, that would _h
 
 Thanks for your love in advance! ☀️
 
-|                                                                                                    Donating using Paypal                                                                                                     |                                                                                                 Donating in China                                                                                                 |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> | <a href="https://afdian.net/@tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> |
+|                                                                                                                Donating using Paypal                                                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" style="height: 60px !important;width: 217px !important;" ></a> |
+
+> All donator will be enlisted as Coffee Supporter and displayed in the Sponsor list in this section.
+
+---
+
+|                                         Wechat 微信支付                                         |                                        Alipay 支付宝支付                                        |
+| :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| <img src="https://img-blog.csdnimg.cn/20210330175112304.png" alt="Buy Me A Coffee" width="150"> | <img src="https://img-blog.csdnimg.cn/20210330175153827.png" alt="Buy Me A Coffee" width="150"> |
+
+> 所有赞助人将被列为咖啡支持者，并在本节的赞助人名单中显示。
 
 ## Join the Community
 
