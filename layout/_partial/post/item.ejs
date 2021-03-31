@@ -1,0 +1,69 @@
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(<%- post.cover || theme.cover %>);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            <% if (post.categories.data[0]) { %>
+                <a href="<%- '/categories/' + post.categories.data[0].name %>">
+                  <b>「 </b><%- post.categories.data[0].name.toUpperCase() %><b> 」</b>
+                </a>
+            <% } else { %>
+                <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+            <% } %>
+            <%- post.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+        </p>
+        <h3 class="post-title animated fadeInDown"><%- link_to(post.path, post.title || "Untitled", {class: "posttitle"}) %></h3>
+        <% if (theme.symbols_count_time.enable) { %>
+            <p class="post-count animated fadeInDown">
+                <% if (theme.symbols_count_time.wordCount) { %>
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+                        <%= symbolsCount(post.content) %>
+                    </span>
+                <% } %>
+                <% if (theme.symbols_count_time.readCount) { %>
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
+                        <%= symbolsTime(
+                                post.content,
+                                theme.symbols_count_time.awl,
+                                theme.symbols_count_time.wpm,
+                                theme.symbols_count_time.suffix
+                        ) %>
+                    </span>
+                <% } %>
+                <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+                    <span id="<%- '/' + post.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                        <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                        <span class="leancloud-visitors-count">1000000</span>
+                    </span>
+                <% } %>
+            </p>
+            <% if (post.tags && post.tags.length){ %>
+                <%- list_tags(post.tags, {
+                    show_count: false,
+                    class: 'animated fadeInDown post-tags'
+                }) %>
+            <% } %>
+        <% } %>
+        <div class="md-content animated fadeIn">
+            <% if (theme.html_truncate.enable) { %>
+                <%- htmlTruncate(post.content, theme.html_truncate.postLength, {
+                    ellipsis: theme.html_truncate.ellipsis,
+                    excludes: theme.html_truncate.excludes,
+                    keepWhitespaces: theme.html_truncate.keepWhitespaces,
+                    reserveLastWord: theme.html_truncate.reserveLastWord
+                }) %>
+            <% } else { %>
+                <%- truncate(strip_html(post.content), {
+                    length: 500,
+                    omission: "..."
+                }) %>
+            <% } %>
+            <span class="read-more"><%- link_to(post.path, __('read_article', 'Read article'), {class: 'posttitle'}) %> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>

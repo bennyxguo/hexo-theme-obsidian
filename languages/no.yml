@@ -1,0 +1,35 @@
+articles: Articles
+categories: Kategorier
+search: Søk
+tags: Tags
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Forrige
+next: Neste
+prev_post: Forrige Artikkel
+next_post: Neste Artikkel
+comment: Kommentarer
+archive_a: Arkiv
+archive_b: "Arkiv: %s"
+page: Side %d
+recent_posts: Siste innlegg
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed
+word_count: Word count
+read_time: Read time
+default_category: Article
+search_initialise: Initialising search index...
+search_start: Please input search keywords.
+search_empty: No result found, please try other keywords.

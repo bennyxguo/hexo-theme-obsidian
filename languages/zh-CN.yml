@@ -1,0 +1,37 @@
+articles: 文章
+categories: 分类
+search: 搜索
+tags: 标签
+tagcloud: 标签云
+tweets: 推文
+prev: 上一页
+next: 下一页
+prev_post: 上一篇
+next_post: 下一篇
+comment: 留言
+archive_a: 归档
+archive_b: 归档：%s
+page: 第 %d 页
+recent_posts: 最新文章
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+time_suffix: 分钟
+load_more: 加载更多
+loading: 加载中...
+toc: 目录
+read_article: 查看全文
+pv: 浏览量
+uv: 访客数
+readed: 已读
+word_count: 文章字数
+read_time: 阅读约需
+read_count: 阅读次数
+default_category: 文章
+search_initialise: 首次搜索，正在载入索引文件，请稍后……
+search_start: 输入关键词搜索。
+search_empty: 没有找到内容，请尝试更换检索词。

@@ -1,0 +1,40 @@
+<%- partial('_partial/head') %>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none"><%= config.title %></span>
+    <div id="loader"></div>
+    <%- body %>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; <%= date(new Date(), 'YYYY') %>
+        <span class="gradient-text">
+            <%= config.author || config.title %>
+        </span>.
+        Powered by <%- link_to("http://hexo.io/", "Hexo", {external: true})%>
+        Theme
+        <span class="gradient-text">
+            <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
+        </span>
+        <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
+    </p>
+</footer>
+<%- partial('_partial/mathjax', null, {cache: true}) %>
+<%- partial('_partial/scripts', null, {cache: true}) %>
+
+<%- theme.footer_html %>
+
+</html>

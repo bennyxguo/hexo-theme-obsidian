@@ -1,0 +1,152 @@
+<div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(<%- url_for(page.cover || theme.welcome_cover) %>) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                <% if (page.categories.data[0]) { %>
+                <a href="<%- '/categories/' + page.categories.data[0].name %>"><b>「
+                    </b><%- page.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+                <% } else { %>
+                <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+                <% } %>
+                <%- page.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+            </p>
+            <h3 class="post-title animated fadeInDown"><%- link_to(page.path, page.title || "Untitled", {class: ""}) %>
+            </h3>
+            <% if (theme.symbols_count_time.enable) {%>
+            <p class="post-count animated fadeInDown">
+                <% if (theme.symbols_count_time.wordCount) { %>
+                <span>
+                    <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+                    <%= symbolsCount(page.content) %>
+                </span>
+                <% } %>
+                <% if (theme.symbols_count_time.readCount) { %>
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
+                    <%= symbolsTime(
+                                page.content,
+                                theme.symbols_count_time.awl,
+                                theme.symbols_count_time.wpm,
+                                theme.symbols_count_time.suffix
+                        ) %>
+                </span>
+                <% } %>
+                <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+                <span id="<%- '/' + page.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                    <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                <% } %>
+                <% if (theme.busuanzi.enable == true && theme.valine.enable == false) { %>
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                <% } %>
+            </p>
+            <% } %>
+            <% if (page.tags && page.tags.length){ %>
+            <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'animated fadeInDown post-tags'
+                }) %>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"><%- page.abstract || '' %></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <%- page.content %>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="<%- theme.autoplay || page.autoplay || "false" %>">
+                <source type="audio/mpeg" src="<%- page.mp3 %>">
+            </audio>
+            <% if (page.mp3 == '' | page.mp3 == null){%>
+            <ul id="audio-list" style="display:none">
+                <% for (var i in theme.mp3){ %>
+                <% if (theme.mp3[i].indexOf('http') == 0){%>
+                <li title='<%- i %>' data-url='<%- theme.mp3[i] %>'></li>
+                <%} else {%>
+                <li title='<%- i %>' data-url='<%- config.root + theme.mp3[i] %>'></li>
+                <%}%>
+                    <%}%>
+            </ul>
+            <%}%>
+            <% if (theme.post_navigation == true) {%>
+            <div class="post-nav">
+                <hr>
+                <% if (page.prev){ %>
+                    <div class="post-nav-item"><%= __('prev_post') %>:<a href="<%- url_for(page.prev.path) %>" rel="prev" 
+                        title="<%- page.prev.title %>"><%- page.prev.title %>
+                      </a></div>
+                <% } %>
+                <% if (page.next){ %>
+                    <div class="post-nav-item"><%= __('next_post') %>:<a href="<%- url_for(page.next.path) %>" rel="next" 
+                        title="<%- page.next.title %>"><%- page.next.title %></a></div>
+                <% } %>                
+            </div>   
+            <% } %>            
+            <% if (theme.gitalk.enable == true){%>
+            <%- partial('gitalk', {post: page}) %>
+            <% } %>
+            <% if (theme.valine.enable == true){%>
+            <div id="vcomments"></div>
+            <% } %>
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="<%- theme.avatar %>" height=300 width=300></img>
+                    <p><%- config.author %></p>
+                    <span><%- theme.descriptionOne %></span>
+                    <dl>
+                        <dd><a href="<%- theme.socials.github %>" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="<%- theme.socials.stackoverflow %>" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/"><%- site.posts.length %> <p><%= __('articles') %></p></a></li>
+                    <li><a href="/categories"><%- site.categories.length %> <p><%= __('categories') %></p></a></li>
+                    <li><a href="/tags"><%- site.tags.length %> <p><%= __('tags') %></p></a></li>
+                </ul>
+            </div>
+            <% if (theme.TOC == true) { %>
+            <% toc = toc(page.content, {list_number: true, max_depth: 3}) %>
+            <% if (toc.length > 1) { %>
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4><%= __('toc') %></h4>
+                    <%- toc %>
+                </div>
+            </div>
+            <%}%>
+            <%}%>
+        </div>
+    </div>
+</div>

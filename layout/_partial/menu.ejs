@@ -1,0 +1,14 @@
+<div class="nav">
+    <ul id="menu-menu" class="menu">
+        <% for (var i in theme.menu){ %>
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false})%>
+        </li>
+        <%}%>
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.
+        Powered by <%- link_to("http://hexo.io/", "Hexo", {external: true})%>
+        Theme <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
+    </p>
+</div>

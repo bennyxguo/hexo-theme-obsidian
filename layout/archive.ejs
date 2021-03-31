@@ -1,0 +1,50 @@
+<div id="single" class="page">
+    <div id="top">
+        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="dark-obsidian section">
+        <div class="article animated fadeIn">
+            <div class="main">
+                <div class="content animated fadeIn">
+                    <div class="set">
+                        <h1 style="text-align: center"><%= theme.page_titles.archives || __("Archived") %></h1>
+                        <p style="text-align: center">「 <%= site.posts.length %> 」</p>
+                        <ul class="timeline timeline-centered">
+                            <% var posts = site.posts.sort('date', 'desc'); %>
+                            <% for(let i = 0, month = -1; i < posts.data.length; ++i) { %>
+                                <%
+                                    const psg = posts.data[i];month
+                                if(psg.date.month() !== month) {
+                                    month = psg.date.month();
+                                %>
+                                <li class="timeline-item period">
+                                    <div class="timeline-info"></div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h2 class="timeline-title"><%- psg.date.locale(config.language || '').format("MMMM YYYY") %></h2>
+                                    </div>
+                                </li>
+                                <% } %>
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text"><%- psg.date.locale(config.language || '').format("MMMM DD, YYYY") %></span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="<%- url_for(psg.path) %>"><%= psg.title %></a>
+                                        <p>
+                                            <%- truncate(strip_html(psg.content), {
+                                                length: 200,
+                                                omission: "..."
+                                            }) %>
+                                        </p>
+                                    </div>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

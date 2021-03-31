@@ -1,0 +1,36 @@
+articles: Articles
+categories: Categorieën
+search: Zoeken
+tags: Labels
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Vorige
+next: Volgende
+prev_post: Vorig artikel
+next_post: Volgend artikel
+comment: Commentaren
+archive_a: Archieven
+archive_b: "Archieven: %s"
+page: Pagina %d
+recent_posts: Recente berichten
+newer: Nieuwer
+older: Ouder
+share: Delen
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Categorie
+tag: Label
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed
+word_count: Words count
+read_time: Reading time
+read_count: Read count
+default_category: Article
+search_initialise: Initialising search index...
+search_start: Please input search keywords.
+search_empty: No result found, please try other keywords.

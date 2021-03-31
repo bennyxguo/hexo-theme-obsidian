@@ -1,0 +1,5 @@
+<div class="set">
+  <div class="category-mask"></div>
+  <h1><%= (theme.page_titles.categories || __('categories')) %></h1>
+  <%- list_categories({orderby: "length", order: -1}) %>
+</div>

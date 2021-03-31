@@ -1,0 +1,121 @@
+<% var first = page.posts.sort("date", "desc").eq(0); %>
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="<%= __('search_initialise') %>"
+            data-start="<%= __('search_start') %>" data-empty="<%= __('search_empty') %>">
+            <span><%= __('search_start')  %></span>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div>
+        <div class="logo animated fadeInDown">
+            <img src="<%- url_for(theme.favicon) %>" alt="">
+            <a class="image-logo" href="/"></a>
+        </div>
+        <ul id="menu-menu" class="menu text-menu">
+            <% for (var i in theme.menu){ %>
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <%- link_to(theme.menu[i].lastIndexOf('/') > 0 ? theme.menu[i] : theme.menu[i] + '/', i, {external: false, class: "menu-link"})%>
+            </li>
+            <%}%>
+            <% if (config.search) { %>
+            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
+            <% } %>
+        </ul>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
+    </div>
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(<%- url_for(first.cover || "/img/cover.jpg") %>);">
+        </div>
+    </div>
+    <% if ( first ) { %>
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            <% if (first.categories.data[0]) { %>
+            <a href="<%- '/categories/' + first.categories.data[0].name %>"><b>「
+                </b><%- first.categories.data[0].name.toUpperCase() %><b> 」</b></a>
+            <% } else { %>
+            <a href="javascript:;"><b>「 </b><%= __('default_category') %><b> 」</b></a>
+            <% } %>
+            <%- first.date.locale(config.language || '').format("MMMM DD, YYYY") %>
+        </p>
+        <h3 class="post-title animated fadeInDown">
+            <%- link_to(first.path, first.title || config.title, {class: "posttitle"}) %></h3>
+        <% if (theme.symbols_count_time.enable) {%>
+        <p class="post-count animated fadeInDown">
+            <% if (theme.symbols_count_time.wordCount) { %>
+            <span>
+                <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+                <%= symbolsCount(first.content) %>
+            </span>
+            <% } %>
+            <% if (theme.symbols_count_time.readCount) { %>
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i><%= __('read_time') %></i>
+                <%= symbolsTime(
+                                first.content,
+                                theme.symbols_count_time.awl,
+                                theme.symbols_count_time.wpm,
+                                theme.symbols_count_time.suffix
+                        ) %>
+            </span>
+            <% } %>
+            <% if (theme.valine.enable == true && theme.valine.visitor == true) { %>
+            <span id="<%- '/' + first.path %>" class="leancloud_visitors" data-flag-title="<%- page.title %>">
+                <b class="iconfont icon-read"></b> <i><%= __('read_count') %></i>
+                <span class="leancloud-visitors-count">1000000</span>
+            </span>
+            <% } %>
+        </p>
+        <% } %>
+        <% if (first.tags && first.tags.length){ %>
+        <%- list_tags(first.tags, {
+                show_count: false,
+                class: 'animated fadeInDown post-tags'
+            }) %>
+        <% } %>
+        <div class="md-content animated fadeIn">
+            <% if (theme.html_truncate.enable) { %>
+            <%- htmlTruncate(first.content, first.preview || theme.html_truncate.coverLength, {
+                    ellipsis: theme.html_truncate.ellipsis,
+                    excludes: theme.html_truncate.excludes,
+                    keepWhitespaces: theme.html_truncate.keepWhitespaces,
+                    reserveLastWord: theme.html_truncate.reserveLastWord
+                }) %>
+            <% } else { %>
+            <%- truncate(strip_html(first.content), {
+                    length: 200,
+                    omission: '...'
+                }) %>
+            <% } %>
+            <span class="read-more"><%- link_to(first.path, __('read_article', 'Read article'), {class: "posttitle"}) %>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

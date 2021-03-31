@@ -1,0 +1,97 @@
+<% if (theme.gitalk.enable == true) { %> <%-
+css(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css'])%> <%-
+js(['//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js'])%> <% } %> <%-
+js(['//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', 'js/plugin.js', 'js/obsidian.js',
+'js/jquery.truncate.js', 'js/search.js'])%> <%-
+js(['//cdn.bootcss.com/typed.js/2.0.10/typed.min.js']) %> <%-
+js(['//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js']) %> <%-
+js(['//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js']) %>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+<% theme.codemirror.modes.forEach(function (mode) { %> <%-
+js(['//cdn.bootcss.com/codemirror/5.48.4/mode/' + mode + '/' + mode + '.min.js']) %> <% }) %> <% if
+(theme.busuanzi.enable == true) { %> <%- js(['js/busuanzi.min.js']) %>
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+<% } %> <%- partial('photoswipe') %> <% if (theme.google_analytics) { %>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=<%- theme.google_analytics %>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', '<%- theme.google_analytics %>');
+</script>
+<% } %> <% if (config.highlightjs) { %>
+<!-- Highlight.js -->
+<%- css(['css/dracula.css'])%>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', event => {
+    document.querySelectorAll('pre code').forEach(block => {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+<% } %>
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['<%= theme.descriptionOne %>', '<%= theme.descriptionTwo %>'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+<% if (theme.valine.enable) { %> <%- js(['//unpkg.com/valine/dist/Valine.min.js']) %>
+<script>
+  var valine = new Valine();
+
+  function initValine(path) {
+    if (!path) path = window.location.pathname;
+    let language = '<%- config.language %>';
+    if (!language) {
+      language = 'en';
+    } else {
+      language = language.toLowerCase();
+    }
+    valine.init({
+      el: '#vcomments',
+      appId: '<%- theme.valine.app_id %>',
+      appKey: '<%- theme.valine.app_key %>',
+      notify: '<%- theme.valine.notify %>',
+      verify: '<%- theme.valine.verify %>',
+      avatar: '<%- theme.valine.avatar %>',
+      placeholder: '<%- theme.valine.placeholder %>',
+      visitor: '<%- theme.valine.visitor %>',
+      path: path,
+      lang: language,
+    });
+  }
+
+  $(document).ready(function () {
+    initValine();
+  });
+</script>
+<% } %>

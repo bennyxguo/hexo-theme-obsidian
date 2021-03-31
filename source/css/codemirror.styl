@@ -1,0 +1,66 @@
+pre code .language-mark {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-weight: 900;
+	color: var(--secondary);
+	z-index: 5;
+	text-transform: uppercase;
+	font-family: Rubik, Lato, lucida grande, lucida sans unicode, Tahoma, 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
+	font-size: 0.6rem;
+	background: rgba(16, 14, 23, 0.36);
+	border-radius: 8px;
+	padding: 0 0.8em;
+	b {
+		position: relative;
+		top: 2px;
+		left: 0;
+	}
+}
+.language-mark[ref="css"] {
+	color: #ff8a00;
+}
+.language-mark[ref="scss"] {
+	color: #ff8a00;
+}
+.language-mark[ref="html"] {
+	color: #4caf50;
+}
+.language-mark[ref=JSX] {
+	color: #03a9f4;
+}
+.language-mark[ref=JavaScript] {
+	color: #03a9f4;
+	color: #ff79c6;
+}
+.language-mark[ref=jQuery] {
+	color: #03a9f4;
+	color: #ff79c6;
+}
+.language-mark[ref=php] {
+	color: #ff79c6;
+}
+
+/* CodeMirror Dracula theme */
+.CodeMirror {
+	height: auto !important;
+	overflow: hidden;
+	border-radius: 8px;
+
+	.CodeMirror-gutters,
+	.CodeMirror-linenumber {
+		background: rgba(32, 28, 41, 1) !important;
+		padding: 0 3px 0 15px;
+	}
+	.CodeMirror-scroll {
+		padding: 55px 30px 60px 10px !important;
+	}
+	&.cm-s-dracula {
+		height: 100%;
+		width: 100%;
+	}
+	.CodeMirror-lines {
+		font-size: 0.8rem;
+		font-family: Rubik, Lato, lucida grande, lucida sans unicode, Tahoma, 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
+	}
+}

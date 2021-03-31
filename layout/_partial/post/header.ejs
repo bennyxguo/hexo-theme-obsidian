@@ -1,0 +1,22 @@
+<div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="<%- url_for(theme.favicon) %>" alt="" data-url="<%= config.url %>">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle"><%- page.title %></h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    <% if (theme.sharejs && theme.sharejs.enable == true) { %>
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="<%= theme.sharejs.disabled || '' %>"></div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

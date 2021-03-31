@@ -1,0 +1,39 @@
+articles: Articles
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Prev
+next: Next
+prev_post: Previous Post
+next_post: Next Post
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+page: Page %d
+recent_posts: Recent Posts
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+nav.category: Category
+nav.tag: Tag
+nav.archive: Archive
+time_suffix: mins.
+load_more: Load more
+toc: Contents
+read_article: Read article
+pv: Page views
+uv: Unique visitors
+readed: Readed
+word_count: Words count
+read_time: Reading time
+read_count: Read count
+default_category: Article
+search_initialise: Initialising search index...
+search_start: Please input search keywords.
+search_empty: No result found, please try other keywords.
