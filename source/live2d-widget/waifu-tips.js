@@ -6,7 +6,7 @@
 function loadWidget(config) {
 	let { waifuPath, apiPath, cdnPath } = config;
 	let useCDN = false, modelList;
-	localStorage.setItem("Live2DPlace", "right");
+	//localStorage.setItem("Live2DPlace", "right");
 	if (typeof cdnPath === "string") {
 		useCDN = true;
 		if (!cdnPath.endsWith("/")) cdnPath += "/";
