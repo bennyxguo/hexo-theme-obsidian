@@ -2,6 +2,11 @@
 
 [English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
 
+## 🚀 v1.4.7 (2021-03-31)
+
+- Bug修复：
+  - 现在文章front-matter的preview对非首篇文章可以正确生效了
+
 ## 🚀 v1.4.6 (2021-03-31)
 
 - 备案号添加：在主题配置文件添加如下代码：

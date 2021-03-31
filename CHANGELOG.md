@@ -2,6 +2,12 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.7 (Mar 31, 2021)
+
+- Bug fix:
+  - Now "preview" for the other article can correctly take effect now
+
+
 ## 🚀 v1.4.6 (Mar 31, 2021)
 
 - Add beian ID：Add the following code in your theme config file:
