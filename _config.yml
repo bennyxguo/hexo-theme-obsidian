@@ -118,6 +118,7 @@ gitalk:
   id: location.pathname
   # Facebook-like distraction
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html

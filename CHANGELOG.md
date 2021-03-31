@@ -2,6 +2,46 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.6 (Mar 31, 2021)
+
+- Add beian ID：Add the following code in your theme config file:
+```
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+# Enable
+beian: true
+# Beian location，for example：粤ICP备
+#beianloc:
+# Beian ID，for example：2021022134号
+#beianid:
+```
+- Custom 3rdparty author：add the following code in the front-matter of your markdown file：
+```
+title: example
+author: 3rdparty author name
+is3rdparty: true
+socials: 
+  page: https://example
+avatar: /example.jpg
+slogan: example
+```
+- Custom gitalk  proxy server to avoid 403 error，add the following code in your theme config file:
+``` 
+...
+# Upper is gitalk config code
+proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token 
+...
+```
+- Add custom mouse effect and custom mouse style, add the following code in your theme config file: 
+```
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+```
+
 ## 🚀 v1.4.5 (Jan 22, 2021)
 
 ### Improvements
