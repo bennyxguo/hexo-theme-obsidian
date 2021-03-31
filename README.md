@@ -171,6 +171,8 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
@@ -230,6 +232,24 @@ codemirror:
 
 # Enabling mathjax support
 mathjax: true
+
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+# Enable
+beian: true
+# Beian location，for example：粤ICP备
+#beianloc:
+# Beian ID，for example：2021022134号
+#beianid:
+
+# Custom mouse style
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+
 ```
 
 </details>
@@ -304,6 +324,13 @@ categories: - Category1 - Category2
 tags: - Tag1 - Tag2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
+
+author: 3rdparty author
+is3rdparty: true
+socials: 
+  page: https://example
+avatar: /example.jpg
+slogan: example
 ```
 
 ### Create categories page

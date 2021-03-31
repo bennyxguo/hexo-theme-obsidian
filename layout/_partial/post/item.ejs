@@ -51,7 +51,7 @@
         <% } %>
         <div class="md-content animated fadeIn">
             <% if (theme.html_truncate.enable) { %>
-                <%- htmlTruncate(post.content, theme.html_truncate.postLength, {
+                <%- htmlTruncate(post.content, post.preview || theme.html_truncate.postLength, {
                     ellipsis: theme.html_truncate.ellipsis,
                     excludes: theme.html_truncate.excludes,
                     keepWhitespaces: theme.html_truncate.keepWhitespaces,
