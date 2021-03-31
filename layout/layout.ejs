@@ -31,6 +31,13 @@
         </span>
         <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
     </p>
+    <% if (theme.beian == true) { %>
+    </br>
+    <%= theme.beianloc %>
+    <span class="gradient-text">
+        <%- link_to("https://beian.miit.gov.cn/", theme.beianid, {external: true})%>
+    </span>
+    <% } %>
 </footer>
 <%- partial('_partial/mathjax', null, {cache: true}) %>
 <%- partial('_partial/scripts', null, {cache: true}) %>
