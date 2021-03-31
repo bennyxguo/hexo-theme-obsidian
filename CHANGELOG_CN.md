@@ -23,7 +23,8 @@ avatar: /example.jpg
 slogan: example
 ```
 - gitalk反代服务器自定义功能以防止403，在主题配置文件配置
-``` proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token 
+``` 
+proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token 
 ```
 - 添加更改鼠标样式与鼠标特效功能
 ```
