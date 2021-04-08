@@ -335,11 +335,24 @@ mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 
 author: 第三方作者名
-is3rdparty: true
 socials: 
   page: https://example
 avatar: /example.jpg
 slogan: example
+
+socials:
+    page: 
+        link: 社交平台链接
+        name: 需要的iconfont名称，例子：icon-bilibili-fill
+        path: iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### 创建分类页

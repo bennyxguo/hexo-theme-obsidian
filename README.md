@@ -340,11 +340,24 @@ mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 
 author: 3rdparty author
-is3rdparty: true
 socials: 
   page: https://example
 avatar: /example.jpg
 slogan: example
+
+socials:
+    page: 
+        link: social platform link
+        name: the iconfont you want to use, for example: icon-bilibili-fill
+        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### Create categories page

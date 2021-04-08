@@ -131,10 +131,33 @@
                                     class=" iconfont icon-stack-overflow"></span></a></dd>
                         <% } %>
                         <% if (page.author){%>
-                        <dd></dd>
-                        <dd><a href="<%- page.socials.page %>" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                        <dd></dd>
+                            <% if (page.socials.page){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
+                            <% } %>
+                            <% if (page.socials.page2){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
+                            <% } %>
+                            <% if (page.socials.page3){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
+                            <% } %>
+                        <dd>
+                            <% if (page.socials.page){%>
+                                <a href="<%- page.socials.page.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page.name %>"></span></a>
+                            <% } %>
+                        </dd>
+                        <dd>
+                            <% if (page.socials.page2){%>
+                                <a href="<%- page.socials.page2.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page2.name %>"></span></a>
+                            <% } %>
+                        </dd>
+                        <dd>
+                            <% if (page.socials.page3){%>
+                                <a href="<%- page.socials.page3.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page3.name %>"></span></a>
+                            <% } %>
+                        </dd>
                         <% } %>
                     </dl>
                 </div>
