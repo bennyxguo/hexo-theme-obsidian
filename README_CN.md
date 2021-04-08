@@ -248,7 +248,7 @@ beian:
   beianloc:
 # 备案号，例子：44010602009049号
   beianid:
-# 公安互联网备案图标
+# 公安互联网备案图标，例子：/img/beian.png
   beianicon:
 
 # 自定义鼠标样式
