@@ -30,14 +30,22 @@
             <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
         </span>
         <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
+        <% if (theme.beian.enable == true) { %>
+        </br>
+        <%= theme.beian.beianloc %>
+        <span class="gradient-text">
+            <%- link_to("https://beian.miit.gov.cn/", theme.beian.beianid, {external: true})%>
+        </span>
+        <% } %>
+        <% if (theme.police.enable == true) { %>
+        </br>
+        <span style="display: inline-block;"> <img src=<%- url_for(theme.police.beianicon) %>></span>
+        <%= theme.police.beianloc %>
+        <span class="gradient-text">
+            <%- link_to("http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602009049", theme.police.beianid, {external: true})%>
+        </span>
+        <% } %>
     </p>
-    <% if (theme.beian == true) { %>
-    </br>
-    <%= theme.beianloc %>
-    <span class="gradient-text">
-        <%- link_to("https://beian.miit.gov.cn/", theme.beianid, {external: true})%>
-    </span>
-    <% } %>
 </footer>
 <%- partial('_partial/mathjax', null, {cache: true}) %>
 <%- partial('_partial/scripts', null, {cache: true}) %>

@@ -234,12 +234,26 @@ codemirror:
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-# Enable
-beian: true
-# Beian location，for example：粤ICP备
 #beianloc:
-# Beian ID，for example：2021022134号
-#beianid:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+beian:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+
 
 # Custom mouse style
 mouse:
