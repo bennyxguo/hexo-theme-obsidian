@@ -232,12 +232,24 @@ codemirror:
 mathjax: true
 
 # 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
+beian: 
 # 启用备案
-beian: true
+  enable: true
 # 备案地区，例子：粤ICP备
-#beianloc:
+  beianloc:
 # 备案号，例子：2021022134号
-#beianid:
+  beianid:
+
+# 公安互联网备案
+beian:
+# 启用备案
+  enable: true
+# 备案地区，例子：粤公网安备
+  beianloc:
+# 备案号，例子：44010602009049号
+  beianid:
+# 公安互联网备案图标
+  beianicon:
 
 # 自定义鼠标样式
 mouse:

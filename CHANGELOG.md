@@ -2,6 +2,34 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.8 (2021-04-08)
+
+- Add police beian
+- Modify beian fomat
+- Add the following code in your theme config file:
+```
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+beian:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+```
+
 ## 🚀 v1.4.7 (Mar 31, 2021)
 
 - Bug fix:
