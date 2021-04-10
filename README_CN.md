@@ -21,6 +21,17 @@ v1.x | ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ <br
 
 </div>
 
+> 我正在开发一个全新的主题叫 [`Aurora`（极光）](https://github.com/auroral-ui/hexo-theme-aurora)，所以这个主题就那么多时间维护了。喜欢这个主题的小伙伴也可以过去看看新的主题，此主题里面有的功能新主题里面都有，而且还更多。
+
+<details>
+  <summary>查看新主题的截图</summary>
+
+![](https://img-blog.csdnimg.cn/202103280030531.png)
+
+![](https://img-blog.csdnimg.cn/20210328003140590.png)
+
+</details>
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
 <details>
