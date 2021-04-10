@@ -21,6 +21,17 @@ A dark Hexo theme, it's responsive, simple but elegant.
 
 </div>
 
+> I am working on a brand new theme called [`Aurora`](https://github.com/auroral-ui/hexo-theme-aurora), therefore this theme currently is not actively maintained. If you are from my blog website, the theme displayed there is the new theme.
+
+<details>
+  <summary>View new theme screenshots</summary>
+
+![](https://img-blog.csdnimg.cn/202103280030531.png)
+
+![](https://img-blog.csdnimg.cn/20210328003140590.png)
+
+</details>
+
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
 <details>
