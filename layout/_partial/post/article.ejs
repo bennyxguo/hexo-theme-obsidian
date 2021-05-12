@@ -5,7 +5,7 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(<%- url_for(page.cover || theme.welcome_cover) %>) ">
+                url('<%- url_for(page.cover || theme.welcome_cover) %>') ">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
@@ -122,7 +122,7 @@
                     <p><%- page.author || config.author %></p>
                     <span><%- page.slogan || theme.descriptionOne %></span>
                     <dl>
-                        <% if (page.is3rdparty == false){%>
+                        <% if (!page.author){%>
                         <dd><a href="<%- theme.socials.github %>" target="_blank"><span
                                     class=" iconfont icon-github"></span></a></dd>
                         <dd><a href="<%- theme.socials.twitter %>" target="_blank"><span
@@ -130,11 +130,34 @@
                         <dd><a href="<%- theme.socials.stackoverflow %>" target="_blank"><span
                                     class=" iconfont icon-stack-overflow"></span></a></dd>
                         <% } %>
-                        <% if (page.is3rdparty == true){%>
-                        <dd></dd>
-                        <dd><a href="<%- page.socials.page %>" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                        <dd></dd>
+                        <% if (page.author){%>
+                            <% if (page.socials.page){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page.path %>">
+                            <% } %>
+                            <% if (page.socials.page2){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page2.path %>">
+                            <% } %>
+                            <% if (page.socials.page3){%>
+                                <link rel="stylesheet" type="text/css" href="<%- page.socials.page3.path %>">
+                            <% } %>
+                        <dd>
+                            <% if (page.socials.page){%>
+                                <a href="<%- page.socials.page.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page.name %>"></span></a>
+                            <% } %>
+                        </dd>
+                        <dd>
+                            <% if (page.socials.page2){%>
+                                <a href="<%- page.socials.page2.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page2.name %>"></span></a>
+                            <% } %>
+                        </dd>
+                        <dd>
+                            <% if (page.socials.page3){%>
+                                <a href="<%- page.socials.page3.link %>" target="_blank"><span
+                                    class=" iconfont <%- page.socials.page3.name %>"></span></a>
+                            <% } %>
+                        </dd>
                         <% } %>
                     </dl>
                 </div>

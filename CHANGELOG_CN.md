@@ -2,6 +2,25 @@
 
 [English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
 
+## 🚀 v1.4.9 (2021-04-08)
+
+- 增加第三方作者自定义社交平台功能，目前支持三个平台按顺序排布，需要插入到文章的front-meta内，代码如下：
+```
+socials:
+    page: 
+        link: 社交平台链接
+        name: 需要的iconfont名称，例子：icon-bilibili-fill
+        path: iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
+```
+
 ## 🚀 v1.4.8 (2021-04-08)
 
 - 公安互联网备案号添加

@@ -2,7 +2,26 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
-## 🚀 v1.4.8 (2021-04-08)
+## 🚀 v1.4.9 (Apr 8, 2021)
+
+- Add custom social platform for 3rdparty authors. This time support 3 platforms. You should add the following code in the fromt-meta of your article:
+```
+socials:
+    page: 
+        link: social platform link
+        name: the iconfont you want to use, for example: icon-bilibili-fill
+        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
+```
+
+## 🚀 v1.4.8 (Apr 8, 2021)
 
 - Add police beian
 - Modify beian fomat
