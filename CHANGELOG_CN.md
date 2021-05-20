@@ -2,7 +2,7 @@
 
 [English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
 
-## 🚀 v1.4.9 (2021-04-08)
+## 🚀 v1.4.9.1 (2021-04-08)
 
 - 增加aplayer以播放云端音乐，目前仅支持网易云音乐歌单。添加下列代码至主题配置文件：
 ```
