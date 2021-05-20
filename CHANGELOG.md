@@ -4,7 +4,7 @@
 
 ## 🚀 v1.4.9.1 (May 20, 2021)
 
-- Add aplayer to play musics. Now only support NetEase Cloud Music. Add the code to theme config:
+- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme config:
 ```
 # APlayer, now only support netease music list
 aplayer:
