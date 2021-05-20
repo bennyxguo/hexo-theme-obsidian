@@ -43,7 +43,7 @@ var description = '';
     <%- theme.header_html %>
     <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
     <% if (theme.aplayer.enable == true) { %>
-    <script>var musiclist = "<%- theme.musiclist%>"</script>
+    <script>var musiclist = "<%- theme.aplayer.musiclist%>"</script>
     <%- js(['/js/loadaplayer.js'])%>
     <!-- 引用依赖 -->
     <%- css(['/aplayer/dist/APlayer.min.css'])%>
