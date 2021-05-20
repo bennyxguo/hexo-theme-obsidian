@@ -42,4 +42,11 @@ var description = '';
     <%- css(['css/ball-atom.min.css'])%>
     <%- theme.header_html %>
     <%- css(['//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css']) %>
+    <% if (theme.aplayer.enable == true) { %>
+    <script>var musiclist = "<%- theme.musiclist%>"</script>
+    <%- js(['/js/loadaplayer.js'])%>
+    <!-- 引用依赖 -->
+    <%- css(['/aplayer/dist/APlayer.min.css'])%>
+    <%- js(['/src/aplayer/dist/APlayer.min.js', '/src/js/Meting.min.js'])%>
+    <% } %>
 </head>
