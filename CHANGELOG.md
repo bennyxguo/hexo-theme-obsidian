@@ -40,7 +40,7 @@ socials:
 - Add the following code in your theme config file:
 ```
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-#beianloc:
+#beian:
 beian: 
 # Enable
   enable: true
@@ -50,7 +50,7 @@ beian:
   beianid:
 
 # Police Beian
-beian:
+police:
 # Enable
   enable: true
 # Beian location，for example: 粤公网安备

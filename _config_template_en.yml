@@ -1,0 +1,213 @@
+#! ---------------------------------------------------------------
+#!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+#!  █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!  ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+#! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+#! ---------------------------------------------------------------
+#! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
+#! Thanks to and inspirated by CSS-Tricks
+#! @author: TriDiamond
+#! @github: https://github.com/TriDiamond
+#! @changelogs: https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md
+#! @feedbacks: https://github.com/TriDiamond/hexo-theme-obsidian/issues/new
+#! ---------------------------------------------------------------
+
+#! ---------------------------------------------------------------
+#!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
+#!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#! ---------------------------------------------------------------
+#! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
+#! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
+#! !! So Please make sure you disabled Hexo's default highlight setting !!
+#! ---------------------------------------------------------------
+#! Rebuild files after you changed the config:
+#! `hexo clean && hexo g`
+#! ---------------------------------------------------------------
+#! highlight:
+#!  enable: false
+#!  line_number: true
+#!  auto_detect: true
+#!  tab_replace:
+#! ---------------------------------------------------------------
+
+# Theme version
+# !! DO NOT EDIT THIS !!
+version: '1.4.9.1'
+
+# ---------------------------------------------------------------
+# Theme default settings
+# ---------------------------------------------------------------
+
+# Menu setting | format = title_name: link_url
+menu:
+  PAGE: /page
+
+# Page custom titles
+page_titles:
+  categories: 'Categories'
+  tags: 'Tags'
+  archives: 'Archived'
+
+# Enable table of content
+TOC: true
+
+# Home page first post default cover image, default use cover
+welcome_cover: /img/cover.jpg
+
+# Article default cover image
+cover: /img/welcome-cover.jpg
+
+# Avatar
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
+
+# Disable default scrollbar
+scrollbar: true
+
+# Website keywords used for SEO
+keywords: TriDiamond Obsidian
+
+# Website slogans
+descriptionOne: 'Think like an artist, develop like an artisan'
+descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
+
+# If you use google analytics, please fill in the ID
+google_analytics:
+
+# Website favicon
+favicon: /img/favicon.png
+
+# rss file
+rss: atom.xml
+
+# ---------------------------------------------------------------
+# Article Music settings
+# ---------------------------------------------------------------
+
+# Auto play article audio
+autoplay: false
+
+# default mp3 file
+mp3:
+  - statics/chengdu.mp3
+
+# ---------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------
+
+# Gitalk comment plugin
+# see https://github.com/gitalk/gitalk
+gitalk:
+  enable: false
+  autoExpand: false
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
+  # Ensure uniqueness and length less than 50
+  id: location.pathname
+  # Facebook-like distraction
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
+
+# Valine comment plugin (recommended!)
+# see https://valine.js.org/quickstart.html
+valine:
+  enable: true
+  app_id:
+  app_key:
+  notify: false
+  verify: false
+  avatar: 'mp'
+  placeholder: 'Leave your throughs behind~'
+  visitor: true
+
+# Enable symbols-count-time plugin
+# see https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  enable: true
+  wordCount: true
+  readCount: true
+  awl: 4
+  wpm: 275
+  suffix: mins.
+
+# Enable html truncate
+# see https://github.com/TriDiamond/hexo-html-truncate
+html_truncate:
+  enable: true
+  # Characters kept for posts
+  postLength: 250
+  # Characters kept for cover posts
+  coverLength: 100
+  ellipsis: '...'
+  # Excluding html tags
+  excludes: ['img']
+  # Characters count including white spaces
+  keepWhitespaces: true
+  # Reserving the last complete word, without breaking the word
+  reserveLastWord: true
+
+# Enable Busuanzi statistic plugin
+# see http://ibruce.info/2015/04/04/busuanzi/
+busuanzi:
+  enable: true
+
+# Enable social media sharing
+# see https://github.com/overtrue/share.js/
+sharejs:
+  enable: true
+  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+
+# Use codemirror instead of highlight js for better colors
+# if you want more language support check the modes list at official website
+# modes see: https://codemirror.net/mode/
+# see https://codemirror.net/
+codemirror:
+  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+
+# Enabling mathjax support
+mathjax: true
+
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+police:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+
+# Custom mouse style
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true

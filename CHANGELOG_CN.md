@@ -49,7 +49,7 @@ beian:
   beianid:
 
 # 公安互联网备案
-beian:
+police:
 # 启用备案
   enable: true
 # 备案地区，例子：粤公网安备
