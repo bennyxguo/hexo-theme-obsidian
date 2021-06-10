@@ -1,7 +1,7 @@
 #! ---------------------------------------------------------------
 #!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
-#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
-#!░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+#!  █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!  ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
 #! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 #! ---------------------------------------------------------------
 #! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
@@ -14,8 +14,8 @@
 
 #! ---------------------------------------------------------------
 #!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
-#! █░▀█ █░█ ░█░ █▀▀ ░▀▄
-#!▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
@@ -31,108 +31,98 @@
 #!  tab_replace:
 #! ---------------------------------------------------------------
 
-# Theme version
-# !! DO NOT EDIT THIS !!
+# 主题版本
+# !! 请勿修改此字段 !!
 version: '1.4.9.1'
 
 # ---------------------------------------------------------------
-# Theme default settings
+# 主题默认设置
 # ---------------------------------------------------------------
 
-# Menu setting | format = title_name: link_url
+# 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
-  ABOUT: /whoami
-  CATEGORIES: /categories
-  TAGS: /tags
-  ARCHIVES: /archives
+  PAGE: /page
 
-# Page custom titles
+# 分类页和标签页自定义标题配置
 page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
 
-# Social media links
-socials:
-  github: 'https://github.com/TriDiamond'
-  twitter: 'https://twitter.com/TriDiamond6'
-  stackoverflow: 'https://stackoverflow.com/users/7602324/tridiamond?tab=profile'
-
-# Enable table of content
+# 是否启用目录
 TOC: true
 
-# Home page first post default cover image, default use cover
+# 首页封面使用的封面图， 不配置默认使用cover配置的图片
 welcome_cover: /img/cover.jpg
 
-# Article default cover image
+# 文章默认封面图
 cover: /img/welcome-cover.jpg
 
-# Avatar
-avatar: https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg
+# 文章内的默认头像
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
 
-# Disable default scrollbar
+# 关闭默认滚动条
 scrollbar: true
 
-# Website keywords used for SEO
+# 网站的关键词，都好分割，用于SEO优化
 keywords: TriDiamond Obsidian
 
-# Website slogans
+# 网站口号
 descriptionOne: 'Think like an artist, develop like an artisan'
 descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
-# If you use google analytics, please fill in the ID
-google_analytics: 'UA-149874671-1'
+# 如果使用google analytics, 请填写ID
+google_analytics:
 
-# Website favicon
+# 网页图标
 favicon: /img/favicon.png
 
-# rss file
+# rss文件
 rss: atom.xml
 
 # ---------------------------------------------------------------
-# Article Music settings
+# 文章音乐设置
 # ---------------------------------------------------------------
 
-# Auto play article audio
+# 自动播放音乐
 autoplay: false
 
-# default mp3 file
+# 默认mp3文件
 mp3:
   - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
-# Plugins
+# 主题插件
 # ---------------------------------------------------------------
 
-# Gitalk comment plugin
-# see https://github.com/gitalk/gitalk
+# Gitalk 评论插件
+# 查看 https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: true
-  clientID: 'ec894e2b66f752e8b7fb'
-  clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
-  repo: 'blog-comments'
-  owner: 'TriDiamond'
-  admin: ['TriDiamond']
+  autoExpand: false
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-  # Custom proxy server
+  # 自定义代理服务器以防止403错误
 
-# Valine comment plugin (recommended!)
-# see https://valine.js.org/quickstart.html
+# Valine 评论插件 (推荐使用!)
+# 查看 https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id: QHCOIEBlyjBUMAjaE5ilzafk-gzGzoHsz
-  app_key: ggeGwz8ypB9uiAIYSRH5T0PF
+  enable: true
+  app_id:
+  app_key:
   notify: false
   verify: false
   avatar: 'mp'
   placeholder: 'Leave your throughs behind~'
   visitor: true
 
-# Enable symbols-count-time plugin
+# 文章字数和阅读时间统计插件
 # see https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   enable: true
@@ -142,59 +132,82 @@ symbols_count_time:
   wpm: 275
   suffix: mins.
 
-# Enable html truncate
+# html截取插件（用于首页截取内容）
 # see https://github.com/TriDiamond/hexo-html-truncate
 html_truncate:
   enable: true
-  # Characters kept for posts
+  # 文章保留多少个字符
   postLength: 250
-  # Characters kept for cover posts
+  # 封面文章保留多少个字符
   coverLength: 100
+  # 省略符号
   ellipsis: '...'
-  # Excluding html tags
-  excludes: ['img', 'h1', 'h2']
-  # Characters count including white spaces
+  # 需要过滤的html标签
+  excludes: ['img']
+  # 截取时保留空白空格字符
   keepWhitespaces: true
-  # Reserving the last complete word, without breaking the word
+  # 截取到最后的时候保留完成的字（只对英文有用）
   reserveLastWord: true
 
-# Enable Busuanzi statistic plugin
+# Busuanzi 浏览量统计插件
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
   enable: true
 
-#Enable social media sharing
+# Sharejs 分享
+# see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
-# Use codemirror instead of highlight js for better colors
-# if you want more language support check the modes list at official website
-# modes see: https://codemirror.net/mode/
-# see https://codemirror.net/
+# 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
+# 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
+# modes文档请看: https://codemirror.net/mode/
+# codemirror官网： https://codemirror.net/
+# 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
 codemirror:
   modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
 
-# Enabling mathjax support
+# 启用 mathjax 支持
 mathjax: true
 
-# custom header HTML
-header_html: ''
+# 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
+beian: 
+# 启用备案
+  enable: true
+# 备案地区，例子：粤ICP备
+  beianloc:
+# 备案号，例子：2021022134号
+  beianid:
 
-# custom footer HTML
-footer_html: '
-<!-- 例：百度统计 -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?your_code";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-'
-# Show previous post and next post in post footer if exists
-# Available values: true | false
-post_navigation: true
+# 公安互联网备案
+police:
+# 启用备案
+  enable: true
+# 备案地区，例子：粤公网安备
+  beianloc:
+# 备案号，例子：44010602009049号
+  beianid:
+# 公安互联网备案图标，例子：/img/beian.png
+  beianicon:
 
+# 自定义鼠标样式
+mouse:
+# 启用
+  enable: true
+# 默认样式
+  default: /default.png
+# 悬浮及点击样式
+  pointer: /hover.png
+  
+# APlayer, 目前只支持网易云歌单
+aplayer:
+  # 启用aplayer
+  enable: true
+  # 歌单ID
+  musiclist: ""
+
+# Live2D小人
+l2d:
+  # 启用live2d
+  enable: true

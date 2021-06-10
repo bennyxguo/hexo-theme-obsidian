@@ -252,7 +252,7 @@ beian:
   beianid:
 
 # 公安互联网备案
-beian:
+police:
 # 启用备案
   enable: true
 # 备案地区，例子：粤公网安备
@@ -271,6 +271,12 @@ mouse:
 # 悬浮及点击样式
   pointer: /hover.png
 
+# APlayer, 目前只支持网易云歌单
+aplayer:
+  # 启用aplayer
+  enable: true
+  # 歌单ID
+  musiclist: ""
 ```
 
 </details>

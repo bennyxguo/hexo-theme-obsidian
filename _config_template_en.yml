@@ -1,7 +1,7 @@
 #! ---------------------------------------------------------------
 #!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
-#! █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
-#!░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+#!  █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!  ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
 #! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
 #! ---------------------------------------------------------------
 #! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
@@ -14,8 +14,8 @@
 
 #! ---------------------------------------------------------------
 #!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
-#! █░▀█ █░█ ░█░ █▀▀ ░▀▄
-#!▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
 #! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
@@ -41,22 +41,13 @@ version: '1.4.9.1'
 
 # Menu setting | format = title_name: link_url
 menu:
-  ABOUT: /whoami
-  CATEGORIES: /categories
-  TAGS: /tags
-  ARCHIVES: /archives
+  PAGE: /page
 
 # Page custom titles
 page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
-
-# Social media links
-socials:
-  github: 'https://github.com/TriDiamond'
-  twitter: 'https://twitter.com/TriDiamond6'
-  stackoverflow: 'https://stackoverflow.com/users/7602324/tridiamond?tab=profile'
 
 # Enable table of content
 TOC: true
@@ -68,7 +59,7 @@ welcome_cover: /img/cover.jpg
 cover: /img/welcome-cover.jpg
 
 # Avatar
-avatar: https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg
+avatar: https://s2.ax1x.com/2019/09/19/nLtSiD.png
 
 # Disable default scrollbar
 scrollbar: true
@@ -81,7 +72,7 @@ descriptionOne: 'Think like an artist, develop like an artisan'
 descriptionTwo: '艺术家思维去思考问题，工匠创造精神去开发'
 
 # If you use google analytics, please fill in the ID
-google_analytics: 'UA-149874671-1'
+google_analytics:
 
 # Website favicon
 favicon: /img/favicon.png
@@ -107,13 +98,13 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: true
-  clientID: 'ec894e2b66f752e8b7fb'
-  clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
-  repo: 'blog-comments'
-  owner: 'TriDiamond'
-  admin: ['TriDiamond']
+  enable: false
+  autoExpand: false
+  clientID: ''
+  clientSecret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -123,9 +114,9 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id: QHCOIEBlyjBUMAjaE5ilzafk-gzGzoHsz
-  app_key: ggeGwz8ypB9uiAIYSRH5T0PF
+  enable: true
+  app_id:
+  app_key:
   notify: false
   verify: false
   avatar: 'mp'
@@ -152,7 +143,7 @@ html_truncate:
   coverLength: 100
   ellipsis: '...'
   # Excluding html tags
-  excludes: ['img', 'h1', 'h2']
+  excludes: ['img']
   # Characters count including white spaces
   keepWhitespaces: true
   # Reserving the last complete word, without breaking the word
@@ -163,7 +154,8 @@ html_truncate:
 busuanzi:
   enable: true
 
-#Enable social media sharing
+# Enable social media sharing
+# see https://github.com/overtrue/share.js/
 sharejs:
   enable: true
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
@@ -178,23 +170,44 @@ codemirror:
 # Enabling mathjax support
 mathjax: true
 
-# custom header HTML
-header_html: ''
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
 
-# custom footer HTML
-footer_html: '
-<!-- 例：百度统计 -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?your_code";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-'
-# Show previous post and next post in post footer if exists
-# Available values: true | false
-post_navigation: true
+# Police Beian
+police:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
 
+# Custom mouse style
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true

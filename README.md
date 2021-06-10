@@ -245,7 +245,7 @@ codemirror:
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-#beianloc:
+#Beian:
 beian: 
 # Enable
   enable: true
@@ -255,7 +255,7 @@ beian:
   beianid:
 
 # Police Beian
-beian:
+police:
 # Enable
   enable: true
 # Beian location，for example: 粤公网安备
@@ -264,7 +264,6 @@ beian:
   beianid:
 # Beian Icon, for example: /img/beian.png
   beianicon:
-
 
 # Custom mouse style
 mouse:
@@ -275,6 +274,12 @@ mouse:
 # Hover sytle
   pointer: /hover.png
 
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
 ```
 
 </details>

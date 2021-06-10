@@ -2,6 +2,18 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.9.1 (May 20, 2021)
+
+- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme config:
+```
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
+```
+
 ## 🚀 v1.4.9 (Apr 8, 2021)
 
 - Add custom social platform for 3rdparty authors. This time support 3 platforms. You should add the following code in the fromt-meta of your article:
@@ -28,7 +40,7 @@ socials:
 - Add the following code in your theme config file:
 ```
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-#beianloc:
+#beian:
 beian: 
 # Enable
   enable: true
@@ -38,7 +50,7 @@ beian:
   beianid:
 
 # Police Beian
-beian:
+police:
 # Enable
   enable: true
 # Beian location，for example: 粤公网安备
