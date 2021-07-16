@@ -95,6 +95,24 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 
 ```yaml
 #! ---------------------------------------------------------------
+#!  ▄▀▄ █▀▄ ▄▀▀ ▀ █▀▄ ▀ ▄▀▄ █▄░█
+#!  █░█ █▀█ ░▀▄ █ █░█ █ █▀█ █░▀█
+#!  ░▀░ ▀▀░ ▀▀░ ▀ ▀▀░ ▀ ▀░▀ ▀░░▀
+#! ᴅᴇsɪɢɴᴇᴅ & ᴄᴏᴅᴇᴅ ʙʏ ᴛʀɪᴅɪᴀᴍᴏɴᴅ
+#! ---------------------------------------------------------------
+#! Theme Obsidian - A dark Hexo theme, it's responsive, simple but elegant.
+#! Thanks to and inspirated by CSS-Tricks
+#! @author: TriDiamond
+#! @github: https://github.com/TriDiamond
+#! @changelogs: https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md
+#! @feedbacks: https://github.com/TriDiamond/hexo-theme-obsidian/issues/new
+#! ---------------------------------------------------------------
+
+#! ---------------------------------------------------------------
+#!  █▄░█ ▄▀▄ ▀█▀ █▀▀ ▄▀▀
+#!  █░▀█ █░█ ░█░ █▀▀ ░▀▄
+#!  ▀░░▀ ░▀░ ░▀░ ▀▀▀ ▀▀░ v1.x
+#! ---------------------------------------------------------------
 #! Since version `v1.3.5` code block highlight has changed from `highlight.js` to
 #! `codemirror`, but the Hexo default highlight still need to be disabled to take affect.
 #! !! So Please make sure you disabled Hexo's default highlight setting !!
@@ -109,6 +127,10 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 #!  tab_replace:
 #! ---------------------------------------------------------------
 
+# Theme version
+# !! DO NOT EDIT THIS !!
+version: '1.4.9.2'
+
 # ---------------------------------------------------------------
 # Theme default settings
 # ---------------------------------------------------------------
@@ -122,6 +144,12 @@ page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
+
+# Social media links
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
 
 # Enable table of content
 TOC: true
@@ -245,7 +273,7 @@ codemirror:
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-#Beian:
+#beianloc:
 beian: 
 # Enable
   enable: true
@@ -280,6 +308,11 @@ aplayer:
   enable: true
   # Music list ID
   musiclist: ""
+  
+# Live2D
+l2d:
+  # Enable live2d
+  enable: true
 ```
 
 </details>
