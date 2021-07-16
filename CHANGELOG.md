@@ -2,6 +2,11 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.9.2 (Jul 16, 2021)
+
+- Fix a bug which coursed by missing "socials" in config template.
+- Attention: you need to add at least one default social media list in config template.
+
 ## 🚀 v1.4.9.1 (May 20, 2021)
 
 - Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme config:

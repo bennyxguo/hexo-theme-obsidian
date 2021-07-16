@@ -33,7 +33,7 @@
 
 # 主题版本
 # !! 请勿修改此字段 !!
-version: '1.4.9.1'
+version: '1.4.9.2'
 
 # ---------------------------------------------------------------
 # 主题默认设置
@@ -48,6 +48,12 @@ page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
+
+# 社交媒体链接
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
 
 # 是否启用目录
 TOC: true

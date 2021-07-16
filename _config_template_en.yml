@@ -33,7 +33,7 @@
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-version: '1.4.9.1'
+version: '1.4.9.2'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -48,6 +48,12 @@ page_titles:
   categories: 'Categories'
   tags: 'Tags'
   archives: 'Archived'
+
+# Social media links
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
 
 # Enable table of content
 TOC: true

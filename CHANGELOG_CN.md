@@ -2,6 +2,11 @@
 
 [English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
 
+## 🚀 v1.4.9.2 (2021-07-16)
+
+- 修复了配置文件模板中没有社交媒体的默认配置导致的运行错误
+- 注意：socials字段内必须至少存在一个默认媒体
+
 ## 🚀 v1.4.9.1 (2021-04-08)
 
 - 增加aplayer以播放云端音乐，目前仅支持网易云音乐歌单。添加下列代码至主题配置文件：
