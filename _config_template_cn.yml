@@ -49,6 +49,12 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
+# 社交媒体链接
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
+
 # 是否启用目录
 TOC: true
 

@@ -49,6 +49,12 @@ page_titles:
   tags: 'Tags'
   archives: 'Archived'
 
+# Social media links
+socials:
+  github: ""
+  twitter: ""
+  stackoverflow: ""
+
 # Enable table of content
 TOC: true
 
