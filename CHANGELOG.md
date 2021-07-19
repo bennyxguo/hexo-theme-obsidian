@@ -2,9 +2,14 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.9.3 (Jul 19, 2021)
+
+- Fix a bug which caused by missing gitalk.enable in config template.
+- Now default using gitalk as comment.
+
 ## 🚀 v1.4.9.2 (Jul 16, 2021)
 
-- Fix a bug which coursed by missing "socials" in config template.
+- Fix a bug which caused by missing "socials" in config template.
 - Attention: you need to add at least one default social media list in config template.
 
 ## 🚀 v1.4.9.1 (May 20, 2021)
