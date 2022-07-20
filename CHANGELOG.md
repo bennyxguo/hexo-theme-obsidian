@@ -2,6 +2,23 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.9.3 (Jul 20, 2022)
+
+- Add custom abstract for each post.
+    - You can still use ``preview`` to show your posts' headings as abstract.
+    - It will show your ``preview`` in default.
+- Now you can add the following in your front-meta to show your custom abstract:
+
+```yaml
+---
+...
+# This will show in your post page, keep it short.
+abstract: ""
+# This is your detail abstract.
+abstracts: ""
+...
+```
+
 ## 🚀 v1.4.9.3 (Jul 19, 2021)
 
 - Fix a bug which caused by missing gitalk.enable in config template.
@@ -14,32 +31,36 @@
 
 ## 🚀 v1.4.9.1 (May 20, 2021)
 
-- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme config:
-```
+- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme
+  config:
+
+```yaml
 # APlayer, now only support netease music list
 aplayer:
-  # Enable aplayer
-  enable: true
-  # Music list ID
-  musiclist: ""
+    # Enable aplayer
+    enable: true
+    # Music list ID
+    musiclist: ""
 ```
 
 ## 🚀 v1.4.9 (Apr 8, 2021)
 
-- Add custom social platform for 3rdparty authors. This time support 3 platforms. You should add the following code in the fromt-meta of your article:
-```
+- Add custom social platform for 3rdparty authors. This time support 3 platforms. You should add the following code in
+  the fromt-meta of your article:
+
+```yaml
 socials:
-    page: 
+    page:
         link: social platform link
-        name: the iconfont you want to use, for example: icon-bilibili-fill
-        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
-    page2: 
-        link: 
-        name: 
-        path: 
-    page3: 
-        link: 
-        name: 
+        name: # the iconfont you want to use, for example: icon-bilibili-fill
+        path: # the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2:
+        link:
+        name:
+        path:
+    page3:
+        link:
+        name:
         path: 
 ```
 
@@ -48,39 +69,40 @@ socials:
 - Add police beian
 - Modify beian fomat
 - Add the following code in your theme config file:
-```
+
+```yaml
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
 #beian:
-beian: 
-# Enable
-  enable: true
-# Beian location，for example：粤ICP备
-  beianloc:
-# Beian ID，for example：2021022134号。
-  beianid:
+beian:
+    # Enable
+    enable: true
+    # Beian location，for example：粤ICP备
+    beianloc:
+    # Beian ID，for example：2021022134号。
+    beianid:
 
 # Police Beian
 police:
-# Enable
-  enable: true
-# Beian location，for example: 粤公网安备
-  beianloc:
-# Beian ID, for example: 44010602009049号
-  beianid:
-# Beian Icon, for example: /img/beian.png
-  beianicon:
+    # Enable
+    enable: true
+    # Beian location，for example: 粤公网安备
+    beianloc:
+    # Beian ID, for example: 44010602009049号
+    beianid:
+    # Beian Icon, for example: /img/beian.png
+    beianicon:
 ```
 
 ## 🚀 v1.4.7 (Mar 31, 2021)
 
 - Bug fix:
-  - Now "preview" for the other article can correctly take effect now
-
+    - Now "preview" for the other article can correctly take effect now
 
 ## 🚀 v1.4.6 (Mar 31, 2021)
 
 - Add beian ID：Add the following code in your theme config file:
-```
+
+```yaml
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
 # Enable
 beian: true
@@ -89,43 +111,51 @@ beian: true
 # Beian ID，for example：2021022134号
 #beianid:
 ```
+
 - Custom 3rdparty author：add the following code in the front-matter of your markdown file：
-```
-title: example
-author: 3rdparty author name
+
+```yaml
+title: # example
+author: # 3rdparty author name
 is3rdparty: true
-socials: 
-  page: https://example
-avatar: /example.jpg
-slogan: example
+socials:
+    page: # https://example
+avatar: # /example.jpg
+slogan: # example
 ```
-- Custom gitalk  proxy server to avoid 403 error，add the following code in your theme config file:
-``` 
+
+- Custom gitalk proxy server to avoid 403 error，add the following code in your theme config file:
+
+```yaml
 ...
 # Upper is gitalk config code
-proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token 
+proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 ...
 ```
-- Add custom mouse effect and custom mouse style, add the following code in your theme config file: 
-```
+
+- Add custom mouse effect and custom mouse style, add the following code in your theme config file:
+
+```yaml
 mouse:
-# Enable custom mouse style
-  enable: true
-# Default style
-  default: /default.png
-# Hover sytle
-  pointer: /hover.png
+    # Enable custom mouse style
+    enable: true
+    # Default style
+    default: # /default.png
+    # Hover sytle
+    pointer: # /hover.png
 ```
 
 ## 🚀 v1.4.5 (Jan 22, 2021)
 
 ### Improvements
 
-- Changed the fonts links from using `loli.net` to using `baomitu.com` (which is hosted by 360, it's more stable). This changes will improve the website from loading up faster.
+- Changed the fonts links from using `loli.net` to using `baomitu.com` (which is hosted by 360, it's more stable). This
+  changes will improve the website from loading up faster.
 
 ## 🚀 v1.4.4 (Sep 16, 2020)
 
-Fixed couple of issues, get ready for some new features! Here thank you all for the 300+ stars so far, I will keep working on improving this theme! ❤️
+Fixed couple of issues, get ready for some new features! Here thank you all for the 300+ stars so far, I will keep
+working on improving this theme! ❤️
 
 ### Bug fixes 🐛
 
@@ -143,7 +173,8 @@ Added `MathJax` support! Also fixed a few issues here and there, smoothen the an
 
 ### Changes
 
-- TOC now only loads up to level 3, this changes fixed the bug when TOC goes over 3 levels the content will overflowing out of the container. ([#20](https://github.com/TriDiamond/hexo-theme-obsidian/issues/20))
+- TOC now only loads up to level 3, this changes fixed the bug when TOC goes over 3 levels the content will overflowing
+  out of the container. ([#20](https://github.com/TriDiamond/hexo-theme-obsidian/issues/20))
 - Smoothen the animations for article pages.
 
 ## 🚀 v1.4.2 (Nov 11, 2019)
@@ -155,7 +186,8 @@ Hope you guys love this update!
 
 - Added the mostly requested feature, local site search!
 
-> The search feature is base on the index generated by [`hexo-generator-search`](https://github.com/wzpan/hexo-generator-search),
+> The search feature is base on the index generated
+> by [`hexo-generator-search`](https://github.com/wzpan/hexo-generator-search),
 > So you need to install this plugin before you can use the search feature.
 
 #### Installation guide
@@ -170,9 +202,9 @@ Adding the plugin config in your root `_config.yml`
 
 ```yaml
 search:
-  path: search.xml
-  field: post
-  content: true
+    path: search.xml
+    field: post
+    content: true
 ```
 
 Regenrate files
@@ -199,9 +231,9 @@ Stay being awesome 👽!
 ```yaml
 # Page custom titles
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
-  archives: 'Archived'
+    categories: 'Categories'
+    tags: 'Tags'
+    archives: 'Archived'
 ```
 
 ### 💥Changes
@@ -227,8 +259,8 @@ Page custom titles
 ```yaml
 # Page custom titles
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
+    categories: 'Categories'
+    tags: 'Tags'
 ```
 
 ### Changes 💥
@@ -243,9 +275,11 @@ Code block styles and color syntax looks way more awesome now! OMG！Hope you al
 ### Changes 💥
 
 - Loader leaving added smoother transition effect.
-- Changed code highlighting plugin, swapped highlight.js with codemirror to have a better color syntax. A more IDE like syntax! ✨(#6)
+- Changed code highlighting plugin, swapped highlight.js with codemirror to have a better color syntax. A more IDE like
+  syntax! ✨(#6)
 - Restyled the code block, now looks even more professional! ✨
-- Complete rewritten TOC css styles, added a pulsing active ball to the current title. Also fixed the clicking space glitchy issue. (#13)
+- Complete rewritten TOC css styles, added a pulsing active ball to the current title. Also fixed the clicking space
+  glitchy issue. (#13)
 
 ### Bug fixes 🐛
 
@@ -274,7 +308,8 @@ Code block styles and color syntax looks way more awesome now! OMG！Hope you al
 
 ### Changes 💥
 
-- Changed the loading icon to `Load Awesome`'s `la-ball-atom`. - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
+- Changed the loading icon to `Load Awesome`'s `la-ball-atom`.
+  - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
 
 ## 🚀 v1.3.2 (Oct 21, 2019)
 
@@ -284,7 +319,8 @@ Code block styles and color syntax looks way more awesome now! OMG！Hope you al
 
 ### Bug fixes 🐛
 
-- Home page added first post reacting height, if the first post's height is higher than the window height, it will react to it's content's full height.
+- Home page added first post reacting height, if the first post's height is higher than the window height, it will react
+  to it's content's full height.
 
 ## 🚀 v1.3.1 (Oct 18, 2019)
 
@@ -338,7 +374,8 @@ Enhanced bunch of features and add bunch of fun stuffs. Hope you all enjoy them!
 
 ### Changes 💥
 
-- Added sticky effect for both home page and article page navigation bar, with auto hide when scroll, allow reading with less undistraction.
+- Added sticky effect for both home page and article page navigation bar, with auto hide when scroll, allow reading with
+  less undistraction.
 - Re-added google analytics js, which was removed before.
 - Article top progress bar is enlarged to more catch eyeballs.
 

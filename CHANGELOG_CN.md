@@ -2,7 +2,24 @@
 
 [English Changelog](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)
 
-## 🚀 v1.4.9.3 (2021-07-119)
+## 🚀 v1.4.9.4 (2022-07-20)
+
+- 为每篇文章增加了自定义摘要
+    - 你仍可以使用 ``preview`` 以将自己的文章开头作为摘要展示
+    - 不作配置的情况下，优先展示 ``preview`` 内容
+- 现在你可以在你的文章的front-meta内加入以下内容以展示自定义摘要
+
+```yaml
+---
+...
+# 以下内容将会在你的文章页面内展示，请尽量保持简短
+abstract: ""
+# 这是你的详细摘要
+abstracts: ""
+...
+```
+
+## 🚀 v1.4.9.3 (2021-07-19)
 
 - 修复了配置文件模板中缺少gitalk.enable导致的错误
 - 现在默认使用gitalk作为评论区
@@ -15,31 +32,33 @@
 ## 🚀 v1.4.9.1 (2021-04-08)
 
 - 增加aplayer以播放云端音乐，目前仅支持网易云音乐歌单。添加下列代码至主题配置文件：
-```
+
+```yaml
 # APlayer, 目前只支持网易云歌单
 aplayer:
-  # 启用aplayer
-  enable: true
-  # 歌单ID
-  musiclist: ""
+    # 启用aplayer
+    enable: true
+    # 歌单ID
+    musiclist: ""
 ```
 
 ## 🚀 v1.4.9 (2021-04-08)
 
 - 增加第三方作者自定义社交平台功能，目前支持三个平台按顺序排布，需要插入到文章的front-meta内，代码如下：
-```
+
+```yaml
 socials:
-    page: 
-        link: 社交平台链接
-        name: 需要的iconfont名称，例子：icon-bilibili-fill
-        path: iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
-    page2: 
-        link: 
-        name: 
-        path: 
-    page3: 
-        link: 
-        name: 
+    page:
+        link: # 社交平台链接
+        name: # 需要的iconfont名称，例子：icon-bilibili-fill
+        path: # iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
+    page2:
+        link:
+        name:
+        path:
+    page3:
+        link:
+        name:
         path: 
 ```
 
@@ -48,37 +67,39 @@ socials:
 - 公安互联网备案号添加
 - 修改备案号格式
 - 在主题配置文件添加如下代码：
-```
+
+```yaml
 # 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
-beian: 
-# 启用备案
-  enable: true
-# 备案地区，例子：粤ICP备
-  beianloc:
-# 备案号，例子：2021022134号
-  beianid:
+beian:
+    # 启用备案
+    enable: true
+    # 备案地区，例子：粤ICP备
+    beianloc:
+    # 备案号，例子：2021022134号
+    beianid:
 
 # 公安互联网备案
 police:
-# 启用备案
-  enable: true
-# 备案地区，例子：粤公网安备
-  beianloc:
-# 备案号，例子：44010602009049号
-  beianid:
-# 公安互联网备案图标，例子：/img/beian.png
-  beianicon:
+    # 启用备案
+    enable: true
+    # 备案地区，例子：粤公网安备
+    beianloc:
+    # 备案号，例子：44010602009049号
+    beianid:
+    # 公安互联网备案图标，例子：/img/beian.png
+    beianicon:
 ```
 
 ## 🚀 v1.4.7 (2021-03-31)
 
 - Bug修复：
-  - 现在文章front-matter的preview对非首篇文章可以正确生效了
+    - 现在文章front-matter的preview对非首篇文章可以正确生效了
 
 ## 🚀 v1.4.6 (2021-03-31)
 
 - 备案号添加：在主题配置文件添加如下代码：
-```
+
+```yaml
 # 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
 # 启用备案
 beian: true
@@ -87,32 +108,38 @@ beian: true
 # 备案号，例子：2021022134号
 #beianid:
 ```
+
 - 第三方作者自定义：在front-matter添加特定词条，规则如下：
-```
-title: example
-author: 第三方作者名
+
+```yaml
+title: # example
+author: # 第三方作者名
 is3rdparty: true
-socials: 
-  page: https://example
-avatar: /example.jpg
-slogan: example
+socials:
+    page: # https://example
+avatar: # /example.jpg
+slogan: # example
 ```
+
 - gitalk反代服务器自定义功能以防止403，在主题配置文件配置：
-``` 
+
+```yaml
 ...
 # 以上是gitalk配置代码
 proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 ... 
 ```
+
 - 添加更改鼠标样式功能，在主题配置文件配置：
-```
+
+```yaml
 mouse:
-# 启用
-  enable: true
-# 默认样式
-  default: /default.png
-# 悬浮及点击样式
-  pointer: /hover.png
+    # 启用
+    enable: true
+    # 默认样式
+    default: # /default.png
+    # 悬浮及点击样式
+    pointer: # /hover.png
 ```
 
 ## 🚀 v1.4.5 (2021-01-22)
@@ -167,9 +194,9 @@ npm install hexo-generator-search --save
 
 ```yaml
 search:
-  path: search.xml
-  field: post
-  content: true
+    path: search.xml
+    field: post
+    content: true
 ```
 
 重新生成静态文件
@@ -193,9 +220,9 @@ hexo clean && hexo g
 ```yaml
 # Page custom titles
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
-  archives: 'Archived'
+    categories: 'Categories'
+    tags: 'Tags'
+    archives: 'Archived'
 ```
 
 ### Changes 💥
@@ -220,8 +247,8 @@ page_titles:
 ```yaml
 # 分类页和标签页自定义标题配置
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
+    categories: 'Categories'
+    tags: 'Tags'
 ```
 
 ### 💥 更变
