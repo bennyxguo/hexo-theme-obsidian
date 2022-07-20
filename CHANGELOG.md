@@ -31,7 +31,7 @@ abstracts: ""
 
 ## 🚀 v1.4.9.1 (May 20, 2021)
 
-- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](music.163.com). Add the code to theme
+- Add aplayer to play remote musics. Now only support [NetEase Cloud Music](https://music.163.com). Add the code to theme
   config:
 
 ```yaml
@@ -309,7 +309,7 @@ Code block styles and color syntax looks way more awesome now! OMG！Hope you al
 ### Changes 💥
 
 - Changed the loading icon to `Load Awesome`'s `la-ball-atom`.
-  - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
+    - [`Load Awesome`](https://github.com/danielcardoso/load-awesome)
 
 ## 🚀 v1.3.2 (Oct 21, 2019)
 
