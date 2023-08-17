@@ -14,14 +14,17 @@ A dark Hexo theme, it's responsive, simple but elegant.
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[PREVIEW](https://obsidian.tridiamond.tech/)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[PREVIEW](https://obsidian.tridiamond.tech/)**
+| **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 </div>
 
-> I am working on a brand new theme called [`Aurora`](https://github.com/auroral-ui/hexo-theme-aurora), therefore this theme currently is not actively maintained. If you are from my blog website, the theme displayed there is the new theme.
+> I am working on a brand new theme called [`Aurora`](https://github.com/auroral-ui/hexo-theme-aurora), therefore this
+> theme currently is not actively maintained. If you are from my blog website, the theme displayed there is the new
+> theme.
 
 <details>
   <summary>View new theme screenshots</summary>
@@ -129,7 +132,7 @@ Open `/themes/obsidian/_config.yml` can change the theme configs
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-version: '1.4.9.3'
+version: '1.4.9.4'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -137,19 +140,19 @@ version: '1.4.9.3'
 
 # Menu setting | format = title_name: link_url
 menu:
-  PAGE: /page
+    PAGE: /page
 
 # Page custom titles
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
-  archives: 'Archived'
+    categories: 'Categories'
+    tags: 'Tags'
+    archives: 'Archived'
 
 # Social media links
 socials:
-  github: ""
-  twitter: ""
-  stackoverflow: ""
+    github: ""
+    twitter: ""
+    stackoverflow: ""
 
 # Enable table of content
 TOC: true
@@ -191,7 +194,7 @@ autoplay: false
 
 # default mp3 file
 mp3:
-  - statics/chengdu.mp3
+    - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
 # Plugins
@@ -200,119 +203,119 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: false
-  clientID: ''
-  clientSecret: ''
-  repo: ''
-  owner: ''
-  admin: ['']
-  # Ensure uniqueness and length less than 50
-  id: location.pathname
-  # Facebook-like distraction
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-  # Custom proxy server
+    enable: true
+    autoExpand: false
+    clientID: ''
+    clientSecret: ''
+    repo: ''
+    owner: ''
+    admin: [ '' ]
+    # Ensure uniqueness and length less than 50
+    id: location.pathname
+    # Facebook-like distraction
+    proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+    # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id:
-  app_key:
-  notify: false
-  verify: false
-  avatar: 'mp'
-  placeholder: 'Leave your throughs behind~'
-  visitor: true
+    enable: false
+    app_id:
+    app_key:
+    notify: false
+    verify: false
+    avatar: 'mp'
+    placeholder: 'Leave your throughs behind~'
+    visitor: true
 
 # Enable symbols-count-time plugin
 # see https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  enable: true
-  wordCount: true
-  readCount: true
-  awl: 4
-  wpm: 275
-  suffix: mins.
+    enable: true
+    wordCount: true
+    readCount: true
+    awl: 4
+    wpm: 275
+    suffix: mins.
 
 # Enable html truncate
 # see https://github.com/TriDiamond/hexo-html-truncate
 html_truncate:
-  enable: true
-  # Characters kept for posts
-  postLength: 250
-  # Characters kept for cover posts
-  coverLength: 100
-  ellipsis: '...'
-  # Excluding html tags
-  excludes: ['img']
-  # Characters count including white spaces
-  keepWhitespaces: true
-  # Reserving the last complete word, without breaking the word
-  reserveLastWord: true
+    enable: true
+    # Characters kept for posts
+    postLength: 250
+    # Characters kept for cover posts
+    coverLength: 100
+    ellipsis: '...'
+    # Excluding html tags
+    excludes: [ 'img' ]
+    # Characters count including white spaces
+    keepWhitespaces: true
+    # Reserving the last complete word, without breaking the word
+    reserveLastWord: true
 
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
-  enable: true
+    enable: true
 
 # Enable social media sharing
 # see https://github.com/overtrue/share.js/
 sharejs:
-  enable: true
-  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+    enable: true
+    disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+    modes: [ 'javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python' ]
 
 # Enabling mathjax support
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
 #beianloc:
-beian: 
-# Enable
-  enable: true
-# Beian location，for example：粤ICP备
-  beianloc:
-# Beian ID，for example：2021022134号。
-  beianid:
+beian:
+    # Enable
+    enable: true
+    # Beian location，for example：粤ICP备
+    beianloc:
+    # Beian ID，for example：2021022134号。
+    beianid:
 
 # Police Beian
 police:
-# Enable
-  enable: true
-# Beian location，for example: 粤公网安备
-  beianloc:
-# Beian ID, for example: 44010602009049号
-  beianid:
-# Beian Icon, for example: /img/beian.png
-  beianicon:
+    # Enable
+    enable: true
+    # Beian location，for example: 粤公网安备
+    beianloc:
+    # Beian ID, for example: 44010602009049号
+    beianid:
+    # Beian Icon, for example: /img/beian.png
+    beianicon:
 
 # Custom mouse style
 mouse:
-# Enable custom mouse style
-  enable: true
-# Default style
-  default: /default.png
-# Hover sytle
-  pointer: /hover.png
+    # Enable custom mouse style
+    enable: true
+    # Default style
+    default: /default.png
+    # Hover sytle
+    pointer: /hover.png
 
 # APlayer, now only support netease music list
 aplayer:
-  # Enable aplayer
-  enable: true
-  # Music list ID
-  musiclist: ""
-  
+    # Enable aplayer
+    enable: true
+    # Music list ID
+    musiclist: ""
+
 # Live2D
 l2d:
-  # Enable live2d
-  enable: true
+    # Enable live2d
+    enable: true
 ```
 
 </details>
@@ -339,10 +342,10 @@ Hexo configuration file `_config.yml` located at the ROOT path of your blog.
 ```yaml
 ---
 highlight:
-  enable: false
-  line_number: true
-  auto_detect: true
-  tab_replace:
+    enable: false
+    line_number: true
+    auto_detect: true
+    tab_replace:
 ```
 
 Codemirror settings
@@ -353,7 +356,7 @@ Codemirror settings
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+    modes: [ 'javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python' ]
 ```
 
 Rebuild files after you changed the config
@@ -366,46 +369,52 @@ hexo clean && hexo g
 
 This post parameter changes how many characters are kept for the preview at home page.
 
-```markdown
-title: My awesome title
-date: 2019-07-14 18:38:45
-categories: - Category1 - Category2
-tags: - Tag1 - Tag2
-mp3: http://domain.com/awesome.mp3
-cover: http://domain.com/awesome.jpg
-preview: 300
+```yaml
+title: # My awesome title
+date: # 2019-07-14 18:38:45
+categories:
+#     - Category1 - Category2
+tags:
+#     - Tag1 - Tag2
+mp3: # http://domain.com/awesome.mp3
+cover: # http://domain.com/awesome.jpg
+preview: # 300
 ```
 
 ### Post template
 
 Post template settings
 
-```markdown
-title: My awesome title
-date: 2019-07-14 18:38:45
-categories: - Category1 - Category2
-tags: - Tag1 - Tag2
-mp3: http://domain.com/awesome.mp3
-cover: http://domain.com/awesome.jpg
+```yaml
+title: # My awesome title
+date: # 2019-07-14 18:38:45
+categories:
+#   - Category1 - Category2
+tags:
+#   - Tag1 - Tag2
+mp3: # http://domain.com/awesome.mp3
+cover: # http://domain.com/awesome.jpg
 
-author: 3rdparty author
-socials: 
-  page: https://example
-avatar: /example.jpg
-slogan: example
-
+author: # 3rdparty author
+avatar: # /example.jpg
+slogan: # example
+abstract: # short abstract
+abstracts: # long abstract
 socials:
-    page: 
-        link: social platform link
-        name: the iconfont you want to use, for example: icon-bilibili-fill
-        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
-    page2: 
-        link: 
-        name: 
-        path: 
-    page3: 
-        link: 
-        name: 
+    page:
+        link:
+        # social platform link
+        name:
+        # the iconfont you want to use, for example: icon-bilibili-fill
+        path:
+        # the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2:
+        link:
+        name:
+        path:
+    page3:
+        link:
+        name:
         path: 
 ```
 
@@ -437,7 +446,7 @@ hexo new page tags
 
 Tags page template
 
-```
+```yaml
 title: tags
 date: 2014-12-22 12:39:04
 type: "tags"
@@ -477,9 +486,9 @@ Adding the plugin config in your root `_config.yml`
 
 ```yaml
 search:
-  path: search.xml
-  field: post
-  content: true
+    path: search.xml
+    field: post
+    content: true
 ```
 
 Regenerate files
@@ -490,11 +499,13 @@ hexo clean && hexo g
 
 ## Related
 
-I have made a [`Typro`](https://typora.io/) theme [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian) especially for this blog theme.
+I have made a [`Typro`](https://typora.io/) theme [`Obsidian`](https://github.com/TriDiamond/typro-theme-obsidian)
+especially for this blog theme.
 
 ## Feedback
 
-> Please check the [ISSUES](https://github.com/TriDiamond/hexo-theme-obsidian/issues) before try to use the following contact methods!
+> Please check the [ISSUES](https://github.com/TriDiamond/hexo-theme-obsidian/issues) before try to use the following
+> contact methods!
 > Maybe the question you have had being asked by others or it's already being answered. Thanks!
 
 You can give me feedback or issue you have through the following methods:
@@ -507,9 +518,11 @@ You can give me feedback or issue you have through the following methods:
 
 Are you **enjoying this project** ? 👋
 
-You can express your ❤️ by _buying me a coffee_ ☕️ to keep this project **maintained and stay alive**, I would ❤️ to **dedicate more time and effort** on it!
+You can express your ❤️ by _buying me a coffee_ ☕️ to keep this project **maintained and stay alive**, I would ❤️ to **
+dedicate more time and effort** on it!
 
-If there are enough coffee ☕️ I would like to become a **full time open source developer**! Keep producing more _awesome themes and applications to the world_!
+If there are enough coffee ☕️ I would like to become a **full time open source developer**! Keep producing more _awesome
+themes and applications to the world_!
 
 However you could just **sharing this project with your friends**, that would _help me a lot as well_! 👊
 

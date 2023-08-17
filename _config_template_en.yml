@@ -33,7 +33,7 @@
 
 # Theme version
 # !! DO NOT EDIT THIS !!
-version: '1.4.9.3'
+version: '1.4.9.4'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -41,19 +41,19 @@ version: '1.4.9.3'
 
 # Menu setting | format = title_name: link_url
 menu:
-  PAGE: /page
+    PAGE: /page
 
 # Page custom titles
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
-  archives: 'Archived'
+    categories: 'Categories'
+    tags: 'Tags'
+    archives: 'Archived'
 
 # Social media links
 socials:
-  github: ""
-  twitter: ""
-  stackoverflow: ""
+    github: ""
+    twitter: ""
+    stackoverflow: ""
 
 # Enable table of content
 TOC: true
@@ -95,7 +95,7 @@ autoplay: false
 
 # default mp3 file
 mp3:
-  - statics/chengdu.mp3
+    - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
 # Plugins
@@ -104,111 +104,111 @@ mp3:
 # Gitalk comment plugin
 # see https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: false
-  clientID: ''
-  clientSecret: ''
-  repo: ''
-  owner: ''
-  admin: ['']
-  # Ensure uniqueness and length less than 50
-  id: location.pathname
-  # Facebook-like distraction
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-  # Custom proxy server
+    enable: true
+    autoExpand: false
+    clientID: ''
+    clientSecret: ''
+    repo: ''
+    owner: ''
+    admin: [ '' ]
+    # Ensure uniqueness and length less than 50
+    id: location.pathname
+    # Facebook-like distraction
+    proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+    # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id:
-  app_key:
-  notify: false
-  verify: false
-  avatar: 'mp'
-  placeholder: 'Leave your throughs behind~'
-  visitor: true
+    enable: false
+    app_id:
+    app_key:
+    notify: false
+    verify: false
+    avatar: 'mp'
+    placeholder: 'Leave your throughs behind~'
+    visitor: true
 
 # Enable symbols-count-time plugin
 # see https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  enable: true
-  wordCount: true
-  readCount: true
-  awl: 4
-  wpm: 275
-  suffix: mins.
+    enable: true
+    wordCount: true
+    readCount: true
+    awl: 4
+    wpm: 275
+    suffix: mins.
 
 # Enable html truncate
 # see https://github.com/TriDiamond/hexo-html-truncate
 html_truncate:
-  enable: true
-  # Characters kept for posts
-  postLength: 250
-  # Characters kept for cover posts
-  coverLength: 100
-  ellipsis: '...'
-  # Excluding html tags
-  excludes: ['img']
-  # Characters count including white spaces
-  keepWhitespaces: true
-  # Reserving the last complete word, without breaking the word
-  reserveLastWord: true
+    enable: true
+    # Characters kept for posts
+    postLength: 250
+    # Characters kept for cover posts
+    coverLength: 100
+    ellipsis: '...'
+    # Excluding html tags
+    excludes: [ 'img' ]
+    # Characters count including white spaces
+    keepWhitespaces: true
+    # Reserving the last complete word, without breaking the word
+    reserveLastWord: true
 
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
-  enable: true
+    enable: true
 
 # Enable social media sharing
 # see https://github.com/overtrue/share.js/
 sharejs:
-  enable: true
-  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+    enable: true
+    disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # Use codemirror instead of highlight js for better colors
 # if you want more language support check the modes list at official website
 # modes see: https://codemirror.net/mode/
 # see https://codemirror.net/
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+    modes: [ 'javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python' ]
 
 # Enabling mathjax support
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
 #beianloc:
-beian: 
-# Enable
-  enable: true
-# Beian location，for example：粤ICP备
-  beianloc:
-# Beian ID，for example：2021022134号。
-  beianid:
+beian:
+    # Enable
+    enable: true
+    # Beian location，for example：粤ICP备
+    beianloc:
+    # Beian ID，for example：2021022134号。
+    beianid:
 
 # Police Beian
 police:
-# Enable
-  enable: true
-# Beian location，for example: 粤公网安备
-  beianloc:
-# Beian ID, for example: 44010602009049号
-  beianid:
-# Beian Icon, for example: /img/beian.png
-  beianicon:
+    # Enable
+    enable: true
+    # Beian location，for example: 粤公网安备
+    beianloc:
+    # Beian ID, for example: 44010602009049号
+    beianid:
+    # Beian Icon, for example: /img/beian.png
+    beianicon:
 
 # Custom mouse style
 mouse:
-# Enable custom mouse style
-  enable: true
-# Default style
-  default: /default.png
-# Hover sytle
-  pointer: /hover.png
+    # Enable custom mouse style
+    enable: true
+    # Default style
+    default: /default.png
+    # Hover sytle
+    pointer: /hover.png
 
 # APlayer, now only support netease music list
 aplayer:
-  # Enable aplayer
-  enable: true
-  # Music list ID
-  musiclist: ""
+    # Enable aplayer
+    enable: true
+    # Music list ID
+    musiclist: ""

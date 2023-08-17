@@ -31,7 +31,7 @@
 
 # 主题版本
 # !! 请勿修改此字段 !!
-version: '1.4.9.3'
+version: '1.4.9.4'
 
 # ---------------------------------------------------------------
 # 主题默认设置
@@ -39,19 +39,19 @@ version: '1.4.9.3'
 
 # 菜单设置 | 格式 = 菜单名: 菜单url
 menu:
-  PAGE: /page
+    PAGE: /page
 
 # 分类页和标签页自定义标题配置
 page_titles:
-  categories: 'Categories'
-  tags: 'Tags'
-  archives: 'Archived'
+    categories: 'Categories'
+    tags: 'Tags'
+    archives: 'Archived'
 
 # 社交媒体链接
 socials:
-  github: ""
-  twitter: ""
-  stackoverflow: ""
+    github: ""
+    twitter: ""
+    stackoverflow: ""
 
 # 是否启用目录
 TOC: true
@@ -93,7 +93,7 @@ autoplay: false
 
 # 默认mp3文件
 mp3:
-  - statics/chengdu.mp3
+    - statics/chengdu.mp3
 
 # ---------------------------------------------------------------
 # 主题插件
@@ -102,68 +102,68 @@ mp3:
 # Gitalk 评论插件
 # 查看 https://github.com/gitalk/gitalk
 gitalk:
-  enable: true
-  autoExpand: false
-  clientID: ''
-  clientSecret: ''
-  repo: ''
-  owner: ''
-  admin: ['']
-  # Ensure uniqueness and length less than 50
-  id: location.pathname
-  # Facebook-like distraction
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-  # 自定义代理服务器以防止403错误
+    enable: true
+    autoExpand: false
+    clientID: ''
+    clientSecret: ''
+    repo: ''
+    owner: ''
+    admin: [ '' ]
+    # Ensure uniqueness and length less than 50
+    id: location.pathname
+    # Facebook-like distraction
+    proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+    # 自定义代理服务器以防止403错误
 
 # Valine 评论插件 (推荐使用!)
 # 查看 https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id:
-  app_key:
-  notify: false
-  verify: false
-  avatar: 'mp'
-  placeholder: 'Leave your throughs behind~'
-  visitor: true
+    enable: false
+    app_id:
+    app_key:
+    notify: false
+    verify: false
+    avatar: 'mp'
+    placeholder: 'Leave your throughs behind~'
+    visitor: true
 
 # 文章字数和阅读时间统计插件
 # see https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  enable: true
-  wordCount: true
-  readCount: true
-  awl: 4
-  wpm: 275
-  suffix: mins.
+    enable: true
+    wordCount: true
+    readCount: true
+    awl: 4
+    wpm: 275
+    suffix: mins.
 
 # html截取插件（用于首页截取内容）
 # see https://github.com/TriDiamond/hexo-html-truncate
 html_truncate:
-  enable: true
-  # 文章保留多少个字符
-  postLength: 250
-  # 封面文章保留多少个字符
-  coverLength: 100
-  # 省略符号
-  ellipsis: '...'
-  # 需要过滤的html标签
-  excludes: ['img']
-  # 截取时保留空白空格字符
-  keepWhitespaces: true
-  # 截取到最后的时候保留完成的字（只对英文有用）
-  reserveLastWord: true
+    enable: true
+    # 文章保留多少个字符
+    postLength: 250
+    # 封面文章保留多少个字符
+    coverLength: 100
+    # 省略符号
+    ellipsis: '...'
+    # 需要过滤的html标签
+    excludes: [ 'img' ]
+    # 截取时保留空白空格字符
+    keepWhitespaces: true
+    # 截取到最后的时候保留完成的字（只对英文有用）
+    reserveLastWord: true
 
 # Busuanzi 浏览量统计插件
 # see http://ibruce.info/2015/04/04/busuanzi/
 busuanzi:
-  enable: true
+    enable: true
 
 # Sharejs 分享
 # see https://github.com/overtrue/share.js/
 sharejs:
-  enable: true
-  disabled: 'facebook,douban,linkedin,diandian,tencent,google'
+    enable: true
+    disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # 使用了codemirror替换了highlight.js，代码高亮更加完善，也更接近IDE的高亮样式
 # 默认已经填入了一些语言的mode支持，如果你需要其他语言的支持，请查看codemirror官网的mode
@@ -171,43 +171,43 @@ sharejs:
 # codemirror官网： https://codemirror.net/
 # 默认支持了：JS, HTML, CSS, PHP, JAVA, C, C#, C++, SHELL, PYTHON.
 codemirror:
-  modes: ['javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python']
+    modes: [ 'javascript', 'css', 'xml', 'htmlmixed', 'clike', 'php', 'shell', 'python' ]
 
 # 启用 mathjax 支持
 mathjax: true
 
 # 此功能仅使用国内服务器的用户需要配置，国外服务器开办网站不需要备案。
-beian: 
-# 启用备案
-  enable: true
-# 备案地区，例子：粤ICP备
-  beianloc:
-# 备案号，例子：2021022134号
-  beianid:
+beian:
+    # 启用备案
+    enable: true
+    # 备案地区，例子：粤ICP备
+    beianloc:
+    # 备案号，例子：2021022134号
+    beianid:
 
 # 公安互联网备案
 police:
-# 启用备案
-  enable: true
-# 备案地区，例子：粤公网安备
-  beianloc:
-# 备案号，例子：44010602009049号
-  beianid:
-# 公安互联网备案图标，例子：/img/beian.png
-  beianicon:
+    # 启用备案
+    enable: true
+    # 备案地区，例子：粤公网安备
+    beianloc:
+    # 备案号，例子：44010602009049号
+    beianid:
+    # 公安互联网备案图标，例子：/img/beian.png
+    beianicon:
 
 # 自定义鼠标样式
 mouse:
-# 启用
-  enable: true
-# 默认样式
-  default: /default.png
-# 悬浮及点击样式
-  pointer: /hover.png
-  
+    # 启用
+    enable: true
+    # 默认样式
+    default: /default.png
+    # 悬浮及点击样式
+    pointer: /hover.png
+
 # APlayer, 目前只支持网易云歌单
 aplayer:
-  # 启用aplayer
-  enable: true
-  # 歌单ID
-  musiclist: ""
+    # 启用aplayer
+    enable: true
+    # 歌单ID
+    musiclist: ""
